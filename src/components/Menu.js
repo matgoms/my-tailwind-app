@@ -213,7 +213,7 @@ function Light(){
         document.documentElement.classList.toggle("dark");
         document.documentElement.classList.toggle("light");
         localStorage.setItem('color-theme', 'light');
-    
+           
   } 
 
 
