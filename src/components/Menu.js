@@ -105,8 +105,8 @@ export default function Menu() {
             About me
           </a>
           
-          <SunIcon className="h-6 w-6 darkmode text-gray-400" aria-hidden="true" id="light" onClick={() => Light()}/>
-          <MoonIcon className="h-6 w-6 darkmode" aria-hidden="true" id="dark" onClick={() => Dark()}/>
+          <SunIcon className="h-6 w-6 darkmode text-gray-400" aria-hidden="true" id="light" style={{display:'none'}} onClick={() => Light()}/>
+          <MoonIcon className="h-6 w-6 darkmode" aria-hidden="true" id="dark" style={{display:'none'}} onClick={() => Dark()}/>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#" className="text-md font-semibold leading-6 text-gray-900 dark:text-gray-400">

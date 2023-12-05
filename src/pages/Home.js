@@ -1,5 +1,5 @@
 import Menu from "../components/Menu";
-import Hero from "../components/Hero";
+import { HeroBig } from "../components/Hero";
 import ImageFull from "../components/ImageFull";
 import Feature from "../components/Feature";
 import Portfolio from "../components/Portfolio";
@@ -9,7 +9,7 @@ export default function Home(){
     return(
         <div class="bg-white dark:bg-slate-800">
             <Menu />
-            <Hero/>
+            <HeroBig/>
             <ImageFull />
             <Feature />
             <Portfolio />

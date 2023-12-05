@@ -19,11 +19,11 @@ import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/2
   },
 ]  */
 
-export default function Hero() {
+export function HeroBig() {
   return (
    <>
     <section>
-    <div class="grid gap-16 max-w-screen-xl px-4 py-16 mx-auto lg:grid lg:grid-cols-2 lg:py-32 lg:px-6 lg:grid-cols-2">
+    <div class="grid gap-16 max-w-screen-xl px-4 py-16 mx-auto lg:grid lg:grid-cols-2 lg:py-24 lg:px-6 lg:grid-cols-2">
         <div class="mr-auto place-self-center">
             <h1 class="max-w-2xl my-6 text-5xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-8xl dark:text-gray-100">Welcome to my portfolio!</h1>
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
@@ -46,3 +46,33 @@ export default function Hero() {
     </>
   )
 }
+
+
+const Title = ({ title, description }) => (
+  <>
+    {title && (
+      <div key={title} className="">
+        <dt className="max-w-2xl my-6 text-5xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-7xl dark:text-gray-100">
+          {title}
+        </dt>
+        <dd className="max-w-2xl mb-6 mt-6 font-body text-gray-500 lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-400">
+          {description}
+        </dd>
+      </div>
+    )}
+  </>
+);
+
+export const HeroSmall = ({ titles }) => (
+  <>
+    <section>
+      <div className="grid gap-16 max-w-screen-xl px-4 py-16 mx-auto lg:grid lg:grid-cols-2 lg:py-16 lg:px-6 lg:grid-cols-2">
+        <div className="mr-auto place-self-center">
+          {titles.map((item) => (
+            <Title key={item.title} title={item.title} description={item.description} />
+          ))}
+        </div>
+      </div>
+    </section>
+  </>
+);

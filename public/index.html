@@ -33,15 +33,15 @@ var tema = localStorage.getItem('color-theme');
   
   if(tema == 'dark'){
     document.documentElement.classList.add('dark');
-    document.getElementById('dark').style.display = "none";
+    document.getElementById('light').style.display = "block";
   } else if (tema == 'light'){
     document.documentElement.classList.add('light');
-    document.getElementById('light').style.display = "none";
+    document.getElementById('dark').style.display = "block";
     
   } else {
     localStorage.setItem('color-theme', 'light');
     document.documentElement.classList.add('light');
-    document.getElementById('light').style.display = "none";
+    document.getElementById('dark').style.display = "block";
   }
 } 
     </script>
