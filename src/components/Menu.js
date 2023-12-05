@@ -27,9 +27,31 @@ function classNames(...classes) {
 
 
 export default function Menu() {
+
+  window.onload = function() {
+        
+    var tema = localStorage.getItem('color-theme');
+      
+      if(tema === 'dark'){
+        document.documentElement.classList.add('dark');
+        document.getElementById('light').classList.remove('hidden');
+      } else if (tema === 'light'){
+        alert('tema é light');
+        document.documentElement.classList.add('light');
+        document.getElementById('dark').classList.remove('hidden');
+        
+      } else {
+        localStorage.setItem('color-theme', 'light');
+        document.documentElement.classList.add('light');
+        document.getElementById('dark').classList.remove('hidden');
+      }
+    } 
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
+
+    
     <header className="bg-white dark:bg-slate-800">
       <nav className="mx-auto flex max-w-7xl lg:py-10 items-center justify-between p-6" aria-label="Global">
         <div className="flex lg:flex-1">
@@ -105,8 +127,8 @@ export default function Menu() {
             About me
           </a>
           
-          <SunIcon className="h-6 w-6 darkmode text-gray-400" aria-hidden="true" id="light" style={{display:'none'}} onClick={() => Light()}/>
-          <MoonIcon className="h-6 w-6 darkmode" aria-hidden="true" id="dark" style={{display:'none'}} onClick={() => Dark()}/>
+          <SunIcon className="h-6 w-6 darkmode text-gray-400 hidden" aria-hidden="true" id="light" onClick={() => Light()}/>
+          <MoonIcon className="h-6 w-6 darkmode hidden" aria-hidden="true" id="dark"  onClick={() => Dark()}/>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#" className="text-md font-semibold leading-6 text-gray-900 dark:text-gray-400">

@@ -25,26 +25,7 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
-    <script>
-      
-window.onload = function() {
-  
-var tema = localStorage.getItem('color-theme');
-  
-  if(tema == 'dark'){
-    document.documentElement.classList.add('dark');
-    document.getElementById('light').style.display = "block";
-  } else if (tema == 'light'){
-    document.documentElement.classList.add('light');
-    document.getElementById('dark').style.display = "block";
-    
-  } else {
-    localStorage.setItem('color-theme', 'light');
-    document.documentElement.classList.add('light');
-    document.getElementById('dark').style.display = "block";
-  }
-} 
-    </script>
+   
    <!--  <script>
       // It's best to inline this in `head` to avoid FOUC (flash of unstyled content) when changing pages or themes
       if (
@@ -57,6 +38,10 @@ var tema = localStorage.getItem('color-theme');
         document.documentElement.classList.add('dark');
       }
     </script> -->
+    <script>
+      
+    
+          </script>
   <script src="../node_modules/flowbite/dist/flowbite.js"></script>
   </head>
   <body>
@@ -72,5 +57,7 @@ var tema = localStorage.getItem('color-theme');
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    
   </body>
 </html>
