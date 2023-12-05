@@ -36,7 +36,6 @@ export default function Menu() {
         document.documentElement.classList.add('dark');
         document.getElementById('light').classList.remove('hidden');
       } else if (tema === 'light'){
-        alert('tema é light');
         document.documentElement.classList.add('light');
         document.getElementById('dark').classList.remove('hidden');
         
