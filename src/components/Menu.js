@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
@@ -28,25 +29,25 @@ function classNames(...classes) {
 
 export default function Menu() {
 
-  window.onload = function() {
-        
-    var tema = localStorage.getItem('color-theme');
-      
-      if(tema === 'dark'){
-        document.documentElement.classList.add('dark');
-        document.getElementById('light').classList.remove('hidden');
-      } else if (tema === 'light'){
-        document.documentElement.classList.add('light');
-        document.getElementById('dark').classList.remove('hidden');
-        
-      } else {
-        localStorage.setItem('color-theme', 'light');
-        document.documentElement.classList.add('light');
-        document.getElementById('dark').classList.remove('hidden');
-      }
-    } 
+  useEffect(() => {
+    const tema = localStorage.getItem('color-theme');
 
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    if(tema === 'dark'){
+      document.documentElement.classList.add('dark');
+      document.getElementById('light').classList.remove('hidden');
+    } else if (tema === 'light'){
+      document.documentElement.classList.add('light');
+      document.getElementById('dark').classList.remove('hidden');
+    } else {
+      localStorage.setItem('color-theme', 'light');
+      document.documentElement.classList.add('light');
+      document.getElementById('dark').classList.remove('hidden');
+    }
+  }, []); // Empty dependency array ensures that this effect runs once when the component mounts
+
+ 
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
 
@@ -126,8 +127,8 @@ export default function Menu() {
             About me
           </a>
           
-          <SunIcon className="h-6 w-6 darkmode text-gray-400 hidden" aria-hidden="true" id="light" onClick={() => Light()}/>
-          <MoonIcon className="h-6 w-6 darkmode hidden" aria-hidden="true" id="dark"  onClick={() => Dark()}/>
+          <SunIcon className="h-6 w-6 text-gray-400 cursor-pointer hidden" aria-hidden="true" id="light" onClick={() => Light()}/>
+          <MoonIcon className="h-6 w-6 cursor-pointer hidden" aria-hidden="true" id="dark"  onClick={() => Dark()}/>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#" className="text-md font-semibold leading-6 text-gray-900 dark:text-gray-400">
