@@ -1,57 +1,87 @@
-import { Tab } from '@headlessui/react'
-import classNames from 'classnames'
 import React from 'react';
+import { Tab } from '@headlessui/react';
+import { Link } from 'react-router-dom';
+import classNames from 'classnames'
 
-// Create a context with all files in the 'projects' folder that end with '.js'
-const socialContext = require.context('../projects/social', false, /\.js$/);
-const uxuiContext = require.context('../projects/uxui', false, /\.js$/);
-
-// Get an array of all project file paths
-const socialFilePaths = socialContext.keys();
-const uxuiFilePaths = uxuiContext.keys();
-
-// Import each project dynamically
-const socialProjects = socialFilePaths.map((filePath) => {
-    const projectData = socialContext(filePath);
-    // Assuming each project file exports a default object
-    return projectData.default;
-});
-
-const uxuiProjects = uxuiFilePaths.map((filePath) => {
-    const projectData = uxuiContext(filePath);
-    // Assuming each project file exports a default object
-    return projectData.default;
-});
-
-const Social = ({ title, description, image }) => {
-    return (
-
-        //FALTA INSERIR O LINK PARA CADA PROJETO
-        <div class="mb-24">
-            <img src={image} alt={title} class={'w-full mb-6 hover:animate-pulse'} alt="" />
-            <h3 class="mb-2 text-xl font-bold dark:text-white">{title}</h3>
-            <p class="text-gray-500 dark:text-gray-400">{description}</p>
-
-        </div>
-    );
-};
-
-
-const UXUI = ({ title, description, image }) => {
-    return (
-
-        //FALTA INSERIR O LINK PARA CADA PROJETO
-        <div class="mb-24">
-            <img src={image} alt={title} class={'w-full mb-6 hover:animate-pulse'} alt="" />
-            <h3 class="mb-2 text-xl font-bold dark:text-white">{title}</h3>
-            <p class="text-gray-500 dark:text-gray-400">{description}</p>
-
-        </div>
-    );
-};
 
 
 export default function Content() {
+    const socialContext = require.context('../projects/social', false, /\.js$/);
+    const uxuiContext = require.context('../projects/uxui', false, /\.js$/);
+    const motionContext = require.context('../projects/motion-vfx', false, /\.js$/);
+
+    // Get an array of all project file paths
+    const socialFilePaths = socialContext.keys();
+    const uxuiFilePaths = uxuiContext.keys();
+    const motionFilePaths = motionContext.keys();
+
+    // Import each project dynamically
+    const socialProjects = socialFilePaths.map((filePath) => {
+        const projectData = socialContext(filePath);
+        // Assuming each project file exports a default object
+        return projectData.default;
+    });
+
+    const uxuiProjects = uxuiFilePaths.map((filePath) => {
+        const projectData = uxuiContext(filePath);
+        // Assuming each project file exports a default object
+        return projectData.default;
+    });
+
+    const motionProjects = motionFilePaths.map((filePath) => {
+        const projectData = motionContext(filePath);
+        // Assuming each project file exports a default object
+        return projectData.default;
+    });
+
+    // Example functional component to render projects
+    const Projects = ({ projects }) => {
+        return (
+            <div>
+                {projects.map((project) => (
+                    <div key={project.title}>
+                        <h3>{project.title}</h3>
+                        <p>{project.description}</p>
+                        {/* Add other project details as needed */}
+                    </div>
+                ))}
+            </div>
+        );
+    };
+
+    // Render your projects with the corresponding components
+    const SocialProjects = () => <Projects projects={socialProjects} />;
+    const UXUIProjects = () => <Projects projects={uxuiProjects} />;
+
+    const MotionProjects = () => <Projects projects={uxuiProjects} />;
+
+    const UXUI = ({ title, description, image }) => {
+        return (
+            <div className="mb-24">
+                <img src={image} alt={title} className="w-full mb-6 hover:animate-pulse" />
+                <h3 className="mb-2 text-xl font-bold dark:text-white">{title}</h3>
+                <p className="text-gray-500 dark:text-gray-400">{description}</p>
+            </div>
+        );
+    };
+    const Social = ({ title, description, image }) => {
+        return (
+            <div className="mb-24">
+                <img src={image} alt={title} className="w-full mb-6 hover:animate-pulse" />
+                <h3 className="mb-2 text-xl font-bold dark:text-white">{title}</h3>
+                <p className="text-gray-500 dark:text-gray-400">{description}</p>
+            </div>
+        );
+    };
+    const Motion = ({ title, description, image }) => {
+        return (
+            <div className="mb-24">
+                <img src={image} alt={title} className="w-full mb-6 hover:animate-pulse" />
+                <h3 className="mb-2 text-xl font-bold dark:text-white">{title}</h3>
+                <p className="text-gray-500 dark:text-gray-400">{description}</p>
+            </div>
+        );
+    };
 
     const tabs = [
         {
@@ -80,7 +110,7 @@ export default function Content() {
                         </Tab.List>
                         <Tab.Panels>
                             <Tab.Panel>
-                            <>
+                                <>
                                     <div class="flex flex-col">
                                         <div class="flex flex-wrap sm:flex-row flex-col py-24">
                                             <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0 dark:text-gray-100">UX/UI Projects</h1>
@@ -89,25 +119,48 @@ export default function Content() {
                                     </div>
                                     <div class="columns-1 lg:columns-2 lg:gap-24">
                                         {uxuiProjects.map((project, index) => (
-                                            <UXUI key={index} {...project} />
-                                        ))}</div>
-                                </>
-                            </Tab.Panel>
-                            <Tab.Panel>
-                                <>
-                                    <div class="flex flex-col">
-                                        <div class="flex flex-wrap sm:flex-row flex-col py-24">
-                                            <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0 dark:text-gray-100">Social media stuff</h1>
-                                            <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 dark:text-gray-400">Street art subway tile salvia four dollar toast bitters selfies quinoa yuccie synth meditation iPhone intelligentsia prism tofu. Viral gochujang bitters dreamcatcher.</p>
-                                        </div>
+                                            <Link key={index} to={`/projects/uxui/${project.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                                                <UXUI key={index} {...project} />
+                                            </Link>
+                                        ))}
                                     </div>
-                                    <div class="columns-1 lg:columns-2 lg:gap-24">
+                                    </>
+
+                                </Tab.Panel>
+                                <Tab.Panel>
+                                    <>
+                                        <div class="flex flex-col">
+                                            <div class="flex flex-wrap sm:flex-row flex-col py-24">
+                                                <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0 dark:text-gray-100">Social media stuff</h1>
+                                                <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 dark:text-gray-400">Street art subway tile salvia four dollar toast bitters selfies quinoa yuccie synth meditation iPhone intelligentsia prism tofu. Viral gochujang bitters dreamcatcher.</p>
+                                            </div>
+                                        </div>
+                                        <div class="columns-1 lg:columns-2 lg:gap-24">
+                                           
                                         {socialProjects.map((project, index) => (
-                                            <Social key={index} {...project} />
+                                            <Link key={index} to={`/projects/${project.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                                                <Social key={index} {...project} />
+                                            </Link>
                                         ))}</div>
-                                </>
-                            </Tab.Panel>
-                            <Tab.Panel>Content 3</Tab.Panel>
+                                    </>
+                                </Tab.Panel>
+                                <Tab.Panel>
+                                <>
+                                        <div class="flex flex-col">
+                                            <div class="flex flex-wrap sm:flex-row flex-col py-24">
+                                                <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0 dark:text-gray-100">Motion and VFX</h1>
+                                                <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 dark:text-gray-400">Street art subway tile salvia four dollar toast bitters selfies quinoa yuccie synth meditation iPhone intelligentsia prism tofu. Viral gochujang bitters dreamcatcher.</p>
+                                            </div>
+                                        </div>
+                                        <div class="columns-1 lg:columns-2 lg:gap-24">
+                                           
+                                        {motionProjects.map((project, index) => (
+                                            <Link key={index} to={`/projects/${project.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                                                <Motion key={index} {...project} />
+                                            </Link>
+                                        ))}</div>
+                                    </>
+                                </Tab.Panel>
                         </Tab.Panels>
                     </Tab.Group>
 
