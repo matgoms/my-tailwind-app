@@ -52,8 +52,7 @@ export default function Content() {
     // Render your projects with the corresponding components
     const SocialProjects = () => <Projects projects={socialProjects} />;
     const UXUIProjects = () => <Projects projects={uxuiProjects} />;
-
-    const MotionProjects = () => <Projects projects={uxuiProjects} />;
+    const MotionProjects = () => <Projects projects={motionProjects} />;
 
     const UXUI = ({ title, description, image }) => {
         return (
@@ -119,7 +118,7 @@ export default function Content() {
                                     </div>
                                     <div class="columns-1 lg:columns-2 lg:gap-24">
                                         {uxuiProjects.map((project, index) => (
-                                            <Link key={index} to={`/projects/uxui/${project.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                                            <Link key={index} to={`/projects/${project.title.toLowerCase().replace(/\s+/g, '-')}`}>
                                                 <UXUI key={index} {...project} />
                                             </Link>
                                         ))}

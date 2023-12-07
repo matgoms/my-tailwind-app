@@ -25,6 +25,9 @@ class Photos extends Component<AppProps, AppState> {
       // Add more items as needed
     ];
 
+
+
+    // TENTAR IMPORTAR AS IMAGENS LOCAIS PELO PHOTOSWIPE
     return (
       <div>
         <div className="bg-white dark:bg-slate-800">
