@@ -2,7 +2,7 @@ import Menu from "../components/Menu";
 import { HeroSmall } from "../components/Hero";
 import Content from "../components/Content";
 import Footer from "../components/Footer";
-
+import { ScrollRestoration } from "react-router-dom";
 
 
 

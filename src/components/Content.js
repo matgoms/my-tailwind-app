@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tab } from '@headlessui/react';
-import { Link } from 'react-router-dom';     
-
+import { Link } from 'react-router-dom';    
+import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react';
 
 export default function Content() {
     
@@ -95,7 +95,9 @@ export default function Content() {
 
                 <div class=" ">
                     <Tab.Group>
+                    
                         <Tab.List class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 flex flex-wrap -mb-px">
+                        
                             {tabs.map((tab, index) => (
                                 <>
                                     <Tab className={tab.classDefault}>UX/UI Design</Tab>
@@ -105,6 +107,7 @@ export default function Content() {
                                     <Tab className={tab.classDefault}>Motion/VFX</Tab>
                                 </>
                             ))}
+                            
                         </Tab.List>
                         <Tab.Panels>
                             <Tab.Panel>

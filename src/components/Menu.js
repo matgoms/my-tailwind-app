@@ -72,7 +72,7 @@ export default function Menu() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12 " >
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-md font-semibold leading-6 text-gray-900 dark:text-gray-400">
+            <Popover.Button className="flex items-center gap-x-1 text-md font-semibold leading-6 text-gray-900 dark:text-gray-400 focus:outline-none">
               Works
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400 dark:text-gray-400" aria-hidden="true" />
             </Popover.Button>
@@ -86,7 +86,7 @@ export default function Menu() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl shadow-2xl ring-1 ring-gray-900/10 bg-white dark:bg-slate-900">
+              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-xl shadow-lg ring-1 ring-gray-900/10 bg-white dark:bg-slate-900">
                 <div className="p-4">
                   {products.map((item) => (
                     <div
