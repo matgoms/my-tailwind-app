@@ -1,6 +1,6 @@
 import Menu from "../components/Menu";
 import { HeroBig } from "../components/Hero";
-import ImageFull from "../components/ImageFull";
+import Image2x from "../components/Image2x";
 import Feature from "../components/Feature";
 import Portfolio from "../components/Portfolio";
 import Footer from "../components/Footer";
@@ -10,7 +10,7 @@ export default function Home(){
         <div class="bg-white dark:bg-slate-800">
             <Menu />
             <HeroBig/>
-            <ImageFull />
+            <Image2x />
             <Feature />
             <Portfolio />
             <Footer />

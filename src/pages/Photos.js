@@ -1,8 +1,8 @@
 import Menu from "../components/Menu";
 import { HeroSmall } from "../components/Hero";
 import Footer from "../components/Footer";
-import React, { Component } from 'react';
-import { render } from 'react-dom';
+import React, { Component } from 'react';/* 
+import { render } from 'react-dom'; */
 import SimpleGallery from '../components/Gallery';
 
 

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Tab } from '@headlessui/react';
-import { Link } from 'react-router-dom';
-import classNames from 'classnames'
-
+import { Link } from 'react-router-dom';     
 
 
 export default function Content() {
+    
+
     const socialContext = require.context('../projects/social', false, /\.js$/);
     const uxuiContext = require.context('../projects/uxui', false, /\.js$/);
     const motionContext = require.context('../projects/motion-vfx', false, /\.js$/);
@@ -49,10 +49,10 @@ export default function Content() {
         );
     };
 
-    // Render your projects with the corresponding components
-    const SocialProjects = () => <Projects projects={socialProjects} />;
+    
+ /*    const SocialProjects = () => <Projects projects={socialProjects} />;
     const UXUIProjects = () => <Projects projects={uxuiProjects} />;
-    const MotionProjects = () => <Projects projects={motionProjects} />;
+    const MotionProjects = () => <Projects projects={motionProjects} />; */
 
     const UXUI = ({ title, description, image }) => {
         return (
@@ -89,7 +89,6 @@ export default function Content() {
     ]
 
     return (
-
         <section class="text-gray-600 body-font bg-slate-50 dark:bg-slate-900/50 py-8">
             <div class="max-w-screen-xl px-5 py-16 mx-auto">
 
@@ -118,6 +117,7 @@ export default function Content() {
                                     </div>
                                     <div class="columns-1 lg:columns-2 lg:gap-24">
                                         {uxuiProjects.map((project, index) => (
+                                            
                                             <Link key={index} to={`/projects/${project.title.toLowerCase().replace(/\s+/g, '-')}`}>
                                                 <UXUI key={index} {...project} />
                                             </Link>
@@ -168,7 +168,6 @@ export default function Content() {
 
             </div>
         </section>
-
     )
 
 }

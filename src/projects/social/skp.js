@@ -3,8 +3,10 @@
 
 const Skp = { 
     title: 'Schwarzkopf', 
+    year: '2018-2020',
     image: 'https://cdn.photoswipe.com/photoswipe-demo-images/photos/9/img-1500.jpg',
-    description: 'My design projects showcase companies and startups committed to simplifying bureaucracy, crafting user-friendly training apps, revealing ancestral stories through personalized platforms, and more.',
+    description: 'SKP TOP',
+    scope: 'Social Media Design, Photo Manipulation', 
     };
   
   
