@@ -207,8 +207,7 @@ const ProjectPage = () => {
                         <div className="mr-auto w-full lg:max-w-screen-2xl py-3 lg:py-16 mx-auto">
                           <iframe
                             src={
-                              content.canva +
-                              "%26scaling%3Dscale-down-width%26page-id%3D0%253A1%26mode%3Ddesign&hide-ui=1"
+                              content.canva
                             }
                             allowfullscreen
                             class="w-full"
