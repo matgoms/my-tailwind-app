@@ -1,7 +1,7 @@
 export default function Footer() {
     return(
 <footer class="bg-white dark:bg-slate-900">
-    <div class="mx-auto max-w-7xl p-4 py-6 lg:py-24">
+    <div class="mx-auto max-w-7xl p-6 lg:p-0 py-6 lg:py-24">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
               <a href="/home" class="flex items-center">
