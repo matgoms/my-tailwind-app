@@ -1,13 +1,14 @@
 import React from 'react';
 
 const ImageFull = ({ image, altText }) => {
+
   return (
   <>
-  <section>
-        <div class="w-full ">
-            <figure>
-                <div alt={altText} className='w-full bg-cover bg-fixed lg:h-[54rem] h-[32rem]' style={{backgroundImage: `url(${image})`}}/>
-            </figure>
+  <section className='w-full'>
+        <div class="relative w-full lg:h-[100vh] h-[100vh]">
+                <div alt={altText} id="HeroSection" className='content-[""] w-full 2xl:bg-fixed bg-scroll block bg-cover bg-bottom bg-no-repeat -z-10 top-0 left-0 h-full' style={{backgroundImage: `url(${image})`}}/>
+                
+
         </div>
     
 </section>

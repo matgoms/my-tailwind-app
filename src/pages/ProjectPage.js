@@ -54,10 +54,11 @@ const ProjectPage = () => {
   }
 
   return (
-    <div class="bg-white dark:bg-slate-800">
-      <Menu />
+    <div>
+     <Menu/>
       <ImageFull image={project.image} altText={project.title} />
-      <div class="mx-auto max-w-screen-xl py-16 px-6 xl:px-0 lg:gap-8 xl:gap-8 lg:pt-32">
+      <div class="bg-white dark:bg-slate-800">
+      <div class=" mx-auto max-w-screen-xl py-16 px-6 2xl:px-0 lg:gap-8 xl:gap-8 lg:pt-32">
         <div class="d-block lg:grid grid-cols-1 lg:grid-cols-5">
           <div class="max-w-screen-md mb-8 lg:mb-16 col-span-4">
             <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-gray-900 dark:text-white">
@@ -79,7 +80,7 @@ const ProjectPage = () => {
               </>
             )}
           </div>
-          <div class="max-w-screen-md mb-8 lg:mb-16 lg:mb-16">
+          <div class="max-w-screen-md mb-8 lg:mb-16">
             <h3 class="mb-4 text-gray-500 dark:text-gray-400">
               <label class="font-bold text-gray-900 dark:text-gray-200">
                 Year:
@@ -106,7 +107,7 @@ const ProjectPage = () => {
       </div>
       <hr class="border-gray-200 mx-auto dark:border-gray-700" />
 
-      <div class="mx-auto w-full mt-8 lg:mt-24 mb-32 lg:mb-32 px-6 xl:px-0 ">
+      <div class="bg-white dark:bg-slate-800 mx-auto w-full mt-8 lg:mt-24 mb-32 lg:mb-32 px-6 xl:px-0 ">
         <div class="flex justify-between mx-auto ">
           <article class="mx-auto w-full">
             {project.contents &&
@@ -225,8 +226,9 @@ const ProjectPage = () => {
           </article>
         </div>
       </div>
-
+      
       <Footer />
+      </div>
     </div>
   );
 };
