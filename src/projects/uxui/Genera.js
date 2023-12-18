@@ -2,7 +2,8 @@ const Genera = {
   title: "Genera",
   year: "2022",
   link: "genera.com.br",
-  image: "https://i.imgur.com/kWCpFrT.jpg",
+  color: "bg-red-600 dark:bg-red-800",
+  image: "https://i.imgur.com/3bFJGsf.png",
   description:
     "Genera is a pioneering Brazilian genetics laboratory in the genomic medicine segment, offering a personalized platform for ancestry, health and well-being testing.",
   scope: "User Interface, User Experience",

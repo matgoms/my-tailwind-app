@@ -10,7 +10,7 @@ import {
   MoonIcon,
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-
+var tema = localStorage.getItem("color-theme");
 const products = [
   {
     name: "Design",
@@ -36,21 +36,39 @@ function classNames(...classes) {
 }
 
 export default function Menu() {
-  useEffect(() => {
-    const tema = localStorage.getItem("color-theme");
+  const [theme, setTheme] = useState(
+    localStorage.getItem("color-theme") || "light"
+  );
 
-    if (tema === "dark") {
+  useEffect(() => {
+    if (theme === "dark") {
       document.documentElement.classList.add("dark");
-      document.getElementById("light").classList.remove("hidden");
-    } else if (tema === "light") {
-      document.documentElement.classList.add("light");
-      document.getElementById("dark").classList.remove("hidden");
+      document.documentElement.classList.remove("light");
     } else {
+      setTheme("light");
       localStorage.setItem("color-theme", "light");
       document.documentElement.classList.add("light");
-      document.getElementById("dark").classList.remove("hidden");
+      document.documentElement.classList.remove("dark");
     }
-  }, []); // Empty dependency array ensures that this effect runs once when the component mounts
+  }, []);
+
+  const handleThemeClick = () => {
+    try {
+      if (theme === "dark") {
+        document.documentElement.classList.add("light");
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("color-theme", "light");
+        setTheme("light");
+      } else {
+        document.documentElement.classList.add("dark");
+        document.documentElement.classList.remove("light");
+        localStorage.setItem("color-theme", "dark");
+        setTheme("dark");
+      }
+    } catch (error) {
+      console.error("Error setting theme in local storage:", error);
+    }
+  };
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -151,16 +169,16 @@ export default function Menu() {
           </a>
 
           <SunIcon
-            className="h-6 w-6 text-gray-400 cursor-pointer hidden"
+            className="h-6 w-6 text-gray-400 cursor-pointer hidden dark:block"
             aria-hidden="true"
             id="light"
-            onClick={() => Light()}
+            onClick={handleThemeClick}
           />
           <MoonIcon
-            className="h-6 w-6 cursor-pointer hidden"
+            className="h-6 w-6 cursor-pointer dark:hidden block"
             aria-hidden="true"
             id="dark"
-            onClick={() => Dark()}
+            onClick={handleThemeClick}
           />
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -181,6 +199,23 @@ export default function Menu() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:bg-slate-800">
           <div className="flex items-center justify-between ">
+            {mobileMenuOpen ? (
+              <div>
+                <SunIcon
+                  className="h-6 w-6 text-gray-400 cursor-pointer hidden dark:block"
+                  aria-hidden="true"
+                  id="lightmobile"
+                  onClick={handleThemeClick}
+                />
+                <MoonIcon
+                  className="h-6 w-6 cursor-pointer dark:hidden block"
+                  aria-hidden="true"
+                  id="darkmobile"
+                  onClick={handleThemeClick}
+                />
+              </div>
+            ) : null}
+
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
@@ -204,7 +239,7 @@ export default function Menu() {
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 dark:hover:bg-slate-700 text-base dark:text-gray-400 hover:bg-slate-50">
+                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 font-semibold leading-7 text-gray-900 dark:hover:bg-slate-700 text-base dark:text-gray-400 hover:bg-slate-50">
                         Works
                         <ChevronDownIcon
                           className={classNames(
@@ -252,11 +287,11 @@ export default function Menu() {
   );
 }
 
-var tema = localStorage.getItem("color-theme");
+/* 
 
 function Dark() {
-  tema = localStorage.getItem("color-theme"); // Obter o valor atualizado
-
+  tema = localStorage.getItem("color-theme");
+alert();
   if (tema === "light") {
     document.getElementById("dark").style.display = "none";
     document.getElementById("light").style.display = "block";
@@ -265,8 +300,10 @@ function Dark() {
     localStorage.setItem("color-theme", "dark");
   }
 }
+
 function Light() {
-  tema = localStorage.getItem("color-theme"); // Obter o valor atualizado
+  alert('light');
+  tema = localStorage.getItem("color-theme");
 
   if (tema === "dark") {
     document.getElementById("dark").style.display = "block";
@@ -276,3 +313,27 @@ function Light() {
     localStorage.setItem("color-theme", "light");
   }
 }
+
+
+function DarkMobile() {
+  tema = localStorage.getItem("color-theme");
+alert();
+    document.getElementById("dark").style.display = "none";
+    document.getElementById("light").style.display = "block";
+    document.documentElement.classList.toggle("dark");
+    document.documentElement.classList.toggle("light");
+    localStorage.setItem("color-theme", "dark");
+
+}
+
+function LightMobile() {
+  alert('light');
+  tema = localStorage.getItem("color-theme");
+
+    document.getElementById("dark").style.display = "block";
+    document.getElementById("light").style.display = "none";
+    document.documentElement.classList.toggle("dark");
+    document.documentElement.classList.toggle("light");
+    localStorage.setItem("color-theme", "light");
+  
+} */

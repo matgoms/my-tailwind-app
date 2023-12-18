@@ -46,9 +46,6 @@ const ProjectPage = () => {
       (p) => p.title.toLowerCase().replace(/\s+/g, "-") === projectName
     );
 
-  // Log information for debugging
-  console.log("Selected Project:", project);
-
   if (!project) {
     return <div>Project not found!</div>;
   }
@@ -56,7 +53,7 @@ const ProjectPage = () => {
   return (
     <div>
      <Menu/>
-      <ImageFull image={project.image} altText={project.title} />
+      <ImageFull image={project.image} altText={project.title} color={project.color}/>
       <div class="bg-white dark:bg-slate-800">
       <div class=" mx-auto max-w-screen-xl py-16 px-6 2xl:px-0 lg:gap-8 xl:gap-8 lg:pt-32">
         <div class="d-block lg:grid grid-cols-1 lg:grid-cols-5">

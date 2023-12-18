@@ -55,13 +55,13 @@ export default function Content() {
     const UXUIProjects = () => <Projects projects={uxuiProjects} />;
     const MotionProjects = () => <Projects projects={motionProjects} />; */
 
-  const UXUI = ({ title, description, image }) => {
+  const UXUI = ({ title, description, image, color }) => {
     return (
       <div className="mb-24">
         <img
           src={image}
           alt={title}
-          className="transition ease-in duration-300 hover:opacity-80 hover:-translate-y-4 w-full mb-6 hover:saturate-[.3] min-h-[30rem] object-cover object-center"
+          className={`transition ease-in duration-300 hover:opacity-80 hover:-translate-y-4 w-full mb-6 hover:saturate-[.3] min-h-[30rem] object-cover object-center ${color}`}
         />
         <h3 className="mb-2 text-xl font-bold dark:text-white">{title}</h3>
         <p className="text-gray-500 dark:text-gray-400">{description}</p>
