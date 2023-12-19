@@ -10,7 +10,6 @@ import {
   MoonIcon,
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-var tema = localStorage.getItem("color-theme");
 const products = [
   {
     name: "Design",
@@ -35,12 +34,14 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Menu() {
+const Menu = ({ className }) => {
+  
   const [theme, setTheme] = useState(
     localStorage.getItem("color-theme") || "light"
   );
 
   useEffect(() => {
+    
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
       document.documentElement.classList.remove("light");
@@ -73,7 +74,7 @@ export default function Menu() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white dark:bg-slate-800">
+    <header className={`${className} text-slate-800 dark:text-white `}>
       <nav
         className="mx-auto flex max-w-7xl lg:py-10 items-center justify-between p-6"
         aria-label="Global"
@@ -82,7 +83,7 @@ export default function Menu() {
           <a href="/home" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
-              className="h-8 w-auto"
+              className="h-10 w-auto dark:brightness-200"
               src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
               alt=""
             />
@@ -91,7 +92,7 @@ export default function Menu() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-400"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 "
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -100,10 +101,10 @@ export default function Menu() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12 ">
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-md focus:outline-none font-semibold leading-6 text-gray-900 dark:text-gray-400">
+            <Popover.Button className="flex items-center gap-x-1 text-lg focus:outline-none font-semibold leading-6">
               Works
               <ChevronDownIcon
-                className="h-5 w-5 flex-none text-gray-400 dark:text-gray-400"
+                className="h-5 w-5 flex-none "
                 aria-hidden="true"
               />
             </Popover.Button>
@@ -126,19 +127,19 @@ export default function Menu() {
                     >
                       <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-slate-50 group-hover:bg-white">
                         <item.icon
-                          className="h-6 w-6 text-gray-600  group-hover:text-indigo-600"
+                          className="h-6 w-6 text-gray-600  group-hover:text-slate-600"
                           aria-hidden="true"
                         />
                       </div>
                       <div className="flex-auto">
                         <a
                           href={item.href}
-                          className="block font-semibold text-gray-900 dark:text-white"
+                          className="block text-lg font-semibold text-gray-900 dark:text-white"
                         >
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
-                        <p className="text-sm mt-1 text-gray-600 dark:text-gray-400">
+                        <p className="text-md mt-1 text-gray-600 dark:text-gray-400">
                           {item.description}
                         </p>
                       </div>
@@ -163,13 +164,13 @@ export default function Menu() {
 
           <a
             href="/about"
-            className="text-md font-semibold leading-6 text-gray-900 dark:text-gray-400"
+            className="text-lg font-semibold leading-6"
           >
             About me
           </a>
 
           <SunIcon
-            className="h-6 w-6 text-gray-400 cursor-pointer hidden dark:block"
+            className="h-6 w-6 cursor-pointer hidden dark:block"
             aria-hidden="true"
             id="light"
             onClick={handleThemeClick}
@@ -184,7 +185,7 @@ export default function Menu() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
             href="#"
-            className="text-md font-semibold leading-6 text-gray-900 dark:text-gray-400"
+            className="text-lg font-semibold leading-6 "
           >
             Contact <span aria-hidden="true">&rarr;</span>
           </a>
@@ -197,7 +198,7 @@ export default function Menu() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:bg-slate-800">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:bg-slate-800 text-base">
           <div className="flex items-center justify-between ">
             {mobileMenuOpen ? (
               <div>
@@ -239,7 +240,7 @@ export default function Menu() {
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 font-semibold leading-7 text-gray-900 dark:hover:bg-slate-700 text-base dark:text-gray-400 hover:bg-slate-50">
+                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 font-semibold  leading-7 text-gray-900 dark:hover:bg-slate-700 dark:text-gray-400 hover:bg-slate-50">
                         Works
                         <ChevronDownIcon
                           className={classNames(
@@ -287,3 +288,4 @@ export default function Menu() {
   );
 }
 
+export default Menu;

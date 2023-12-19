@@ -18,8 +18,8 @@ export default function SimpleGallery(props) {
   }, []);
 
   return (
-    <section class="text-gray-600 body-font bg-slate-50 dark:bg-slate-900/50 py-16 lg:py-8">
-    <div class="max-w-screen-xl px-5 py-6 mx-auto columns-1 lg:columns-3 lg:gap-16">
+    <section class="text-gray-600 body-font bg-slate-50 dark:bg-slate-900/50 py-8 lg:py-16">
+    <div class="max-w-screen-2xl px-5 py-6 mx-auto columns-1 lg:columns-3 lg:gap-16 my-8 lg:my-16">
 
     <div className="pswp-gallery " id={props.galleryID}>
       {props.images.map((image, index) => (
@@ -31,7 +31,7 @@ export default function SimpleGallery(props) {
           target="_blank"
           rel="noreferrer"
         >
-          <img src={image.largeURL} alt="" class="w-full py-3 lg:py-16" />
+          <img src={image.largeURL} alt="" class="w-full mb-6 lg:mb-16" />
         </a>
       ))}
     </div>

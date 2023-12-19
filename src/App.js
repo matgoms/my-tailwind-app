@@ -5,6 +5,8 @@ import Projects from "./pages/Projects";
 import Photos from "./pages/Photos";
 import About from "./pages/About";
 import ProjectPage from './pages/ProjectPage';
+import RecentProjects from './pages/recentprojects';
+
 export default function App(){
     return(
         <div>
@@ -16,7 +18,7 @@ export default function App(){
                 <Route path="/projects" element={<Projects/>}/>
                 <Route path="/photos" element={<Photos/>}/>
                 <Route path="/about" element={<About/>}/>
-                <Route path="/projects/:projectName" element={<ProjectPage />} />
+                <Route path="/projects/:projectName" element={<ProjectPage />}/>
                 
             </Routes>
             </BrowserRouter>
