@@ -27,7 +27,7 @@ const RecentProjects = () => {
           Here are a few projects I've completed recently.
           </p>
         </div>
-        <div class="grid gap-8 lg:grid-cols-3 gap-24">
+        <div class="grid lg:grid-cols-3 gap-24">
           {recentProjects.map((project) => (
             <div key={project.id}>
               {/* Render project details */}
