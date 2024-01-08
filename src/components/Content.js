@@ -93,7 +93,7 @@ export default function Content() {
                   <img
                     src={content.Img}
                     alt={title}
-                    className="transition ease-in duration-300 hover:opacity-80 rounded-2xl border-gray-200 border-[1px] w-full mb-24 object-fit object-center"
+                    className="transition ease-in duration-300 opacity-80 hover:opacity-100 rounded-2xl hover:border-gray-200 border-transparent border-[1px] w-full mb-24 object-fit object-center"
                   />
                 </>
               )}

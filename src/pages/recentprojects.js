@@ -1,20 +1,32 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const RecentProjects = () => {
+const RecentProjects = ({ currentProject }) => {
  
   // Use require.context to dynamically import all files within './projects'
   const projectsContext = require.context("../projects", true, /\.js$/);
 
-  // Get an array of all project file paths
-  const projectFilePaths = projectsContext.keys();
+ // Get an array of all project file paths
+ const projectFilePaths = projectsContext.keys();
+ const excludedProjects = ['./social/social-posts.js', currentProject];
+ 
 
-  // Import each project dynamically
-  const recentProjects = projectFilePaths.map((filePath) => {
-    const projectData = projectsContext(filePath);
-    // Assuming each project file exports a default object
-    return projectData.default;
-  });
+ // Exclude a specific project file (adjust the filename as needed)
+  const filteredFilePaths = projectFilePaths.filter(
+    (project) => !excludedProjects.includes(project) && project !== currentProject
+  );
+   
+
+
+ // Import each project dynamically
+ const recentProjects = filteredFilePaths.map((project) => {
+   const projectData = projectsContext(project);
+   // Assuming each project file exports a default object
+   return projectData.default;
+
+});
+
+
 
   return (
     <section class="bg-slate-50 dark:bg-slate-800">

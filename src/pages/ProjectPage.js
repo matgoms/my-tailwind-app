@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState  } from "react";
 import { useParams } from "react-router-dom";
 import Menu from "../components/Menu";
 /* import { SocialProjects, UXUIProjects, MotionProjects } from '../components/Content'; // Import projects directly */
@@ -7,20 +7,16 @@ import Footer from "../components/Footer";
 import { LinkIcon } from "@heroicons/react/24/outline";
 import RecentProjects from "./recentprojects";
 
+
 // Use require.context to dynamically import all files within './projects'
-const socialContext = require.context("../projects/social", false, /\.js$/);
 const uxuiContext = require.context("../projects/uxui", false, /\.js$/);
 const motionContext = require.context("../projects/motion-vfx", false, /\.js$/);
 
 // Get an array of all project file paths
-const socialFilePaths = socialContext.keys();
 const uxuiFilePaths = uxuiContext.keys();
 const motionFilePaths = motionContext.keys();
 
 // Import each project dynamically
-const socialProjects = socialFilePaths.map(
-  (filePath) => socialContext(filePath).default
-);
 const uxuiProjects = uxuiFilePaths.map(
   (filePath) => uxuiContext(filePath).default
 );
@@ -28,21 +24,45 @@ const motionProjects = motionFilePaths.map(
   (filePath) => motionContext(filePath).default
 );
 
+
+
+
 const ProjectPage = () => {
  
   const { projectName } = useParams();
+  const [projectFolder, setProjectFolder] = useState('');
 
  useEffect(() => {
+
+  const checkFilePath = (filePath, folder) => {
+    const lowerCaseFilePath = filePath.toLowerCase();
+    return lowerCaseFilePath.includes(folder.toLowerCase());
+  };
+    
+  const findProjectFolder = (projectName) => {
+    const isFoundInUxui = uxuiFilePaths.some((filePath) => checkFilePath(filePath, projectName));
+    const isFoundInMotionVfx = motionFilePaths.some((filePath) => checkFilePath(filePath, projectName));
+
+    if (isFoundInUxui) {
+      return 'uxui';
+    } else if (isFoundInMotionVfx) {
+      return 'motion-vfx';
+    } else {
+      return 'Pasta não encontrada';
+    }
+  };
+
+  const projectFolder = findProjectFolder(projectName);
+  setProjectFolder(projectFolder);
+  console.log(`O arquivo ${projectName} está localizado em: ${projectFolder}`);
+
     // Scroll to the top when the component mounts or the projectName changes
     window.scrollTo(0, 0);
   }, [projectName]);
 
   // Find the corresponding project based on the title (not an id)
   const project =
-    socialProjects.find(
-      (p) => p.title.toLowerCase().replace(/\s+/g, "-") === projectName
-    ) ||
-    uxuiProjects.find(
+   uxuiProjects.find(
       (p) => p.title.toLowerCase().replace(/\s+/g, "-") === projectName
     ) ||
     motionProjects.find(
@@ -249,8 +269,8 @@ const ProjectPage = () => {
         </div>
 
         
-             <RecentProjects />
-     
+             <RecentProjects currentProject={`./${projectFolder}/${projectName}.js`}/>
+    
         
         <Footer />
       </div>
