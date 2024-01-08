@@ -18,6 +18,9 @@ export default function Content() {
   const motionFilePaths = motionContext.keys();
 
   // Import each project dynamically
+
+ 
+
   const socialProjects = socialFilePaths.map((filePath) => {
     const projectData = socialContext(filePath);
     // Assuming each project file exports a default object
@@ -68,16 +71,34 @@ export default function Content() {
       </div>
     );
   };
-  const Social = ({ title, description, image }) => {
+
+
+  const Social = ({ contents, title }) => {
+    const shuffleArray = (array) => {
+      let shuffledArray = array.slice();
+      for (let i = shuffledArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+      }
+      return shuffledArray;
+    };
+   //guarde, comprint, lello, veni, dne, pp, skp, fera, andre, goodi,  //
     return (
       <div className="mb-24">
-        <img
-          src={image}
-          alt={title}
-          className="transition ease-in duration-300 hover:opacity-80 hover:-translate-y-4 w-full mb-6 hover:saturate-[.3] min-h-[30rem] object-cover object-center"
-        />
-        <h3 className="mb-2 text-xl font-bold dark:text-white">{title}</h3>
-        <p className="text-gray-500 dark:text-gray-400">{description}</p>
+        {contents &&
+         shuffleArray(contents).map((content, index) => (
+            <div key={index}>
+              {content.Img && (
+                <>
+                  <img
+                    src={content.Img}
+                    alt={title}
+                    className="transition ease-in duration-300 hover:opacity-80 rounded-2xl border-gray-200 border-[1px] w-full mb-24 object-fit object-center"
+                  />
+                </>
+              )}
+            </div>
+          ))}
       </div>
     );
   };
@@ -163,16 +184,9 @@ export default function Content() {
                       </p>
                     </div>
                   </div>
-                  <div class="columns-1 lg:columns-2 lg:gap-24">
+                  <div class="columns-1 lg:columns-3 lg:gap-24">
                     {socialProjects.map((project, index) => (
-                      <Link
-                        key={index}
-                        to={`/projects/${project.title
-                          .toLowerCase()
-                          .replace(/\s+/g, "-")}`}
-                      >
-                        <Social key={index} {...project} />
-                      </Link>
+                      <Social key={index} {...project} />
                     ))}
                   </div>
                 </>
