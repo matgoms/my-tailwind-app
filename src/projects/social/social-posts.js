@@ -1,87 +1,89 @@
 
 const Social = { 
     title: 'Social Media',  
+    image: 'https://i.imgur.com/0krS9Dv.png',  
+    description: "Genera is a pioneering Brazilian genetics laboratory in the genomic medicine segment, offering a personalized platform for ancestry, health and well-being testing.",
     contents: [
         //paypal
         {
-            Img: 'https://i.imgur.com/996n26c.png'
+            Img: 'https://i.imgur.com/0krS9Dv.png'
         },
         {
-            Img: 'https://i.imgur.com/hDdqH3e.png'
+            Img: 'https://i.imgur.com/OYgIPCr.png'
         },
         {
-            Img: 'https://i.imgur.com/0b8xcc0.png'
+            Img: 'https://i.imgur.com/nieTHBv.png'
         },
         {
-            Img: 'https://i.imgur.com/DOq6r71.png'
+            Img: 'https://i.imgur.com/6KH04Bk.png'
         },
         {
-            Img: 'https://i.imgur.com/w4XEYPv.png'
+            Img: 'https://i.imgur.com/8Cz3VLb.png'
         },
 
         //lello
         {
-            Img: 'https://i.imgur.com/8P2tiOx.png'
+            Img: 'https://i.imgur.com/2XGF5il.png'
         },
         {
-            Img: 'https://i.imgur.com/wLcEDH1.png'
+            Img: 'https://i.imgur.com/ywPaszG.png'
         },
         {
-            Img: 'https://i.imgur.com/nijUN3b.png'
+            Img: 'https://i.imgur.com/kOdOmBC.png'
         },
         //veni
         {
-            Img: 'https://i.imgur.com/M94BUcu.png'
+            Img: 'https://i.imgur.com/XilLSpG.png'
         },
         //comprint
         {
-            Img: 'https://i.imgur.com/T9dySbk.png'
+            Img: 'https://i.imgur.com/Vy1BFox.png'
         },
         {
-            Img: 'https://i.imgur.com/BWGC4hh.png'
+            Img: 'https://i.imgur.com/CjOYVmM.png'
         },
         //guarde
         {
-            Img: 'https://i.imgur.com/bMpcWra.png'
+            Img: 'https://i.imgur.com/AqPxrZL.png'
         },
         //fera
         {
-            Img: 'https://i.imgur.com/CrosZLG.png'
+            Img: 'https://i.imgur.com/BmpIK6c.png'
         },
         //dede
         {
-            Img: 'https://i.imgur.com/uwXj7TE.png'
+            Img: 'https://i.imgur.com/JOcEcEc.png'
         },
         //goodi
         {
-            Img: 'https://i.imgur.com/e6SxfDB.png'
+            Img: 'https://i.imgur.com/J1uETag.png'
         },
         {
-            Img: 'https://i.imgur.com/Eux8zPh.png'
+            Img: 'https://i.imgur.com/pySLu2z.png'
         },
         //dne
         {
-            Img: 'https://i.imgur.com/Cp9gegV.png'
+            Img: 'https://i.imgur.com/uDofcfh.png'
         },
         {
-            Img: 'https://i.imgur.com/3Hh3Xb4.png'
+            Img: 'https://i.imgur.com/PjnidYH.png'
         },
         
         //skp
         {
-            Img: 'https://i.imgur.com/u4SHzcR.png'
+            Img: 'https://i.imgur.com/MbwxRdW.png'
         },
         {
-            Img: 'https://i.imgur.com/Y76QCGS.png'
+            Img: 'https://i.imgur.com/QQ7xVw9.png'
         },
         {
-            Img: 'https://i.imgur.com/C0zWxVE.png'
+            Img: 'https://i.imgur.com/feNULLZ.png'
         },
         {
-            Img: 'https://i.imgur.com/mRGDnDx.png'
+            Img: 'https://i.imgur.com/kkzPBtr.png'
         },
         {
-            Img: 'https://i.imgur.com/fX0gmhM.png'
+            Img: 'https://i.imgur.com/U1gRcTX.png'
         },
     ]
 
