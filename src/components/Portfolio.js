@@ -36,7 +36,7 @@ export default function Portfolio() {
           </div>
           <div class="columns-1 lg:columns-3 lg:gap-24">
             <Link
-              to={`/projects`}
+              to={`/projects`} state={{category: "social" }}
             >
               <img
                 src={socialProject.image}
@@ -55,7 +55,7 @@ export default function Portfolio() {
             </Link>
 
             <Link
-              to={`/projects`}
+              to={`/projects`} state={{category: "motion" }}
             >
               <img
                 src={motionProject.image}
@@ -73,7 +73,7 @@ export default function Portfolio() {
               </div>
             </Link>
             <Link
-              to={`/projects`}
+              to={`/projects`} state={{category: "design" }}
             >
               <img
                 src={uxuiProject.image}

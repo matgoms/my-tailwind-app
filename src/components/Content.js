@@ -1,6 +1,8 @@
-import React from "react";
-import { Tab } from "@headlessui/react";
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { Tab, TabList, TabPanel, Tabs } from '@headlessui/react';
 import { Link } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 
 export default function Content() {
@@ -41,6 +43,7 @@ export default function Content() {
 
   // Example functional component to render projects
   const Projects = ({ projects }) => {
+    
     return (
       <div>
         {projects.map((project) => (
@@ -123,11 +126,42 @@ export default function Content() {
     },
   ];
 
+  const location = useLocation();
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
+
+  const handleTabChange = (index) => {
+    setActiveTabIndex(index);
+  };
+
+  useEffect(() => {
+    // Atualiza o estado da guia com base nos dados do estado da localização
+    const categoryFromState = location.state?.category;
+
+    switch (categoryFromState) {
+      case 'social':
+        setActiveTabIndex(1);
+        break;
+      case 'design':
+        setActiveTabIndex(0);
+        break;
+      case 'motion':
+        setActiveTabIndex(2);
+        break;
+      // Adicione mais casos conforme necessário
+
+      // O caso padrão será 'social' se nenhum estado de categoria for fornecido
+      default:
+        setActiveTabIndex(0);
+        break;
+    }
+    window.scrollTo(0, 0);
+  }, [location.state]);
+
   return (
     <section class="text-gray-600 body-font bg-slate-50 dark:bg-slate-900/50 py-8">
       <div class="max-w-screen-xl px-5 py-16 mx-auto">
         <div class=" ">
-          <Tab.Group>
+          <Tab.Group selectedIndex={activeTabIndex} onChange={handleTabChange}>
             <Tab.List class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 flex flex-wrap -mb-px ">
               {tabs.map((tab, index) => (
                 <>
