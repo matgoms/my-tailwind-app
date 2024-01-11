@@ -1,55 +1,72 @@
+import {
+    EnvelopeIcon,
+    CameraIcon,
+    PaintBrushIcon,
+    XMarkIcon,
+    SunIcon,
+    MoonIcon,
+  } from "@heroicons/react/24/outline";
+
 export default function Footer() {
     return(
 <footer class="bg-white dark:bg-slate-900">
-    <div class="mx-auto max-w-7xl px-6 2xl:px-0 py-16 lg:py-24">
-        <div class="md:flex md:justify-between">
-          <div class="mb-6 md:mb-0">
-              <a href="/home" class="flex items-center">
+    <div class="mx-auto max-w-7xl px-6 2xl:px-0 py-16 lg:pt-24">
+        <div class="lg:flex md:justify-between">
+          <div class="mb-16 lg:mb-6">
+              <a href="/" class="flex items-center">
               <img className="h-8 w-auto me-2" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
                   <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Matheus Gomes</span>
               </a>
           </div>
-          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-              <div>
+          <div class="lg:grid grid-cols-1 gap-24 lg:grid-cols-2">
+          <div class="lg:inline-flex gap-24">
+              <div class="mb-16 lg:mb-6">
                   <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Explore</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
                       <li class="mb-4">
-                          <a href="/home" class="hover:underline">Home</a>
+                          <a href="/" class="hover:underline">Home</a>
                       </li>
                       <li  class="mb-4">
-                          <a href="/about" class="hover:underline">About</a>
+                          <a href="/about" class="hover:underline">About me</a>
                       </li>
                       <li class="mb-4">
                           <a href="/projects" class="hover:underline">Design Projects</a>
                       </li>
-                      <li class="mb-4">
+                      <li class="">
                           <a href="/photos" class="hover:underline">Photography</a>
                       </li>
-                      <li  class="mb-4">
-                          <a href="/contact" class="hover:underline">Contact</a>
+                  </ul>
+              </div>
+              <div class="mb-16 lg:mb-6">
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow me</h2>
+                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                      
+                      
+                      <li class="mb-4">
+                          <a href="https://be.net/matgoms" class="hover:underline ">Behance</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="https://dribbble.com/matgoms" class="hover:underline">Dribbble</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="https://instagram.com/matgoms" class="hover:underline">Instagram</a>
+                      </li>
+                      <li class="">
+                          <a href="https://linkedin.com/in/matgoms" class="hover:underline ">Linkedin</a>
                       </li>
                   </ul>
               </div>
-              <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
-                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                      <li class="mb-4">
-                          <a href="https://github.com/themesberg/Matheus Gomes" class="hover:underline ">Github</a>
-                      </li>
-                      <li>
-                          <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
-                      </li>
-                  </ul>
               </div>
-              <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+              <div class="mb-16 lg:mb-6">
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                      <li class="mb-4">
-                          <a href="#" class="hover:underline">Privacy Policy</a>
+                      <li class="mb-4 ">
+                          <a href="mailto:matgoms@gmail.com" class="hover:underline cursor-pointer inline-flex"> <EnvelopeIcon className="h-6 w-6 me-2"/>matgoms@gmail.com</a>
                       </li>
-                      <li>
-                          <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                      <li class="">
+                      or fill the forms at the  <a href="/contact" class="hover:no-underline underline cursor-pointer inline-flex">contact page</a>
                       </li>
+                     
                   </ul>
               </div>
           </div>

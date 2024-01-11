@@ -96,7 +96,7 @@ export default function Content() {
                   <img
                     src={content.Img}
                     alt={title}
-                    className="transition ease-in duration-300  rounded-2xl outline-slate-300 hover:outline-offset-[8px] transition-all ease-in duration-75  dark:hover:outline-slate-600 dark:outline-slate-700 outline-1 outline w-full mb-24 object-fit object-center"
+                    className="transition  rounded-2xl outline-slate-300 hover:outline-offset-[8px] transition-all ease-in duration-75  dark:hover:outline-slate-600 dark:outline-slate-700 outline-1 outline w-full mb-24 object-fit object-center"
                   />
                 </>
               )}
@@ -154,7 +154,7 @@ export default function Content() {
         setActiveTabIndex(0);
         break;
     }
-    window.scrollTo(0, 0);
+    
   }, [location.state]);
 
   return (
@@ -218,7 +218,7 @@ export default function Content() {
                       </p>
                     </div>
                   </div>
-                  <div class="columns-1 lg:columns-3 lg:gap-24">
+                  <div class="columns-1 md:columns-2 lg:columns-3 md:gap-24">
                     {socialProjects.map((project, index) => (
                       <Social key={index} {...project} />
                     ))}

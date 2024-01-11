@@ -23,12 +23,12 @@ export function HeroBig() {
   return (
    <>
     <section>
-    <div class="grid gap-16 max-w-screen-xl px-4 py-16 mx-auto lg:grid lg:grid-cols-2 lg:py-24 lg:px-6 lg:grid-cols-2">
+    <div class="grid gap-16 max-w-screen-xl px-4 py-16 mx-auto lg:grid lg:grid-cols-2 lg:py-24 lg:px-6">
         <div class="mr-auto place-self-center">
             <h1 class="max-w-2xl my-6 text-5xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-8xl dark:text-gray-100">Welcome to my portfolio!</h1>
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
             <p class="max-w-2xl mb-6 mt-6 font-body text-gray-500 lg:mb-8 md:text-lg lg:text-3xl dark:text-gray-400">I'm a 26-years-old photographer, adventurer, art enthusiast and designer. Hope you enjoy it.</p>
-            <a href="/about" class="text-lg inline-flex items-center justify-center text-base font-medium text-center text-dark dark:text-gray-400">
+            <a href="/about" class="text-lg inline-flex items-center justify-center font-medium text-center text-dark dark:text-gray-400">
             Discover more about me
                 <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </a>
@@ -48,11 +48,13 @@ export function HeroBig() {
 }
 
 
-const Title = ({ title, description }) => (
+const Title = ({ title, description, image }) => (
   <>
+    <div className="grid gap-16 max-w-screen-xl px-4 py-16 mx-auto lg:grid lg:grid-cols-3 lg:py-16 lg:px-6 lg:gap-24">
+        <div className="col-span-2 mr-auto place-self-center">
     {title && (
       <div key={title} className="">
-        <dt className="max-w-2xl my-6 text-5xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-7xl dark:text-gray-100">
+        <dt className="max-w-2xl my-6 text-5xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-7xl dark:text-gray-100 text-balance">
           {title}
         </dt>
         <dd className="max-w-2xl mb-6 mt-6 font-body text-gray-500 lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-400">
@@ -60,19 +62,27 @@ const Title = ({ title, description }) => (
         </dd>
       </div>
     )}
+    </div>
+    {image && (
+      <div key={image} className="">
+         <img class="mt-4  w-72 h-72 rounded-full object-cover grayscale" src={image}/>
+      </div>
+    )}
+    </div>
   </>
 );
+
 
 export const HeroSmall = ({ titles }) => (
   <>
     <section>
-      <div className="grid gap-16 max-w-screen-xl px-4 py-16 mx-auto lg:grid lg:grid-cols-2 lg:py-16 lg:px-6 lg:grid-cols-2">
-        <div className="mr-auto place-self-center">
+    
           {titles.map((item) => (
-            <Title key={item.title} title={item.title} description={item.description} />
+            <Title key={item.title} title={item.title} description={item.description}  image={item.image} />
           ))}
-        </div>
-      </div>
+        
+        
+     
     </section>
   </>
 );
