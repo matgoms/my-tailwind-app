@@ -180,7 +180,7 @@ const ProjectPage = () => {
                       <>
                         <section>
                           <div className="lg:max-w-7xl mx-auto w-full lg:py-16 py-3">
-                            <img src={content.img} alt="" className="w-full" />
+                            <img src={content.img} alt="" className="w-full border-[1px] border-slate-50 dark:border-slate-900/0" />
                           </div>
                         </section>
                       </>
@@ -192,7 +192,7 @@ const ProjectPage = () => {
                             <img
                               src={content.imgBig}
                               alt=""
-                              className="w-full "
+                              className="w-full border-[1px] border-slate-50 dark:border-slate-900/40"
                             />
                           </div>
                         </section>
@@ -212,7 +212,7 @@ const ProjectPage = () => {
                                   <img
                                     src={duo.imgDuo}
                                     alt=""
-                                    className="w-full"
+                                    className="w-full border-[1px] border-slate-50 dark:border-slate-900/40"
                                   />
                                 </div>
                               </div>
@@ -232,10 +232,10 @@ const ProjectPage = () => {
                                 "%26scaling%3Dscale-down-width%26page-id%3D0%253A1%26mode%3Ddesign&hide-ui=1"
                               }
                               allowfullscreen
-                              class="w-full"
-                              height={"920"}
+                              class="w-full h-lvh border-2 border-slate-50 dark:border-slate-800"
+                              
                             ></iframe>
-                            <h6 class="mt-4 text-gray-700  dark:text-gray-400 text-center">
+                            <h6 class="mt-4 text-gray-700  dark:text-gray-400 text-center ">
                               {content.caption}
                             </h6>
                           </div>
@@ -250,8 +250,7 @@ const ProjectPage = () => {
                             <iframe
                               src={content.canva}
                               allowfullscreen
-                              class="w-full"
-                              height={"920"}
+                              class="w-full aspect-video border-2 border-slate-50 dark:border-slate-800"
                             ></iframe>
                             <h6 class="mt-4  text-gray-700  dark:text-gray-400 text-center">
                               {content.caption}

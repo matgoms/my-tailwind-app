@@ -61,13 +61,13 @@ export default function Content() {
     const UXUIProjects = () => <Projects projects={uxuiProjects} />;
     const MotionProjects = () => <Projects projects={motionProjects} />; */
 
-  const UXUI = ({ title, description, image, color }) => {
+  const UXUI = ({ title, description, thumb, color }) => {
     return (
-      <div className="mb-24">
+      <div className="mb-24 break-inside-avoid-column">
         <img
-          src={image}
+          src={thumb}
           alt={title}
-          className={`transition ease-in duration-300 hover:opacity-80 hover:-translate-y-4 w-full mb-6 hover:saturate-[.3] min-h-[30rem] object-cover object-center ${color}`}
+          className={`transition ease-in duration-300 hover:opacity-80 hover:-translate-y-4 w-full mb-6 hover:saturate-[.3] aspect-[4/3] object-cover object-center ${color}`}
         />
         <h3 className="mb-2 text-xl font-bold dark:text-white">{title}</h3>
         <p className="text-gray-500 dark:text-gray-400">{description}</p>
@@ -105,13 +105,13 @@ export default function Content() {
       </div>
     );
   };
-  const Motion = ({ title, description, image }) => {
+  const Motion = ({ title, description, thumb, color  }) => {
     return (
       <div className="mb-24">
         <img
-          src={image}
+          src={thumb}
           alt={title}
-          className="transition ease-in duration-300 hover:opacity-80 hover:-translate-y-4 w-full mb-6 hover:saturate-[.3] min-h-[30rem] object-cover object-center"
+          className="transition ease-in duration-300 hover:opacity-80 hover:-translate-y-4 w-full mb-6 hover:saturate-[.3] min-h-[30rem] object-cover object-center ${color}"
         />
         <h3 className="mb-2 text-xl font-bold dark:text-white">{title}</h3>
         <p className="text-gray-500 dark:text-gray-400">{description}</p>

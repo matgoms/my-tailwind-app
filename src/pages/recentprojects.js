@@ -51,9 +51,9 @@ const RecentProjects = ({ currentProject }) => {
               >
                 <article class="bg-transparent">
                   <img
-                    src={project.image}
+                    src={project.thumb}
                     alt={project.title}
-                    className={`transition ease-in duration-300 hover:opacity-80  w-full mb-2  h-[18rem] object-cover object-center ${project.color}`}
+                    className={`transition aspect-[4/3] ease-in duration-300 hover:opacity-80  w-full mb-2  object-cover object-center ${project.color}`}
                   />
                   <div class="py-6">
                     <div class="flex justify-between align-middle mb-4">
