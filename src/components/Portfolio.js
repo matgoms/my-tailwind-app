@@ -27,7 +27,7 @@ export default function Portfolio() {
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
               What have I been working on lately?
             </h2>
-            <p class="text-gray-500 sm:text-xl dark:text-gray-400">
+            <p class="text-gray-500 sm:text-xl dark:text-gray-400 text-balance">
               As a creative enthusiast, I have always been dedicated to studying
               various artistic fields and visual communications. I have a strong
               ability to adapt, allowing me to tackle various situations
@@ -48,7 +48,7 @@ export default function Portfolio() {
                 <h3 class="my-6 text-xl font-bold dark:text-white">
                   Social Media
                 </h3>
-                <p class="text-gray-500 dark:text-gray-400">
+                <p class="text-gray-500 dark:text-gray-400 text-pretty">
                   {socialProject.description}
                 </p>
               </div>
@@ -67,7 +67,7 @@ export default function Portfolio() {
                 <h3 class="my-6 text-xl font-bold dark:text-white">
             Motion/VFX Projects
                 </h3>
-                <p class="text-gray-500 dark:text-gray-400">
+                <p class="text-gray-500 dark:text-gray-400 text-pretty">
                   {motionProject.description}
                 </p>
               </div>
@@ -85,7 +85,7 @@ export default function Portfolio() {
                 <h3 class="my-6 text-xl font-bold dark:text-white">
                 UX/UI Projects
                 </h3>
-                <p class="text-gray-500 dark:text-gray-400">
+                <p class="text-gray-500 dark:text-gray-400 text-pretty">
                   {uxuiProject.description}
                 </p>
               </div>

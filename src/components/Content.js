@@ -96,7 +96,7 @@ export default function Content() {
                   <img
                     src={content.Img}
                     alt={title}
-                    className="transition  rounded-2xl outline-slate-300 hover:outline-offset-[8px] transition-all ease-in duration-75  dark:hover:outline-slate-600 dark:outline-slate-700 outline-1 outline w-full mb-24 object-fit object-center"
+                    className="rounded-2xl outline-slate-300 hover:outline-offset-[8px] transition-all ease-in duration-75  dark:hover:outline-slate-600 dark:outline-slate-700 outline-1 outline w-full mb-24 object-fit object-center"
                   />
                 </>
               )}
@@ -158,11 +158,11 @@ export default function Content() {
   }, [location.state]);
 
   return (
-    <section class="text-gray-600 body-font bg-slate-50 dark:bg-slate-900/50 py-8">
-      <div class="max-w-screen-xl px-5 py-16 mx-auto">
+    <section class="text-gray-600 body-font bg-slate-50 dark:bg-slate-900/50 py-8 lg:py-24">
+      <div class="max-w-screen-xl px-5 mx-auto">
         <div class=" ">
           <Tab.Group selectedIndex={activeTabIndex} onChange={handleTabChange}>
-            <Tab.List class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 flex flex-wrap -mb-px ">
+            <Tab.List class="text-md font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 flex flex-wrap -mb-px ">
               {tabs.map((tab, index) => (
                 <>
                   <Tab className={tab.classDefault}>UX/UI Design</Tab>

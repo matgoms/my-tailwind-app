@@ -57,7 +57,7 @@ const Title = ({ title, description, image }) => (
         <dt className="max-w-2xl my-6 text-5xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-7xl dark:text-gray-100 text-balance">
           {title}
         </dt>
-        <dd className="max-w-2xl mb-6 mt-6 font-body text-gray-500 lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-400">
+        <dd className="max-w-2xl mb-6 mt-6 font-body text-gray-500 lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-400 text-balance">
           {description}
         </dd>
       </div>
@@ -65,7 +65,7 @@ const Title = ({ title, description, image }) => (
     </div>
     {image && (
       <div key={image} className="">
-         <img class="mt-4  w-72 h-72 rounded-full object-cover grayscale" src={image}/>
+         <img class="mt-4  w-72 h-72 rounded-full object-cover saturate-50 hover:saturate-100 duration-300  transition-all" src={image}/>
       </div>
     )}
     </div>

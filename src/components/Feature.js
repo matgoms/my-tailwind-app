@@ -20,21 +20,21 @@ export default function Feature() {
               <PaintBrushIcon className="h-8 w-8" aria-hidden="true" />
               </div>
               <h3 class="mb-2 text-xl font-bold dark:text-white">Art Direction</h3>
-              <p class="text-gray-500 dark:text-gray-400">Plan it, create it, launch it. Collaborate seamlessly with all  the organization and hit your marketing goals every month with our marketing plan.</p>
+              <p class="text-gray-500 dark:text-gray-400 text-balance">Plan it, create it, launch it. Collaborate seamlessly with all  the organization and hit your marketing goals every month with our marketing plan.</p>
           </div>
           <div>
               <div class="flex justify-center items-center mb-4 w-20 h-20 rounded-full bg-primary-100 lg:h-20 lg:w-20 bg-indigo-200 lg:animate-bounce">
               <CodeBracketIcon className="h-8 w-8" aria-hidden="true" />
               </div>
               <h3 class="mb-2 text-xl font-bold dark:text-white">UX/UI Design</h3>
-              <p class="text-gray-500 dark:text-gray-400">Protect your organization, devices and stay compliant with our structured workflows and custom permissions made for you.</p>
+              <p class="text-gray-500 dark:text-gray-400 text-balance">Protect your organization, devices and stay compliant with our structured workflows and custom permissions made for you.</p>
           </div>
           <div>
               <div class="flex justify-center items-center mb-4 w-20 h-20 rounded-full bg-primary-100 lg:h-20 lg:w-20 dark:bg-primary-900 bg-pink-200 lg:animate-bounce">
                  <CameraIcon className="h-8 w-8" aria-hidden="true" />                    
               </div>
               <h3 class="mb-2 text-xl font-bold dark:text-white">Photography</h3>
-              <p class="text-gray-500 dark:text-gray-400">Auto-assign tasks, send Slack messages, and much more. Now power up with hundreds of new templates to help you get started.</p>
+              <p class="text-gray-500 dark:text-gray-400  text-balance">Auto-assign tasks, send Slack messages, and much more. Now power up with hundreds of new templates to help you get started.</p>
           </div>
          
          

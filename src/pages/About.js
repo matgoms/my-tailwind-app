@@ -1,13 +1,13 @@
 import Menu from "../components/Menu";
 import { HeroSmall } from "../components/Hero";
 import Footer from "../components/Footer";
-import { ArrowDownTrayIcon,  } from "@heroicons/react/20/solid";
+import { ArrowDownTrayIcon } from "@heroicons/react/20/solid";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 const About = () => {
   const HeroSmallTitle = [
     {
-      title: "Hi there. Nice to meet you.",
+      title: "Get to know a little about me.",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nesciunt sunt quis nostrum atque, ipsa ullam molestias, reiciendis, in perferendis exercitationem.",
       image: "http://matgoms.me/dist/img/me.jpg",
@@ -20,8 +20,8 @@ const About = () => {
       <div class="bg-white dark:bg-slate-800">
         <Menu />
         <HeroSmall titles={HeroSmallTitle} images={HeroSmallTitle} />
-        <section class="text-gray-600 text-md bg-slate-50 dark:bg-slate-900/50 py-8">
-          <div class="max-w-screen-xl px-5 py-16 mx-auto">
+        <section class="text-gray-600 text-md bg-slate-50 dark:bg-slate-900/50 py-8 lg:py-24">
+          <div class="max-w-screen-xl px-5 mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 lg:gap-24">
               <div class="col-span-2">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
@@ -29,23 +29,125 @@ const About = () => {
                   small businesses.
                 </h2>
                 <p class="mt-3 mb-8 sm:text-xl leading-relaxed text-base  dark:text-gray-400">
-                  As a creative enthusiast, I have always been dedicated to  studying various artistic fields and visual communications. I have a strong ability to adapt, allowing me to tackle various situations effectively and find prompt, suitable solutions. Furthermore, through my professional experiences and studies at exceptional universities, I have learned to manage multiple tasks simultaneously and consistently excel by delivering high-quality work.
+                  As a creative enthusiast, I have always been dedicated to
+                  studying various artistic fields and visual communications. I
+                  have a strong ability to adapt, allowing me to tackle various
+                  situations effectively and find prompt, suitable solutions.
+                  Furthermore, through my professional experiences and studies
+                  at exceptional universities, I have learned to manage multiple
+                  tasks simultaneously and consistently excel by delivering
+                  high-quality work.
                 </p>
               </div>
               <div class="">
                 {/* linguas */}
 
                 <div class="flex gap-4 mt-12">
-                  <span class="fi-br aspect-[4/3] w-8 rounded-md bg-no-repeat"></span>
-                  <span class="fi-us aspect-[4/3] w-8 rounded-md bg-no-repeat"></span>
-                  <span class="fi-fr aspect-[4/3] w-8 rounded-md bg-no-repeat"></span>
-                  <span class="fi-es aspect-[4/3] w-8 rounded-md bg-no-repeat"></span>
+                  <div class="group relative h-full cursor-pointer align-middle ">
+                    <div class="absolute invisible bottom-7 group-hover:visible w-max bg-slate-700 text-black px-4 mb-6 -ms-2 py-1.5 text-sm rounded-md">
+                      <p class=" leading-2 text-gray-200 pt-2 pb-2">
+                        {" "}
+                        Native language
+                      </p>
+                      <svg
+                        class="absolute z-10  bottom-[-10px] "
+                        width="16"
+                        height="10"
+                        viewBox="0 0 16 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 10L0 0L16 1.41326e-06L8 10Z"
+                          class="fill-slate-700"
+                        />
+                      </svg>
+                    </div>
+                    <span class="fi-br rounded-md aspect-[4/3] w-8 inline-block bg-no-repeat"></span>
+                  </div>
+                  <div class="group relative h-full cursor-pointer align-middle ">
+                    <div class="absolute invisible bottom-7 group-hover:visible w-max bg-slate-700 text-black px-4 mb-6 -ms-2 py-1.5 text-sm rounded-md">
+                      <p class=" leading-2 text-gray-200 pt-2 pb-2">
+                        {" "}
+                        Advanced
+                      </p>
+                      <svg
+                        class="absolute z-10  bottom-[-10px] "
+                        width="16"
+                        height="10"
+                        viewBox="0 0 16 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 10L0 0L16 1.41326e-06L8 10Z"
+                          class="fill-slate-700"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="fi-us rounded-md aspect-[4/3] w-8 inline-block bg-no-repeat"
+                      id="us"
+                    ></span>
+                  </div>
+                  <div class="group relative h-full cursor-pointer align-middle ">
+                    <div class="absolute invisible bottom-7 group-hover:visible w-max bg-slate-700 text-black px-4 mb-6 -ms-2 py-1.5 text-sm rounded-md">
+                      <p class=" leading-2 text-gray-200 pt-2 pb-2">
+                        {" "}
+                        Advanced
+                      </p>
+                      <svg
+                        class="absolute z-10  bottom-[-10px] "
+                        width="16"
+                        height="10"
+                        viewBox="0 0 16 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 10L0 0L16 1.41326e-06L8 10Z"
+                          class="fill-slate-700"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="fi-fr rounded-md aspect-[4/3] w-8 inline-block bg-no-repeat"
+                      id="fr"
+                    ></span>
+                  </div>
+                  <div class="group relative h-full cursor-pointer align-middle ">
+                    <div class="absolute invisible bottom-7 group-hover:visible w-max bg-slate-700 text-black px-4 mb-6 -ms-2 py-1.5 text-sm rounded-md">
+                      <p class=" leading-2 text-gray-200 pt-2 pb-2"> Basic</p>
+                      <svg
+                        class="absolute z-10  bottom-[-10px] "
+                        width="16"
+                        height="10"
+                        viewBox="0 0 16 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 10L0 0L16 1.41326e-06L8 10Z"
+                          class="fill-slate-700"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      class="fi-es rounded-md aspect-[4/3] w-8 inline-block bg-no-repeat"
+                      id="es"
+                    ></span>
+                  </div>
                 </div>
 
                 <p class="lg:text-lg leading-relaxed font-medium my-6 dark:text-gray-400">
                   Matheus Gomes, 27yd
                   <br />
-                  <a href="mailto:matgoms@gmail.com" class="text-slate-600 underline dark:text-gray-400 hover:no-underline">matgoms@gmail.com</a>
+                  <a
+                    href="mailto:matgoms@gmail.com"
+                    class="text-slate-600 underline dark:text-gray-400 hover:no-underline"
+                  >
+                    matgoms@gmail.com
+                  </a>
                   <br />
                   São Paulo, Brazil
                 </p>
@@ -171,6 +273,28 @@ const About = () => {
                     class="bg-blue-600 h-1.5 rounded-full dark:bg-blue-500"
                     style={{ width: "60%" }}
                   ></div>
+                </div>
+
+                <div>
+                  <h3 class="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                    Skills
+                  </h3>
+                  <ul class="flex flex-wrap *:text-sm gap-2  *:w-max *:rounded-full *:border *:text-slate-600 *:border-slate-600/20 *:bg-slate-100 *:px-2 *:py-0.5 *:dark:text-slate-400 dark:*:border-slate-400/20 dark:*:bg-slate-400/10 ">
+                    <li>Figma</li>
+                    <li>XD</li>
+                    <li>Miro</li>
+                    <li>Maze</li>
+                    <li>Photoshop</li>
+                    <li>Illustrator</li>
+                    <li>Sketch</li>
+                    <li>Hotjar</li>
+                    <li>Notion</li>
+                    <li>Analytics</li>
+                    <li>Design System</li>
+                    <li>React JS</li>
+                    <li>Photography</li>
+                    <li>Video editing / VFX</li>
+                  </ul>
                 </div>
               </div>
             </div>
