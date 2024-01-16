@@ -1,10 +1,9 @@
 const Challenge = {
   title: "Design Thinking Challenge",
   year: "2022",
-  color: "bg-white/60 dark:bg-slate-900",
-  image: process.env.PUBLIC_URL + "/img/" + "dt-challenge/genera-thumb.png",
-  thumb:
-    process.env.PUBLIC_URL + "/img/" + "dt-challenge/dt-challenge-thumb.png",
+  color: "bg-white/80 dark:bg-slate-900",
+  image: process.env.PUBLIC_URL + "/img/" + "dt-challenge/dt-challenge.jpg",
+  thumb: process.env.PUBLIC_URL + "/img/" + "dt-challenge/dt-challenge-thumb.png",
   description:
     "The challenge we faced revolved around digitizing the training chart/plan. In response, our team studied and discussed potential solutions.",
   scope: "Design Thinking, User Experience",

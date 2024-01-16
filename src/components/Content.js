@@ -61,14 +61,30 @@ export default function Content() {
     const UXUIProjects = () => <Projects projects={uxuiProjects} />;
     const MotionProjects = () => <Projects projects={motionProjects} />; */
 
-  const UXUI = ({ title, description, thumb, color }) => {
+  const UXUI = ({ title, description, thumb, color, status }) => {
     return (
       <div className="mb-24 break-inside-avoid-column">
+        <div class="transition ease-in duration-300 hover:-translate-y-4 w-full mb-6  relative">
         <img
           src={thumb}
           alt={title}
-          className={`transition ease-in duration-300 hover:opacity-80 hover:-translate-y-4 w-full mb-6 hover:saturate-[.3] aspect-[4/3] object-cover object-center ${color}`}
+          className={` aspect-[4/3] object-cover object-center ${color} hover:opacity-80 hover:saturate-[.5] transition ease-in duration-300`}
         />
+        {status  && (
+                        <div class="absolute top-4 right-4 ">
+                          
+                       <span
+                            className="bg-amber-400 inline-flex items-center rounded-full  text-slate-800 px-4 py-2">
+                            <svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-slate-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                            {status}
+                          </span>
+                      </div>
+                  )}
+
+</div>
         <h3 className="mb-2 text-xl font-bold dark:text-white">{title}</h3>
         <p className="text-gray-500 dark:text-gray-400">{description}</p>
       </div>
@@ -105,16 +121,22 @@ export default function Content() {
       </div>
     );
   };
-  const Motion = ({ title, description, thumb, color  }) => {
+  const Motion = ({ title, description, thumb, color, status  }) => {
     return (
       <div className="mb-24">
         <img
           src={thumb}
           alt={title}
-          className="transition ease-in duration-300 hover:opacity-80 hover:-translate-y-4 w-full mb-6 hover:saturate-[.3] min-h-[30rem] object-cover object-center ${color}"
+          className="transition ease-in duration-300 hover:opacity-80 hover:-translate-y-4 w-full mb-6 hover:saturate-[.3] aspect-[4/3] object-cover object-center ${color}"
         />
+         {status  && (
+                        <div class="absolute bottom-0 px-4 py-3 bg-gray-500/50 w-full">
+                        <p class="text-gray-200">{status}
+                        </p>
+                      </div>
+                  )}
         <h3 className="mb-2 text-xl font-bold dark:text-white">{title}</h3>
-        <p className="text-gray-500 dark:text-gray-400">{description}</p>
+        <p className="text-gray-500 dark:text-gray-400 text-pretty">{description}</p>
       </div>
     );
   };
@@ -136,7 +158,9 @@ export default function Content() {
   useEffect(() => {
     // Atualiza o estado da guia com base nos dados do estado da localização
     const categoryFromState = location.state?.category;
-
+    if (categoryFromState) {
+      window.scrollTo(0, 650);
+    }
     switch (categoryFromState) {
       case 'social':
         setActiveTabIndex(1);
@@ -147,12 +171,16 @@ export default function Content() {
       case 'motion':
         setActiveTabIndex(2);
         break;
+
+        
       // Adicione mais casos conforme necessário
 
       // O caso padrão será 'social' se nenhum estado de categoria for fornecido
       default:
         setActiveTabIndex(0);
         break;
+      
+        window.scrollTo(0, 650);
     }
     
   }, [location.state]);

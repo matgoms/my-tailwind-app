@@ -3,7 +3,7 @@ const HomeRepair = {
     year: '2023',
     status: 'In progress',
     color: "bg-white/80 dark:bg-slate-900",
-    image: process.env.PUBLIC_URL + '/img/' + 'home-repair/home-repair.png',
+    image: process.env.PUBLIC_URL + '/img/' + 'home-repair/home-repair.jpg',
     thumb: process.env.PUBLIC_URL + '/img/' + 'home-repair/home-repair-thumb.png',
     description: "Depuis le début de 2023, je travaille sur ce projet. C'est toujours un travail en cours (WIP), car j'essaie de rendre le Design System aussi bon et complet que possible en utilisant les dernières mises à jour de Figma, qui incluent les variables, les composants, les propriétés booléennes, l'échange d'instances, etc. Bientôt, je publierai le fichier interactif du Design System !",
     scope: "User Interface, User Experience",

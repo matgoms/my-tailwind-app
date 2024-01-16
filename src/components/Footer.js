@@ -73,8 +73,16 @@ export default function Footer() {
       </div>
       <hr class="lg:mt-32 my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://tailwindui.com/" class="hover:underline">Matheus Gomes™</a>. All Rights Reserved.
+          
+          <span class="text-sm inline-flex items-center text-gray-500 sm:text-center dark:text-gray-400">
+          Built with <svg width="100%" height="100%" viewBox="-10.5 -9.45 21 18.9" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-sm ms-3 me-1 w-5 text-cyan-700  flex origin-center transition-all ease-in-out"><circle cx="0" cy="0" r="2" fill="currentColor"></circle><g stroke="currentColor" stroke-width="1" fill="none"><ellipse rx="10" ry="4.5"></ellipse><ellipse rx="10" ry="4.5" transform="rotate(60)"></ellipse><ellipse rx="10" ry="4.5" transform="rotate(120)"></ellipse></g></svg> React +
+          
+          
+          <img className="h-5 w-auto ms-1 me-1" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" /> Tailwind
+          
           </span>
+
+          <span class="text-sm inline-flex items-center text-gray-500 sm:text-center dark:text-gray-400">© 2023 Matheus Gomes™. All Rights Reserved.</span>
           <div class="flex mt-4 sm:justify-center sm:mt-0">
               <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                   <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">

@@ -88,7 +88,7 @@ const ProjectPage = () => {
               <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-gray-900 dark:text-white">
                 {project.title}
               </h2>
-              <p class="mt-8 text-gray-500 sm:text-xl dark:text-gray-400">
+              <p class="mt-8 text-gray-500 sm:text-xl dark:text-gray-400 text-balance">
                 {project.description}
               </p>
               {project.link && (
@@ -109,14 +109,14 @@ const ProjectPage = () => {
               )}
             </div>
             <div class="max-w-screen-md mb-8 lg:mb-16">
-              <h3 class="mb-4 text-gray-500 dark:text-gray-400">
+              <div class="mb-4 text-gray-500 dark:text-gray-400">
                 <label class="font-bold text-gray-900 dark:text-gray-200">
                   Year:
                 </label>
                 <br />
                 {project.year}
-              </h3>
-              <h3 class="mb-4 text-gray-500 dark:text-gray-400">
+              </div>
+              <div class="mb-4 text-gray-500 dark:text-gray-400">
                 <label class="font-bold text-gray-900 dark:text-gray-200">
                   Scope:
                 </label>
@@ -125,22 +125,22 @@ const ProjectPage = () => {
                   project.scope.split(",").map((scope, index) => (
                     <span
                       key={index}
-                      className="inline-flex rounded-full bg-gray-50 text-gray-800 my-1 px-2.5 py-0.5   dark:bg-gray-700 dark:text-gray-200"
+                      className="flex flex-wrap gap-2 w-max rounded-full bg-gray-50 text-gray-800 my-2 px-2.5 py-0.5   dark:bg-gray-700 dark:text-gray-200"
                     >
                       {scope.trim()}{" "}
                       {/* Use trim to remove any leading or trailing whitespace */}
                     </span>
                   ))}
-              </h3>
+              </div>
               {project.duration && (
                       <>
-              <h3 class="mb-4 text-gray-500 dark:text-gray-400">
+              <div class="mb-4 text-gray-500 dark:text-gray-400">
                 <label class="font-bold text-gray-900 dark:text-gray-200">
                   Duration:
                 </label>
                 <br />
                 {project.duration}
-              </h3>
+              </div>
               </>
               )}
             </div>
@@ -169,7 +169,7 @@ const ProjectPage = () => {
                       <>
                         <section>
                           <div className="lg:max-w-3xl mx-auto w-full ">
-                            <p className="mb-6 text-gray-500 sm:text-xl dark:text-gray-400">
+                            <p className="mb-6 text-gray-500 sm:text-xl dark:text-gray-400 text-pretty">
                               {content.description}
                             </p>
                           </div>
@@ -180,7 +180,7 @@ const ProjectPage = () => {
                       <>
                         <section>
                           <div className="lg:max-w-7xl mx-auto w-full lg:py-16 py-3">
-                            <img src={content.img} alt="" className="w-full border-[1px] border-slate-50 dark:border-slate-900/0" />
+                            <img src={content.img} alt="" className="w-full border-[1px] border-slate-50 dark:border-slate-900/0 " />
                           </div>
                         </section>
                       </>
@@ -192,7 +192,7 @@ const ProjectPage = () => {
                             <img
                               src={content.imgBig}
                               alt=""
-                              className="w-full border-[1px] border-slate-50 dark:border-slate-900/40"
+                              className="w-full border-[1px] border-slate-50 dark:border-slate-900/40 bg-slate-50 dark:bg-slate-900/60"
                             />
                           </div>
                         </section>
@@ -212,7 +212,7 @@ const ProjectPage = () => {
                                   <img
                                     src={duo.imgDuo}
                                     alt=""
-                                    className="w-full border-[1px] border-slate-50 dark:border-slate-900/40"
+                                    className="w-full border-[1px] border-slate-50 dark:border-slate-900/40 bg-slate-50 dark:bg-slate-900/60"
                                   />
                                 </div>
                               </div>
@@ -251,6 +251,23 @@ const ProjectPage = () => {
                               src={content.canva}
                               allowfullscreen
                               class="w-full aspect-video border-2 border-slate-50 dark:border-slate-800"
+                            ></iframe>
+                            <h6 class="mt-4  text-gray-700  dark:text-gray-400 text-center">
+                              {content.caption}
+                            </h6>
+                          </div>
+                        </section>
+                      </>
+                    )}
+
+{content.vimeo && (
+                      <>
+                        <section>
+                          <div className="mr-auto w-full lg:max-w-screen-2xl py-3 lg:py-16 mx-auto">
+                            <iframe
+                              src={content.vimeo + '&title=0&byline=0&portrait=0'}
+                              class="w-full aspect-video border-2 border-slate-50 dark:border-slate-800"
+                              frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
                             ></iframe>
                             <h6 class="mt-4  text-gray-700  dark:text-gray-400 text-center">
                               {content.caption}

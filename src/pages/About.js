@@ -28,7 +28,7 @@ const About = () => {
                   Over 7 years of work experience with leading companies and
                   small businesses.
                 </h2>
-                <p class="mt-3 mb-8 sm:text-xl leading-relaxed text-base  dark:text-gray-400">
+                <p class="mt-3 mb-8 sm:text-xl leading-relaxed text-base  dark:text-gray-400 text-balance">
                   As a creative enthusiast, I have always been dedicated to
                   studying various artistic fields and visual communications. I
                   have a strong ability to adapt, allowing me to tackle various

@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import Menu from "../components/Menu";
 import { HeroSmall } from "../components/Hero";
 import Content from "../components/Content";
@@ -13,6 +14,8 @@ const Projects = () => {
       // Add more items as needed
     ];
   
+   
+
     return (
         <>
          <div class="bg-white dark:bg-slate-800">

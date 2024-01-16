@@ -38,8 +38,8 @@ export function HeroBig() {
             <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup"/>
         </div>   */}              
          <div class="lg:grid grid-cols-2 gap-4 mt-8 hidden">
-            <img class="w-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png" alt="office content 1"/>
-            <img class="mt-4 w-full lg:mt-10" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png" alt="office content 2"/>
+            <img class="w-full transition ease-in duration-300 hover:-translate-y-4" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png" alt="office content 1"/>
+            <img class="mt-4 w-full lg:mt-10 transition ease-in duration-300 hover:-translate-y-4" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png" alt="office content 2"/>
         </div>
     </div>
 </section>

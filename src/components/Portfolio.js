@@ -58,9 +58,9 @@ export default function Portfolio() {
               to={`/projects`} state={{category: "motion" }}
             >
               <img
-                src={motionProject.image}
+                src={motionProject.thumb}
                 alt={motionProject.title}
-                class={`transition ease-in duration-300 hover:opacity-80  w-full mb-2 rounded-2xl h-[20rem] object-cover object-center ${motionProject.color}`}
+                class={`transition ease-in duration-300 hover:opacity-80  w-full mb-2 h-[20rem] object-cover object-center ${motionProject.color}`}
                 alt=""
               />
               <div class="mb-24 ">
@@ -76,9 +76,9 @@ export default function Portfolio() {
               to={`/projects`} state={{category: "design" }}
             >
               <img
-                src={uxuiProject.image}
+                src={uxuiProject.thumb}
                 alt={uxuiProject.title}
-                class={`transition ease-in duration-300 hover:opacity-80  w-full mb-2 rounded-2xl h-[20rem] object-cover object-center ${uxuiProject.color}`}
+                class={`transition ease-in duration-300 hover:opacity-80  w-full mb-2 object-cover  h-[20rem] object-left ${uxuiProject.color}`}
                 alt=""
               />
               <div class="mb-24 ">
