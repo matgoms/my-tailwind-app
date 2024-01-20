@@ -22,8 +22,7 @@ const HomeRepair = {
           ],
         },
         {
-          title: "Protótipo",
-          description: "Creating our prototype involved dedicated efforts towards a clean, minimalist design. Utilizing rounded icons and a carefully selected color palette, we aimed for clarity and modernity. ",
+          title: "Prototipe",
           figma:
             "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FE6651mcw69kOYhCt2av4Rq%2FHomeRepair%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D249-3835",
           /* canva:

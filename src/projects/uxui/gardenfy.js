@@ -13,26 +13,26 @@ const Gardenfy = {
       {
           Duo: [
             {
-              imgDuo: process.env.PUBLIC_URL + "/img/" + "dt-challenge/duo1.jpg",
+              imgDuo: process.env.PUBLIC_URL + "/img/" + "gardenfy/duo1.jpg",
             },
             {
-              imgDuo: process.env.PUBLIC_URL + "/img/" + "dt-challenge/duo2.png",
+              imgDuo: process.env.PUBLIC_URL + "/img/" + "gardenfy/duo2.png",
             },
           ],
         },
       {
         title: "The identity",
         description:
-          "This gardening app's visual identity is punctuated by soft, evocative icons and colors that seamlessly guide users through their plant care journey, also cultivating a serene user experience.",
+          "Gardenfy app's visual identity is punctuated by soft, evocative icons and colors that seamlessly guide users through their plant care journey, also cultivating a serene user experience.",
       },
       {
-        canva: "https://www.canva.com/design/DAFEJj1l7j8/view?embed",
+        canva: "https://www.canva.com/design/DAFVkxAKXaM/view?embed",
         caption: "(Click to interact)",
       },
       {
-          title: "Concept Map",
+          title: "App's Journey",
           description:
-            "By creating a concept map, we could envision a more intuitive understanding of the training process, encourage collaboration and engagement among team members and transform training strategies into a visually compelling app.",
+            "Through this app, we aspire to encourage collaboration, fostering engagement as we transform plant care into a visually digital experience. With features like displaying all plants, offering detailed plant information, providing timely watering notifications, and scheduling tools, this app is a comprehensive guide for plant enthusiasts.",
         },
         {
           imgBig: process.env.PUBLIC_URL + "/img/" + "gardenfy/screens.png",
@@ -40,8 +40,8 @@ const Gardenfy = {
       {
           title: "Prototype",
         figma:
-          "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FXBEO8OWCgJkZUCwFempJHF%2FAcademia%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D6-0%26viewport%3D1162%252C546%252C0.33%26t%3DbrhdVhSIWTQwPXHj-1%26scaling%3Dscale-down%26mode%3Ddesign",
-        caption: "(Scroll down to see the entire project)",
+          "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FBeoB3zG0hSioTrOmCTuiiA%2FAPP-Plantas%3Fpage-id%3D319%253A2625%26type%3Ddesign%26node-id%3D381-3143%26viewport%3D1162%252C546%252C0.33%26t%3DbrhdVhSIWTQwPXHj-1%26scaling%3Dscale-down%26mode%3Ddesign",
+        caption: "(Click to interact)",
       },
      
   
@@ -50,6 +50,7 @@ const Gardenfy = {
       // Adicione mais itens de conteúdo conforme necessário
     ],
   };
+  
   
   //para botar imagens, https://www.shecodes.io/athena/38751-how-to-import-all-images-of-a-folder-into-a-react-component
   

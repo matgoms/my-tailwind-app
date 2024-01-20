@@ -265,7 +265,7 @@ const ProjectPage = () => {
                         <section>
                           <div className="mr-auto w-full lg:max-w-screen-2xl py-3 lg:py-16 mx-auto">
                             <iframe
-                              src={content.vimeo + '&title=0&byline=0&portrait=0'}
+                              src={content.vimeo + '&title=0&byline=0&portrait=0&sidedock=0'}
                               class="w-full aspect-video border-2 border-slate-50 dark:border-slate-800"
                               frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
                             ></iframe>

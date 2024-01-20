@@ -26,21 +26,21 @@ const RecentProjects = ({ currentProject }) => {
 
 });
 
-
+const limitedProjects = recentProjects.slice(0, 6);
 
   return (
     <section class="bg-slate-50 dark:bg-slate-800">
       <div class="py-16 mx-auto max-w-screen-2xl lg:py-40 px-6 lg:px-0">
         <div class="mx-auto max-w-screen-sm text-center lg:mb-24 mb-8">
           <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            Recent Projects
+            Other projects
           </h2>
           <p class="font-regular text-gray-500 sm:text-xl dark:text-gray-400">
-          Here are a few projects I've completed recently.
+          Here are a few projects I've worked on recently.
           </p>
         </div>
         <div class="grid lg:grid-cols-3 gap-24">
-          {recentProjects.map((project) => (
+          {limitedProjects.map((project) => (
             <div key={project.id}>
               {/* Render project details */}
 
