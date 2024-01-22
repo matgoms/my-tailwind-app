@@ -180,7 +180,7 @@ const ProjectPage = () => {
                       <>
                         <section>
                           <div className="lg:max-w-7xl mx-auto w-full lg:py-16 py-3">
-                            <img src={content.img} alt="" className="w-full border-[1px] border-slate-50 dark:border-slate-900/0 " />
+                            <img src={content.img} alt="" className="w-full border-[1px] border-slate-50 dark:border-slate-900/40 bg-slate-50 dark:bg-slate-900/60" />
                           </div>
                         </section>
                       </>

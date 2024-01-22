@@ -4,7 +4,7 @@ const Cashbid = {
     color: "bg-white/80 dark:bg-slate-900",
     image: process.env.PUBLIC_URL + '/img/' + 'cashbid/cashbid.jpg',
     thumb: process.env.PUBLIC_URL + '/img/' + 'cashbid/cashbid-thumb.png',
-    description: "A real estate auction platform I've worked on. The company is also a fintech powerhouse offering real estate financing, mortgage solutions, expert advisory services, customized lines of credit, and streamlined property searches.",
+    description: "Besides being a real estate auction platform, the company is also a fintech powerhouse that offers estate financing, mortgage solutions, expert advisory services,  lines of credit and streamlined property searches.",
     scope: "User Interface, User Experience",
     duration: '1 Month',
 
@@ -19,6 +19,9 @@ const Cashbid = {
               imgDuo: process.env.PUBLIC_URL + '/img/' + 'cashbid/duo2.png',
             },
           ],
+        },
+        {
+          img: process.env.PUBLIC_URL + '/img/' + 'cashbid/style.png',
         },
         {
           title: "Prototype",

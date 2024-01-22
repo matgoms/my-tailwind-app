@@ -20,6 +20,9 @@ const Blzpremium = {
         caption: "(Click to interact)",
       },
       {
+        img: process.env.PUBLIC_URL + '/img/' + 'blzpremium/style.png',
+      },
+      {
           title: "Prototype",
           description:
             "You're invited to explore and interact with the prototype, offering a firsthand experience of our design process. Hope you enjoy it.",

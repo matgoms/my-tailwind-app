@@ -37,6 +37,9 @@ const Gardenfy = {
         {
           imgBig: process.env.PUBLIC_URL + "/img/" + "gardenfy/screens.png",
         },
+        {
+          img: process.env.PUBLIC_URL + '/img/' + 'gardenfy/style.png',
+        },
       {
           title: "Prototype",
         figma:

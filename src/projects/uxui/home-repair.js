@@ -1,7 +1,7 @@
 const HomeRepair = { 
     title: 'Home Repair', 
     year: '2023',
-    status: 'In progress',
+    status: 'Work in progress',
     color: "bg-white/80 dark:bg-slate-900",
     image: process.env.PUBLIC_URL + '/img/' + 'home-repair/home-repair.jpg',
     thumb: process.env.PUBLIC_URL + '/img/' + 'home-repair/home-repair-thumb.png',
@@ -20,6 +20,9 @@ const HomeRepair = {
               imgDuo: process.env.PUBLIC_URL + '/img/' + 'home-repair/components2.jpg',
             },
           ],
+        },
+        {
+          img: process.env.PUBLIC_URL + '/img/' + 'home-repair/style.png',
         },
         {
           title: "Prototipe",

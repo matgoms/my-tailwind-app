@@ -9,9 +9,16 @@ const Santosfc = {
     duration: '2 weeks',
 
     contents: [
-      
         { 
-            img: process.env.PUBLIC_URL + '/img/' + 'santosfc/site.jpg',
+            img: process.env.PUBLIC_URL + '/img/' + 'santosfc/style.png',
+          
+        },
+        { 
+        title: "About the visual identity",
+        description: "In my committed pursuit of an intuitive design, I've embraced a minimalistic aesthetic, particularly when confronted with intricate genetic information, giving an overall sense of simplicity that enhances user comprehension. This intentional color pairing ensures readability for individuals with visual impairments, creating a more inclusive and user-friendly layout. The judicious use of few colors, particularly in the case of black and yellow, not only adds a touch of sophistication to the design but also serves as a practical solution for optimizing visual clarity and navigating the layout."
+    },
+        { 
+            img: process.env.PUBLIC_URL + '/img/' + 'santosfc/site.png',
           
         },
     
