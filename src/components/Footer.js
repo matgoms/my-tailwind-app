@@ -9,7 +9,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer class="bg-white dark:bg-slate-900">
+    <footer class="bg-white dark:bg-slate-900 transition-colors duration-1000 ease-in-out">
       <div class="mx-auto max-w-7xl px-6 2xl:px-0 py-16 lg:pt-24">
         <div class="lg:flex md:justify-between">
           <div class="mb-16 lg:mb-6">

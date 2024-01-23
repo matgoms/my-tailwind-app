@@ -9,7 +9,7 @@ const About = () => {
     {
       title: "Get to know a little about me.",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nesciunt sunt quis nostrum atque, ipsa ullam molestias, reiciendis, in perferendis exercitationem.",
+        "I have over 7 years of design experience working with leading companies and small businesses.",
       image: "http://matgoms.me/dist/img/me.jpg",
     },
     /* { title: 'Title 2', description: 'Description 2' }, */
@@ -17,34 +17,29 @@ const About = () => {
   ];
   return (
     <>
-      <div class="bg-white dark:bg-slate-800">
+      <div class="bg-white dark:bg-slate-800 transition-colors duration-1000 ease-in-out">
         <Menu />
         <HeroSmall titles={HeroSmallTitle} images={HeroSmallTitle} />
-        <section class="text-gray-600 text-md bg-slate-50 dark:bg-slate-900/50 py-8 lg:py-24">
+        <section class="text-gray-600 text-md bg-slate-50 dark:bg-slate-900/50 py-8 lg:py-24 transition-colors duration-1000 ease-in-out">
           <div class="max-w-screen-xl px-5 mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 lg:gap-24">
               <div class="col-span-2">
-                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-                  Over 7 years of work experience with leading companies and
-                  small businesses.
-                </h2>
+                
                 <p class="mt-3 mb-8 sm:text-xl leading-relaxed text-base  dark:text-gray-400 text-balance">
                   As a creative enthusiast, I have always been dedicated to
                   studying various artistic fields and visual communications. I
                   have a strong ability to adapt, allowing me to tackle various
                   situations effectively and find prompt, suitable solutions.
-                  Furthermore, through my professional experiences and studies
-                  at exceptional universities, I have learned to manage multiple
-                  tasks simultaneously and consistently excel by delivering
+                  Furthermore, through my professional experiences and studies I have learned to manage multiple tasks simultaneously and consistently excel by delivering
                   high-quality work.
                 </p>
               </div>
               <div class="">
                 {/* linguas */}
 
-                <div class="flex gap-4 mt-12">
+                <div class="flex gap-4 mt-6">
                   <div class="group relative h-full cursor-pointer align-middle ">
-                    <div class="absolute invisible bottom-7 group-hover:visible w-max bg-slate-700 text-black px-4 mb-6 -ms-2 py-1.5 text-sm rounded-md">
+                    <div class="absolute invisible bottom-7 group-hover:visible w-max bg-slate-700  text-black px-4 mb-6 -ms-2 py-1.5 text-sm rounded-md">
                       <p class=" leading-2 text-gray-200 pt-2 pb-2">
                         {" "}
                         Native language
@@ -280,6 +275,19 @@ const About = () => {
                     Skills
                   </h3>
                   <ul class="flex flex-wrap *:text-sm gap-2  *:w-max *:rounded-full *:border *:text-slate-600 *:border-slate-600/20 *:bg-slate-100 *:px-2 *:py-0.5 *:dark:text-slate-400 dark:*:border-slate-400/20 dark:*:bg-slate-400/10 ">
+                    <li>Analytics</li>
+                    <li>Back End</li>
+                    <li>Design System</li>
+                    <li>Design Thinking</li>
+                    <li>Front End</li>
+                    <li>React</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                    Softwares
+                  </h3>
+                  <ul class="flex flex-wrap *:text-sm gap-2  *:w-max *:rounded-full *:border *:text-slate-600 *:border-slate-600/20 *:bg-slate-100 *:px-2 *:py-0.5 *:dark:text-slate-400 dark:*:border-slate-400/20 dark:*:bg-slate-400/10 ">
                     <li>Figma</li>
                     <li>XD</li>
                     <li>Miro</li>
@@ -289,11 +297,6 @@ const About = () => {
                     <li>Sketch</li>
                     <li>Hotjar</li>
                     <li>Notion</li>
-                    <li>Analytics</li>
-                    <li>Design System</li>
-                    <li>React JS</li>
-                    <li>Photography</li>
-                    <li>Video editing / VFX</li>
                   </ul>
                 </div>
               </div>

@@ -29,7 +29,7 @@ const RecentProjects = ({ currentProject }) => {
 const limitedProjects = recentProjects.slice(0, 6);
 
   return (
-    <section class="bg-slate-50 dark:bg-slate-800">
+    <section class="bg-slate-50 dark:bg-slate-900/40 transition-colors duration-1000 ease-in-out">
       <div class="py-16 mx-auto max-w-screen-2xl lg:py-40 px-6 lg:px-0">
         <div class="mx-auto max-w-screen-sm text-center lg:mb-24 mb-8">
           <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">

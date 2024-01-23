@@ -74,16 +74,16 @@ const Menu = ({ className }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className={`${className} text-slate-800 dark:text-white `}>
+    <header className={`${className}`}>
       <nav
-        className="mx-auto flex max-w-7xl lg:py-10 items-center justify-between p-6"
+        className="mx-auto flex max-w-7xl lg:py-10 items-center justify-between p-6 "
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
-              className="h-10 w-auto dark:brightness-200"
+              className="h-10 w-auto dark:brightness-200 transition-all duration-1000 ease-in-out"
               src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
               alt=""
             />
@@ -101,7 +101,7 @@ const Menu = ({ className }) => {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12 ">
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-lg focus:outline-none font-semibold leading-6">
+            <Popover.Button className="flex items-center gap-x-1 text-lg focus:outline-none font-semibold leading-6 text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200">
               Works
               <ChevronDownIcon
                 className="h-5 w-5 flex-none "
@@ -164,13 +164,13 @@ const Menu = ({ className }) => {
 
           <a
             href="/about"
-            className="text-lg font-semibold leading-6"
+            className="text-lg font-semibold leading-6  text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200"
           >
             About me
           </a>
 
           <SunIcon
-            className="h-6 w-6 cursor-pointer hidden dark:block"
+            className="h-6 w-6 cursor-pointer hidden dark:block dark:text-white"
             aria-hidden="true"
             id="light"
             onClick={handleThemeClick}
@@ -185,7 +185,7 @@ const Menu = ({ className }) => {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
             href="#"
-            className="text-lg font-semibold leading-6 "
+            className="text-lg font-semibold leading-6  text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200"
           >
             Contact <span aria-hidden="true">&rarr;</span>
           </a>
@@ -240,7 +240,7 @@ const Menu = ({ className }) => {
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 font-semibold  leading-7 text-gray-900 dark:hover:bg-slate-700 dark:text-gray-400 hover:bg-slate-50">
+                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 font-semibold  leading-7 text-gray-900 dark:hover:bg-slate-700 dark:text-gray-400 hover:bg-slate-50 ">
                         Works
                         <ChevronDownIcon
                           className={classNames(
@@ -256,7 +256,7 @@ const Menu = ({ className }) => {
                             key={item.name}
                             as="a"
                             href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900  dark:text-gray-400 dark:hover:bg-slate-700 hover:bg-slate-50"
+                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900  dark:text-gray-400 dark:hover:bg-slate-700 hover:bg-slate-50 transition-colors duration-1000 ease-in-out"
                           >
                             {item.name}
                           </Disclosure.Button>
@@ -267,7 +267,7 @@ const Menu = ({ className }) => {
                 </Disclosure>
                 <a
                   href="/about"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900  dark:text-gray-400 hover:bg-slate-50 dark:hover:bg-slate-700"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900  dark:text-gray-400 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors duration-1000 ease-in-out"
                 >
                   About me
                 </a>
@@ -275,7 +275,7 @@ const Menu = ({ className }) => {
               <div className="py-6">
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 dark:text-gray-400 hover:bg-slate-50"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 dark:text-gray-400 hover:bg-slate-50 transition-colors duration-1000 ease-in-out"
                 >
                   Contact
                 </a>

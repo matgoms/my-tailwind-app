@@ -58,7 +58,7 @@ class Photos extends Component<AppProps, AppState> {
 
     return (
       <div>
-        <div className="bg-white dark:bg-slate-800">
+        <div className="bg-white dark:bg-slate-800 transition-colors duration-1000 ease-in-out">
           <Menu />
           <HeroSmall titles={HeroSmallTitle} />
           <SimpleGallery galleryID="my-gallery" images={this.state.images} />

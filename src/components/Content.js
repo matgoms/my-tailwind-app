@@ -186,11 +186,11 @@ export default function Content() {
   }, [location.state]);
 
   return (
-    <section class="text-gray-600 body-font bg-slate-50 dark:bg-slate-900/50 py-8 lg:py-24">
+    <section class="text-gray-600 body-font bg-slate-50 dark:bg-slate-900/50 transition-colors duration-1000 ease-in-out py-8 lg:py-24">
       <div class="max-w-screen-xl px-5 mx-auto">
         <div class=" ">
           <Tab.Group selectedIndex={activeTabIndex} onChange={handleTabChange}>
-            <Tab.List class="text-md font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 flex flex-wrap -mb-px ">
+            <Tab.List class="text-sm lg:text-md font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 flex flex-wrap -mb-px ">
               {tabs.map((tab, index) => (
                 <>
                   <Tab className={tab.classDefault}>UX/UI Design</Tab>
@@ -210,10 +210,7 @@ export default function Content() {
                         UX/UI Projects
                       </h1>
                       <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 dark:text-gray-400">
-                        Street art subway tile salvia four dollar toast bitters
-                        selfies quinoa yuccie synth meditation iPhone
-                        intelligentsia prism tofu. Viral gochujang bitters
-                        dreamcatcher.
+                      Explore a selection of design projects that showcase my skills and passion for design.
                       </p>
                     </div>
                   </div>
@@ -236,13 +233,10 @@ export default function Content() {
                   <div class="flex flex-col">
                     <div class="flex flex-wrap sm:flex-row flex-col py-24">
                       <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0 dark:text-gray-100">
-                        Social media stuff
+                        Social media
                       </h1>
                       <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 dark:text-gray-400">
-                        Street art subway tile salvia four dollar toast bitters
-                        selfies quinoa yuccie synth meditation iPhone
-                        intelligentsia prism tofu. Viral gochujang bitters
-                        dreamcatcher.
+                      Discover the vibrant visuals and innovative concepts that define my approach to crafting engaging and impactful social media content.
                       </p>
                     </div>
                   </div>
@@ -261,10 +255,7 @@ export default function Content() {
                         Motion and VFX
                       </h1>
                       <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 dark:text-gray-400">
-                        Street art subway tile salvia four dollar toast bitters
-                        selfies quinoa yuccie synth meditation iPhone
-                        intelligentsia prism tofu. Viral gochujang bitters
-                        dreamcatcher.
+                      A collection of motion design projects, where my passion for creativity comes to life as a hobby.
                       </p>
                     </div>
                   </div>
