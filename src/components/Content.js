@@ -186,7 +186,7 @@ export default function Content() {
   }, [location.state]);
 
   return (
-    <section class="text-gray-600 body-font bg-slate-50 dark:bg-slate-900/50 transition-colors duration-1000 ease-in-out py-8 lg:py-24">
+    <section class="text-gray-600 body-font bg-slate-50 dark:bg-slate-900/50 transition-colors duration-1000 ease-in-out py-24 lg:py-24">
       <div class="max-w-screen-xl px-5 mx-auto">
         <div class=" ">
           <Tab.Group selectedIndex={activeTabIndex} onChange={handleTabChange}>

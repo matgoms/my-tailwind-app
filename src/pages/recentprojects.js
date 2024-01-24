@@ -101,7 +101,7 @@ const limitedProjects = recentProjects.slice(0, 6);
                         project.scope.split(",").map((scope, index) => (
                           <span
                             key={index}
-                            className="inline-flex items-center rounded-full text-sm bg-transparent border-[1px] border-slate-600/20 text-slate-600 my-2 mr-2 px-2.5 py-0.5 dark:text-slate-400 dark:border-slate-400/20"
+                            className="inline-flex items-center font-medium rounded-full text-sm bg-transparent border-[1px] border-slate-600/20 text-slate-600 my-2 mr-2 px-2.5 py-0.5 dark:text-slate-400 dark:border-slate-400/20"
                           >
                             {scope.trim()}{" "}
                             {/* Use trim to remove any leading or trailing whitespace */}

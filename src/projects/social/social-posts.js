@@ -2,7 +2,7 @@
 const Social = { 
     title: 'Social Media',  
     image: 'https://i.imgur.com/0krS9Dv.png',  
-    description: "Genera is a pioneering Brazilian genetics laboratory in the genomic medicine segment, offering a personalized platform for ancestry, health and well-being testing.",
+    description: "A selection of social media designs. Done during my tenure at advertising agencies in São Paulo, Brazil, these designs embody creativity, innovation, and a strategic approach to social media aesthetics.",
     contents: [
         //paypal
         {

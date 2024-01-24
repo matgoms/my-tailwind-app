@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import { useParams } from "react-router-dom";
 import {
   Bars3Icon,
   CameraIcon,
@@ -35,21 +36,22 @@ function classNames(...classes) {
 }
 
 const Menu = ({ className }) => {
-  
   const [theme, setTheme] = useState(
     localStorage.getItem("color-theme") || "light"
   );
+  var inputElements = document.querySelectorAll('input');
 
   useEffect(() => {
-    
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
       document.documentElement.classList.remove("light");
+      document.documentElement.style.setProperty('--color-scheme-background', 'dark');     
     } else {
       setTheme("light");
       localStorage.setItem("color-theme", "light");
       document.documentElement.classList.add("light");
       document.documentElement.classList.remove("dark");
+      document.documentElement.style.setProperty('--color-scheme-background', 'light');
     }
   }, []);
 
@@ -60,11 +62,13 @@ const Menu = ({ className }) => {
         document.documentElement.classList.remove("dark");
         localStorage.setItem("color-theme", "light");
         setTheme("light");
+        document.documentElement.style.setProperty('--color-scheme-background', 'light');
       } else {
         document.documentElement.classList.add("dark");
         document.documentElement.classList.remove("light");
         localStorage.setItem("color-theme", "dark");
         setTheme("dark");
+        document.documentElement.style.setProperty('--color-scheme-background', 'dark');
       }
     } catch (error) {
       console.error("Error setting theme in local storage:", error);
@@ -72,7 +76,7 @@ const Menu = ({ className }) => {
   };
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const { projectName } = useParams();
   return (
     <header className={`${className}`}>
       <nav
@@ -100,13 +104,31 @@ const Menu = ({ className }) => {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12 ">
-          <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-lg focus:outline-none font-semibold leading-6 text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200">
-              Works
-              <ChevronDownIcon
+          <Popover className="relative ">
+            <Popover.Button className="flex items-center gap-x-1 text-lg focus:outline-none font-semibold leading-6 ">
+              {projectName && (
+                <>
+                  <p class="text-white">Works</p>
+                  <ChevronDownIcon
                 className="h-5 w-5 flex-none "
                 aria-hidden="true"
               />
+                </>
+              )}
+
+              {!projectName && (
+                <>
+                  <p class="text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200">
+                    Works</p>
+                  
+                  <ChevronDownIcon
+                className="h-5 w-5 flex-none text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200"
+                aria-hidden="true"
+              />
+                </>
+              )}
+
+           
             </Popover.Button>
 
             <Transition
@@ -166,7 +188,20 @@ const Menu = ({ className }) => {
             href="/about"
             className="text-lg font-semibold leading-6  text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200"
           >
-            About me
+           {projectName && (
+                <>
+                  <p class="text-white">About me</p>
+                                 </>
+              )}
+
+              {!projectName && (
+                <>
+                  <p class="text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200">
+                    About me</p>
+                  
+                 
+                </>
+              )}
           </a>
 
           <SunIcon
@@ -184,10 +219,22 @@ const Menu = ({ className }) => {
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
-            href="#"
+            href="/contact"
             className="text-lg font-semibold leading-6  text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200"
           >
-            Contact <span aria-hidden="true">&rarr;</span>
+            {projectName && (
+                <>
+                  <p class="text-white">Contact <span aria-hidden="true">&rarr;</span></p>
+                  
+                </>
+              )}
+
+              {!projectName && (
+                <>
+                  <p class="text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200">
+                    Contact <span aria-hidden="true">&rarr;</span></p>
+                </>
+              )} 
           </a>
         </div>
       </nav>
@@ -286,6 +333,6 @@ const Menu = ({ className }) => {
       </Dialog>
     </header>
   );
-}
+};
 
 export default Menu;

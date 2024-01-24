@@ -139,7 +139,7 @@ const About = () => {
                   <br />
                   <a
                     href="mailto:matgoms@gmail.com"
-                    class="text-slate-600 underline dark:text-gray-400 hover:no-underline"
+                    class="text-gray-600 underline dark:text-gray-400 hover:no-underline"
                   >
                     matgoms@gmail.com
                   </a>
@@ -148,7 +148,7 @@ const About = () => {
                 </p>
 
                 <a
-                  class="inline-flex items-center py-2.5 px-5 me-2 text-sm font-medium text-gray-900 focus:outline-none bg-transparent rounded-full border border-slate-200 hover:bg-white focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  class="inline-flex items-center py-2.5 px-5 me-2 text-sm font-medium text-gray-900 focus:outline-none bg-transparent rounded-full border border-slate-200 hover:bg-white focus:z-10 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-700 dark:bg-slate-800 dark:text-gray-400 dark:border-slate-600 dark:hover:text-white dark:hover:bg-slate-700"
                   href="http://matgoms.me/dist/pdf/CV - Matheus Gomes.pdf"
                   target="_blank"
                   download
@@ -274,7 +274,7 @@ const About = () => {
                   <h3 class="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
                     Skills
                   </h3>
-                  <ul class="flex flex-wrap *:text-sm gap-2  *:w-max *:rounded-full *:border *:text-slate-600 *:border-slate-600/20 *:bg-slate-100 *:px-2 *:py-0.5 *:dark:text-slate-400 dark:*:border-slate-400/20 dark:*:bg-slate-400/10 ">
+                  <ul class="flex flex-wrap *:text-sm gap-2 *:font-medium *:w-max *:rounded-full *:border *:text-gray-600 *:border-slate-600/20 *:bg-slate-100 *:px-2 *:py-0.5 *:dark:text-gray-400 dark:*:border-slate-400/20 dark:*:bg-slate-400/10 ">
                     <li>Analytics</li>
                     <li>Back End</li>
                     <li>Design System</li>
@@ -287,7 +287,7 @@ const About = () => {
                   <h3 class="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
                     Softwares
                   </h3>
-                  <ul class="flex flex-wrap *:text-sm gap-2  *:w-max *:rounded-full *:border *:text-slate-600 *:border-slate-600/20 *:bg-slate-100 *:px-2 *:py-0.5 *:dark:text-slate-400 dark:*:border-slate-400/20 dark:*:bg-slate-400/10 ">
+                  <ul class="flex flex-wrap *:text-sm gap-2  *:font-medium *:w-max *:rounded-full *:border *:text-gray-600 *:border-slate-600/20 *:bg-slate-100 *:px-2 *:py-0.5 *:dark:text-gray-400 dark:*:border-slate-400/20 dark:*:bg-slate-400/10 ">
                     <li>Figma</li>
                     <li>XD</li>
                     <li>Miro</li>

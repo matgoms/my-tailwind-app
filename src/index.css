@@ -10,7 +10,12 @@
 
 }
 
+input{
+  color-scheme: var(--color-scheme-background);
+}
+
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
