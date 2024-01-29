@@ -1,6 +1,6 @@
 export default function Form() {
   return (
-    <form action="#" class="space-y-6">
+    <form name="contact" method="POST" class="space-y-6" netlify>
       <div>
         <label
           for="email"
