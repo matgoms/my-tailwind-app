@@ -28,10 +28,7 @@ export default function Portfolio() {
               What have I been working on lately?
             </h2>
             <p class="text-gray-500 sm:text-xl dark:text-gray-400 text-balance">
-              As a creative enthusiast, I have always been dedicated to studying
-              various artistic fields and visual communications. I have a strong
-              ability to adapt, allowing me to tackle various situations
-              effectively and find prompt, suitable solutions.
+            In a nutshell, my recent projects reflect a blend of creativity, technical expertise, and a passion for creating meaningful and impactful design experiences across various domains. Here are some of them:
             </p>
           </div>
           <div class="columns-1 lg:columns-3 lg:gap-24">

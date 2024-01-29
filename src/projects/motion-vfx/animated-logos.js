@@ -1,14 +1,13 @@
-const Abstrato = {
-  title: "Abstrato Motion",
+const Logos = {
+  title: "Animated Logos",
   year: "2019",
+  status: 'Work in progress',
   color: "bg-fuchsia-700 dark:bg-fuchsia-900",
   image: process.env.PUBLIC_URL + "/img/" + "abstrato/abstrato.png",
-  thumb:
-    process.env.PUBLIC_URL + "/img/" + "abstrato/abstrato-motion-thumb.gif",
+  thumb: process.env.PUBLIC_URL + "/img/" + "abstrato/abstrato-motion-thumb.gif",
   description:
-    "Highlighted here are a collection of logo designs, along with their diverse variations, designed during my time at an advertising agency in São Paulo, Brazil. ",
-  scope: "Motion Design",
-  duration: "1 week",
+    "Highlighted here are a collection of animated logo designs, along with their diverse variations, designed during my time at advertising agencies in São Paulo, Brazil. ",
+  scope: "Motion Design, Branding",
 
   contents: [
     {
@@ -31,4 +30,4 @@ const Abstrato = {
   ],
 };
 
-export default Abstrato;
+export default Logos;

@@ -15,8 +15,8 @@ export default function Footer() {
           <div class="mb-16 lg:mb-6">
             <a href="/" class="flex items-center">
               <img
-                className="h-8 w-auto me-2"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                className="size-16 w-auto brightness-90 dark:brightness-100 transition-all duration-1000 ease-in-out me-2 mb-1"
+                src="../img/logo-matheusgomes.gif"
                 alt=""
               />
               <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">

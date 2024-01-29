@@ -87,8 +87,8 @@ const Menu = ({ className }) => {
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
-              className="h-10 w-auto dark:brightness-200 transition-all duration-1000 ease-in-out"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              className="size-16 w-auto brightness-90 dark:brightness-100 transition-all duration-1000 ease-in-out"
+              src="../img/logo-matheusgomes.gif"
               alt=""
             />
           </a>
