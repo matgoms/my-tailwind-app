@@ -1,6 +1,6 @@
 export default function Form() {
   return (
-    <form name="contact" method="POST" class="space-y-6" netlify>
+    <form name="contact" method="POST" class="space-y-6" netlify data-netlify="true">
       <div>
         <label
           for="email"
@@ -29,6 +29,7 @@ export default function Form() {
         </label>
         <input
           type="text"
+          name="subject"
           id="subject"
           class="px-3 py-2 bg-white dark:bg-slate-900/40 border border-slate-300 dark:border-slate-600 placeholder-gray-400 disabled:bg-white disabled:text-gray-500 dark:text-gray-200 disabled:border-slate-200 focus:outline-none focus:border-sky-500 focus:bg-transparent focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 disabled:shadow-none"
           placeholder="Let me know how I can help you"
@@ -46,6 +47,7 @@ export default function Form() {
         </label>
         <textarea
           id="message"
+          name="message"
           rows="6"
           class="px-3 py-2 bg-white dark:bg-slate-900/40 border  border-slate-300 dark:border-slate-600 placeholder-gray-400 disabled:bg-white disabled:text-gray-500 dark:text-gray-200 disabled:border-slate-200 focus:outline-none focus:border-sky-500 focus:bg-transparent focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 disabled:shadow-none resize-none"
           placeholder="Leave a comment..."
