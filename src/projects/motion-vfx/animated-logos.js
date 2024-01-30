@@ -6,7 +6,7 @@ const Logos = {
   image: process.env.PUBLIC_URL + "/img/" + "abstrato/abstrato.png",
   thumb: process.env.PUBLIC_URL + "/img/" + "abstrato/abstrato-motion-thumb.gif",
   description:
-    "Highlighted here are a collection of animated logo designs, along with their diverse variations, designed during my time at advertising agencies in São Paulo, Brazil. ",
+    "A collection of animated logo designs, along with their diverse variations, designed during my time at advertising agencies in São Paulo, Brazil. ",
   scope: "Motion Design, Branding",
 
   contents: [

@@ -15,7 +15,7 @@ export default function Footer() {
           <div class="mb-16 lg:mb-6">
             <a href="/" class="flex items-center">
               <img
-                className="size-16 w-auto brightness-90 dark:brightness-100 transition-all duration-1000 ease-in-out me-2 mb-1"
+                className="size-16 w-auto transition-all duration-1000 ease-in-out dark:brightness-110 saturate-[.10] me-2 mb-1"
                 src="../img/logo-matheusgomes.gif"
                 alt=""
               />
@@ -120,7 +120,7 @@ export default function Footer() {
         <hr class="lg:mt-32 my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div class="sm:flex sm:items-center sm:justify-between">
           <span class="text-sm inline-flex items-center text-gray-500 sm:text-center dark:text-gray-400">
-            Built with{" "}
+            Built by myself with{" "}
             <svg
               width="100%"
               height="100%"

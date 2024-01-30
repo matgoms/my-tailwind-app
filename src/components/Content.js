@@ -153,7 +153,7 @@ export default function Content() {
   const tabs = [
     {
       classDefault:
-        "inline-block p-4 border-b-2 rounded-t-lg ui-selected:text-blue-600 ui-selected:border-blue-600  ui-selected:active dark:ui-selected:text-blue-500 dark:ui-selected:border-blue-500 focus:outline-none ui-not-selected:border-transparent ui-not-selected:hover:text-gray-600 ui-not-selected:hover:border-gray-300 dark:ui-not-selected:hover:text-gray-300 transition ease-in-out duration-500",
+        "inline-block p-4 border-b-2 rounded-t-lg ui-selected:text-slate-600 ui-selected:border-slate-600  ui-selected:active dark:ui-selected:text-slate-200 dark:ui-selected:border-slate-200 focus:outline-none ui-not-selected:border-transparent ui-not-selected:hover:text-gray-600 ui-not-selected:hover:border-gray-300 dark:ui-not-selected:hover:text-gray-300 transition ease-in-out duration-500",
     },
   ];
 
@@ -264,7 +264,7 @@ export default function Content() {
                         Motion and VFX
                       </h1>
                       <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 dark:text-gray-400">
-                      A collection of motion design projects, where my passion for creativity comes to life as a hobby.
+                      A collection of motion design projects I created as a hobby.
                       </p>
                     </div>
                   </div>

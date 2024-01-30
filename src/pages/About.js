@@ -3,14 +3,16 @@ import { HeroSmall } from "../components/Hero";
 import Footer from "../components/Footer";
 import { ArrowDownTrayIcon } from "@heroicons/react/20/solid";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
+import useAnalyticsEventTracker from "../components/useAnalyticsEventTracker";
 
 const About = () => {
+  const gaEventTracker = useAnalyticsEventTracker('About me');
   const HeroSmallTitle = [
     {
       title: "Get to know a little about me.",
       description:
         "I have over 7 years of design experience working with leading companies and small businesses.",
-      image: "http://matgoms.me/dist/img/me.jpg",
+      image: "../img/me.jpg",
     },
     /* { title: 'Title 2', description: 'Description 2' }, */
     // Add more items as needed
@@ -150,7 +152,7 @@ const About = () => {
                 <a
                   class="inline-flex items-center py-2.5 px-5 me-2 text-sm font-medium text-gray-900 focus:outline-none bg-transparent rounded-full border border-slate-200 hover:bg-white focus:z-10 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-700 dark:bg-slate-800 dark:text-gray-400 dark:border-slate-600 dark:hover:text-white dark:hover:bg-slate-700"
                   href="../pdf/CV - Matheus Gomes.pdf"
-                  target="_blank"
+                  target="_blank" onClick={()=>gaEventTracker('curriculo')}
                   download
                 >
                   Download my CV
@@ -232,7 +234,7 @@ const About = () => {
                 </div>
                 <div class="w-full bg-slate-200 rounded-full h-1.5 mb-6 dark:bg-slate-700">
                   <div
-                    class="bg-blue-600 h-1.5 rounded-full dark:bg-blue-500"
+                    class="bg-cyan-500 h-1.5 rounded-full dark:bg-cyan-600"
                     style={{ width: "95%" }}
                   ></div>
                 </div>
@@ -243,7 +245,7 @@ const About = () => {
                 </div>
                 <div class="w-full bg-slate-200 rounded-full h-1.5 mb-6 dark:bg-slate-700">
                   <div
-                    class="bg-blue-600 h-1.5 rounded-full dark:bg-blue-500"
+                    class="bg-cyan-500 h-1.5 rounded-full dark:bg-cyan-600"
                     style={{ width: "90%" }}
                   ></div>
                 </div>
@@ -254,7 +256,7 @@ const About = () => {
                 </div>
                 <div class="w-full bg-slate-200 rounded-full h-1.5 mb-6 dark:bg-slate-700">
                   <div
-                    class="bg-blue-600 h-1.5 rounded-full dark:bg-blue-500"
+                    class="bg-cyan-500 h-1.5 rounded-full dark:bg-cyan-600"
                     style={{ width: "80%" }}
                   ></div>
                 </div>
@@ -265,7 +267,7 @@ const About = () => {
                 </div>
                 <div class="w-full bg-slate-200 rounded-full h-1.5 mb-6 dark:bg-slate-700">
                   <div
-                    class="bg-blue-600 h-1.5 rounded-full dark:bg-blue-500"
+                    class="bg-cyan-500 h-1.5 rounded-full dark:bg-cyan-600"
                     style={{ width: "60%" }}
                   ></div>
                 </div>

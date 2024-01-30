@@ -86,11 +86,26 @@ const Menu = ({ className }) => {
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img
-              className="size-16 w-auto brightness-90 dark:brightness-100 transition-all duration-1000 ease-in-out"
+            {projectName && (
+                <>
+                  <img
+              className="size-16 w-auto brightness-0  transition-all duration-1000 ease-in-out invert"
               src="../img/logo-matheusgomes.gif"
               alt=""
             />
+                </>
+              )}
+            
+              {!projectName && (
+                <>
+                  <img
+              className="size-16 w-auto transition-all duration-1000 ease-in-out dark:brightness-110 saturate-[.10]"
+              src="../img/logo-matheusgomes.gif"
+              alt=""
+            />
+                </>
+              )}
+
           </a>
         </div>
         <div className="flex lg:hidden">
