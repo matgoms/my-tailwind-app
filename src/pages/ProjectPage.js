@@ -80,7 +80,7 @@ const ProjectPage = () => {
         altText={project.title}
         color={project.color}
       />
-      <Menu className="absolute top-0 w-full *:text-white bg-gradient-to-b from-black/30" />
+      <Menu className="absolute top-0 w-full *:text-white bg-gradient-to-b from-black/30 " />
       <div class="bg-white dark:bg-slate-800 transition-colors duration-1000 ease-in-out">
         <div class=" mx-auto max-w-screen-xl py-16 px-6 2xl:px-0 lg:gap-8 xl:gap-8 lg:pt-32">
           <div class="d-block lg:grid grid-cols-1 lg:grid-cols-5">
@@ -176,6 +176,25 @@ const ProjectPage = () => {
                         </section>
                       </>
                     )}
+                  
+    {content.credits && (
+      <section>
+        <div className="lg:max-w-3xl mx-auto w-full">
+          <p className="mb-6 text-gray-500 sm:text-xl dark:text-gray-400 text-pretty">
+            {content.credits.map((credit, creditsIndex) => (
+              <span key={creditsIndex}>
+                {credit.text}
+                {credit.link && (
+                  <span dangerouslySetInnerHTML={{ __html: credit.link }} />
+                )}
+              </span>
+            ))}
+          </p>
+        </div>
+      </section>
+    )}
+ 
+
                     {content.img && (
                       <>
                         <section>
