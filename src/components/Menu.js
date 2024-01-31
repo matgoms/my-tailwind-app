@@ -93,7 +93,7 @@ const Menu = ({ className }) => {
             {projectName && (
                 <>
                   <img
-              className="size-14 w-auto brightness-0  transition-all duration-1000 ease-in-out invert"
+              className="w-24 md:w-32 brightness-0  transition-all duration-1000 ease-in-out invert"
               src="../img/logo-matheus.svg"
               alt=""
             />
@@ -103,7 +103,7 @@ const Menu = ({ className }) => {
               {!projectName && (
                 <>
                   <img
-              className="size-14 w-auto transition-all duration-1000 ease-in-out dark:invert"
+              className="w-24 md:w-32 transition-all duration-1000 ease-in-out dark:invert"
               src="../img/logo-matheus.svg"
               alt=""
             />

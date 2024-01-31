@@ -50,7 +50,7 @@ const limitedProjects = sortedProjects.slice(0, 6);
           Here are a few projects I've worked on recently.
           </p>
  </div>
-          <h3 class="text-lg font-medium racking-tight text-gray-900 dark:text-white">
+          <h3 class="mt-4 md:mt-0 text-lg font-medium racking-tight text-gray-900 dark:text-white">
                         <a href="/projects" class="flex items-center gap-4 hover:underline"> 
                         See all projects
                         <ArrowRightCircleIcon class="size-6 text-gray-400 dark:text-gray-600"/>

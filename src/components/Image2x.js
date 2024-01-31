@@ -38,7 +38,7 @@ const Image2x = ({ photos }) => {
           key={index}
           src={photo}
           alt={`Photo ${index + 1}`}
-          className={`z-50 text-xl h-full absolute top-0 left-0 transition-opacity duration-1000 ${
+          className={`z-10 text-xl h-full absolute top-0 left-0 transition-opacity duration-1000 ${
             index === currentIndex ? 'opacity-100' : 'opacity-0'
           }`}
         />
