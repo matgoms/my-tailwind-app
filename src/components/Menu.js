@@ -85,12 +85,12 @@ const Menu = ({ className }) => {
       >
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
+            <span className="sr-only">Matheus Gomes</span>
             {projectName && (
                 <>
                   <img
-              className="size-16 w-auto brightness-0  transition-all duration-1000 ease-in-out invert"
-              src="../img/logo-matheusgomes.gif"
+              className="size-14 w-auto brightness-0  transition-all duration-1000 ease-in-out invert"
+              src="../img/logo-matheus.svg"
               alt=""
             />
                 </>
@@ -99,8 +99,8 @@ const Menu = ({ className }) => {
               {!projectName && (
                 <>
                   <img
-              className="size-16 w-auto transition-all duration-1000 ease-in-out dark:brightness-110 saturate-[.10]"
-              src="../img/logo-matheusgomes.gif"
+              className="size-14 w-auto transition-all duration-1000 ease-in-out dark:invert"
+              src="../img/logo-matheus.svg"
               alt=""
             />
                 </>
@@ -336,7 +336,7 @@ const Menu = ({ className }) => {
               </div>
               <div className="py-6">
                 <a
-                  href="#"
+                  href="/contact"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 dark:text-gray-400 hover:bg-slate-50 transition-colors duration-1000 ease-in-out"
                 >
                   Contact

@@ -15,12 +15,12 @@ export default function Footer() {
           <div class="mb-16 lg:mb-6">
             <a href="/" class="flex items-center">
               <img
-                className="size-16 w-auto transition-all duration-1000 ease-in-out dark:brightness-110 saturate-[.10] me-2 mb-1"
-                src="../img/logo-matheusgomes.gif"
+                className="size-12 w-auto transition-all duration-1000 ease-in-out dark:invert"
+                src="../img/logo-matheus.svg"
                 alt=""
               />
-              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                Matheus Gomes
+              <span class="self-center ms-2 text-2xl font-semibold whitespace-nowrap dark:text-white">
+                ™
               </span>
             </a>
           </div>
@@ -145,9 +145,6 @@ export default function Footer() {
             Tailwind
           </span>
 
-          <span class="text-sm inline-flex items-center text-gray-500 sm:text-center dark:text-gray-400">
-            © 2023 Matheus Gomes™. All Rights Reserved.
-          </span>
           <div class="flex mt-4 sm:justify-center sm:mt-0">
             <a
               href="http://linkedin.com/in/matgoms"
