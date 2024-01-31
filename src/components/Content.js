@@ -93,26 +93,19 @@ export default function Content() {
 
 
   const Social = ({ contents, title }) => {
-    const shuffleArray = (array) => {
-      let shuffledArray = array.slice();
-      for (let i = shuffledArray.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
-      }
-      return shuffledArray;
-    };
+    
    //guarde, comprint, lello, veni, dne, pp, skp, fera, andre, goodi,  //
     return (
       <div className="mb-24">
         {contents &&
-         shuffleArray(contents).map((content, index) => (
+         contents.map((content, index) => (
             <div key={index}>
               {content.Img && (
                 <>
                   <img
                     src={content.Img}
                     alt={title}
-                    className="rounded-2xl outline-slate-300 hover:outline-offset-[8px] transition-all ease-in duration-75  dark:hover:outline-slate-600 dark:outline-slate-700 outline-1 outline w-full mb-24 object-fit object-center"
+                    className="rounded-2xl outline-slate-300 hover:outline-offset-[8px] transition-all ease-in duration-75  dark:hover:outline-slate-600 dark:outline-slate-700  outline-1 outline w-full mb-24 object-fit object-center"
                   />
                 </>
               )}
