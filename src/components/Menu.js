@@ -31,9 +31,8 @@ const products = [
   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
   { name: 'Contact sales', href: '#', icon: PhoneIcon },
 ] */
-function handleSubmit(event) {
-  trackGAEvent("Menu", "Botão", "About me");
-  console.log('clicou mané');
+function handleSubmit(category, action, label) {
+  trackGAEvent(category, action, label);
 }
 
 function classNames(...classes) {
@@ -176,7 +175,7 @@ const Menu = ({ className }) => {
                       <div className="flex-auto">
                         <a
                           href={item.href}
-                          className="block text-lg font-semibold text-gray-900 dark:text-white"
+                          className="block text-lg font-semibold text-gray-900 dark:text-white" onClick={() => handleSubmit("Menu", `menu-${item.name}`, "button-works")}
                         >
                           {item.name}
                           <span className="absolute inset-0" />
@@ -206,7 +205,7 @@ const Menu = ({ className }) => {
 
           <a
             href="/about"
-            className="text-lg font-semibold leading-6  text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200" onClick={handleSubmit}
+            className="text-lg font-semibold leading-6  text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200" onClick={() => handleSubmit("Menu", "menu-about", "button-about")}
           >
            {projectName && (
                 <>
@@ -241,6 +240,7 @@ const Menu = ({ className }) => {
           <a
             href="/contact"
             className="text-lg font-semibold leading-6  text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200  transition-colors duration-1000 ease-in-out"
+            onClick={() => handleSubmit("Menu", "menu-contact", "button-contact")}
           >
             {projectName && (
                 <>
