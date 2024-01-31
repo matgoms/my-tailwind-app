@@ -41,15 +41,24 @@ console.log(limitedProjects);
 
   return (
     <section class="bg-slate-50 dark:bg-slate-900/40 transition-colors duration-1000 ease-in-out">
-      <div class="py-16 mx-auto max-w-screen-xl lg:py-40 px-6 lg:px-0">
-        <div class="mx-auto max-w-screen-sm text-center lg:mb-24 mb-8">
+      <div class="py-16 mx-auto max-w-screen-xl lg:py-40 px-6">
+      <div class="lg:flex mb-16 justify-between items-center">
+        <div class="">
           <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
             Other projects
           </h2>
           <p class="font-regular text-gray-500 sm:text-xl dark:text-gray-400">
           Here are a few projects I've worked on recently.
           </p>
-        </div>
+ </div>
+          <h3 class="text-lg font-medium racking-tight text-gray-900 dark:text-white">
+                        <a href="/projects" class="flex items-center gap-4 hover:underline"> 
+                        See all projects
+                        <ArrowRightCircleIcon class="size-6 text-gray-400 dark:text-gray-600"/>
+                      </a>
+                      </h3>
+                      </div>
+       
         <div class="grid lg:grid-cols-3 gap-16">
           {limitedProjects.map((project) => (
             <div key={project.id}>
