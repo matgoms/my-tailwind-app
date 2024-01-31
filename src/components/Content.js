@@ -196,7 +196,7 @@ export default function Content() {
 
   return (
     <section class="text-gray-600 body-font bg-slate-50 dark:bg-slate-900/50 transition-colors duration-1000 ease-in-out py-24 lg:py-24">
-      <div class="max-w-screen-xl px-5 mx-auto">
+      <div class="max-w-screen-xl px-6 mx-auto">
         <div class=" ">
           <Tab.Group selectedIndex={activeTabIndex} onChange={handleTabChange}>
             <Tab.List class="text-sm lg:text-md font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 flex flex-wrap -mb-px ">

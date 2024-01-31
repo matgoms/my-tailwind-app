@@ -54,7 +54,6 @@ const ProjectPage = () => {
 
   const projectFolder = findProjectFolder(projectName);
   setProjectFolder(projectFolder);
-  console.log(`O arquivo ${projectName} está localizado em: ${projectFolder}`);
 
     // Scroll to the top when the component mounts or the projectName changes
     window.scrollTo(0, 0);
@@ -148,7 +147,7 @@ const ProjectPage = () => {
         </div>
         <hr class="border-gray-200 mx-auto dark:border-gray-700" />
 
-        <div class="bg-white dark:bg-slate-800 mx-auto w-full mt-8 lg:mt-24 mb-32 lg:mb-32 px-6 xl:px-0 ">
+        <div class="bg-white dark:bg-slate-800 mx-auto w-full mt-8 lg:mt-24 mb-32 lg:mb-32 xl:px-0 ">
           <div class="flex justify-between mx-auto ">
             <article class="mx-auto w-full">
               {project.contents &&
@@ -157,7 +156,7 @@ const ProjectPage = () => {
                     {content.title && (
                       <>
                         <section>
-                          <div className="lg:max-w-3xl mx-auto w-full">
+                          <div className="lg:max-w-3xl mx-auto w-full px-6 lg:px-0">
                             <h2 className="mt-16 mb-6 text-2xl font-bold text-gray-900 dark:text-white">
                               {content.title}
                             </h2>
@@ -168,7 +167,7 @@ const ProjectPage = () => {
                     {content.description && (
                       <>
                         <section>
-                          <div className="lg:max-w-3xl mx-auto w-full ">
+                          <div className="lg:max-w-3xl mx-auto w-full px-6 lg:px-0">
                             <p className="mb-6 text-gray-500 sm:text-xl dark:text-gray-400 text-pretty">
                               {content.description}
                             </p>
@@ -179,7 +178,7 @@ const ProjectPage = () => {
                   
     {content.credits && (
       <section>
-        <div className="lg:max-w-3xl mx-auto w-full">
+        <div className="lg:max-w-3xl mx-auto w-full px-6 lg:px-0">
           <p className="mb-6 text-gray-500 sm:text-xl dark:text-gray-400 text-pretty">
             {content.credits.map((credit, creditsIndex) => (
               <span key={creditsIndex}>
@@ -198,7 +197,7 @@ const ProjectPage = () => {
                     {content.img && (
                       <>
                         <section>
-                          <div className="lg:max-w-7xl mx-auto w-full lg:py-16 py-3">
+                          <div className="lg:max-w-7xl mx-auto w-full lg:py-16 py-3 px-6 lg:px-0">
                             <img src={content.img} alt="" className="w-full border-[1px] border-slate-50 dark:border-slate-900/40 bg-slate-50 dark:bg-slate-900/60" />
                           </div>
                         </section>
@@ -221,13 +220,13 @@ const ProjectPage = () => {
                     {content.Duo && (
                       <>
                         <section>
-                          <div className="max-w-screen-xl mx-auto columns-1 lg:columns-2 lg:gap-32">
+                          <div className="max-w-screen-xl mx-auto columns-1 lg:columns-2 lg:gap-32 ">
                             {content.Duo.map((duo, duoIndex) => (
                               <div
                                 key={duoIndex}
                                 className="grid max-w-screen-2xl mx-auto lg:py-16 py-3"
                               >
-                                <div className="mr-auto place-self-center w-full">
+                                <div className="mr-auto place-self-center w-full px-6 lg:px-0">
                                   <img
                                     src={duo.imgDuo}
                                     alt=""
@@ -251,7 +250,7 @@ const ProjectPage = () => {
                                 "%26scaling%3Dscale-down-width%26page-id%3D0%253A1%26mode%3Ddesign&hide-ui=1"
                               }
                               allowfullscreen
-                              class="w-full h-lvh border-2 border-slate-50 dark:border-slate-800"
+                              class="w-full h-lvh lg:border-2 border-slate-50 dark:border-slate-800"
                               
                             ></iframe>
                             <h6 class="mt-4 text-gray-700  dark:text-gray-400 text-center ">

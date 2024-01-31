@@ -115,7 +115,7 @@ const Menu = ({ className }) => {
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6 " aria-hidden="true" />
+            <Bars3Icon className="h-6 w-6 dark:text-gray-400" aria-hidden="true" />
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12 ">
@@ -160,7 +160,7 @@ const Menu = ({ className }) => {
                   {products.map((item) => (
                     <div
                       key={item.name}
-                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-md leading-6 hover:bg-slate-50 dark:hover:bg-slate-800/40"
+                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-md leading-6 hover:bg-slate-50 dark:hover:bg-slate-800/40 "
                     >
                       <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-slate-50 group-hover:bg-white">
                         <item.icon
@@ -235,7 +235,7 @@ const Menu = ({ className }) => {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
             href="/contact"
-            className="text-lg font-semibold leading-6  text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200"
+            className="text-lg font-semibold leading-6  text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200  transition-colors duration-1000 ease-in-out"
           >
             {projectName && (
                 <>
@@ -260,7 +260,7 @@ const Menu = ({ className }) => {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:bg-slate-800 text-base">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:bg-slate-800 text-base  transition-colors duration-1000 ease-in-out">
           <div className="flex items-center justify-between ">
             {mobileMenuOpen ? (
               <div>
@@ -302,7 +302,7 @@ const Menu = ({ className }) => {
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 font-semibold  leading-7 text-gray-900 dark:hover:bg-slate-700 dark:text-gray-400 hover:bg-slate-50 ">
+                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 font-semibold  leading-7 text-gray-900 dark:hover:bg-slate-700 dark:text-gray-400 hover:bg-slate-50  transition-colors duration-1000 ease-in-out">
                         Works
                         <ChevronDownIcon
                           className={classNames(

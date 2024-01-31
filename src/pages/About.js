@@ -22,12 +22,12 @@ const About = () => {
       <div class="bg-white dark:bg-slate-800 transition-colors duration-1000 ease-in-out">
         <Menu />
         <HeroSmall titles={HeroSmallTitle} images={HeroSmallTitle} />
-        <section class="text-gray-600 text-md bg-slate-50 dark:bg-slate-900/50 py-8 lg:py-24 transition-colors duration-1000 ease-in-out">
-          <div class="max-w-screen-xl px-5 mx-auto">
+        <section class="text-gray-600 text-md bg-slate-50 dark:bg-slate-900/50 py-16 lg:py-24 transition-colors duration-1000 ease-in-out">
+          <div class="max-w-screen-xl px-6 mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 lg:gap-24">
               <div class="col-span-2">
                 
-                <p class="mt-3 mb-8 sm:text-xl leading-relaxed text-base  dark:text-gray-400 text-balance">
+                <p class="lg:mt-3 mb-8 sm:text-xl leading-relaxed text-base  dark:text-gray-400 text-balance">
                   As a creative enthusiast, I have always been dedicated to
                   studying various artistic fields and visual communications. I
                   have a strong ability to adapt, allowing me to tackle various

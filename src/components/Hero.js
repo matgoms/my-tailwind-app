@@ -23,7 +23,7 @@ export function HeroBig() {
   return (
    <>
     <section>
-    <div class="grid gap-16 max-w-screen-xl px-4 py-16 mx-auto lg:grid lg:grid-cols-2 lg:py-24 lg:px-6">
+    <div class="grid gap-16 max-w-screen-xl px-6 py-16 mx-auto lg:grid lg:grid-cols-2 lg:py-24 ">
         <div class="mr-auto place-self-center">
             <h1 class="max-w-2xl my-6 text-5xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-8xl dark:text-gray-100">Welcome to my portfolio!</h1>
           
@@ -50,7 +50,7 @@ export function HeroBig() {
 
 const Title = ({ title, description, image }) => (
   <>
-    <div className="grid gap-2 max-w-screen-xl px-4 py-16 mx-auto lg:grid lg:grid-cols-3 lg:py-16 lg:px-6 lg:gap-24">
+    <div className="grid gap-2 max-w-screen-xl px-6 py-16 mx-auto lg:grid lg:grid-cols-3 lg:py-16 lg:px-6 lg:gap-24">
         <div className="col-span-2 mr-auto place-self-center">
     {title && (
       <div key={title} className="">
@@ -65,7 +65,7 @@ const Title = ({ title, description, image }) => (
     </div>
     {image && (
       <div key={image} className="">
-         <img class="mt-4 aspect-square w-3/4 rounded-full object-cover saturate-50 hover:saturate-100 duration-300  transition-all" src={image}/>
+         <img class="hidden lg:block lg:mt-4 aspect-square w-3/4 rounded-full object-cover saturate-50 hover:saturate-100 duration-300  transition-all" src={image}/>
       </div>
     )}
     </div>

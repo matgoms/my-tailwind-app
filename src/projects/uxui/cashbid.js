@@ -1,6 +1,6 @@
 const Cashbid = { 
     title: 'Cashbid', 
-    year: '2023',
+    year: '2021',
     color: "bg-white/80 dark:bg-slate-900",
     image: process.env.PUBLIC_URL + '/img/' + 'cashbid/cashbid.jpg',
     thumb: process.env.PUBLIC_URL + '/img/' + 'cashbid/cashbid-thumb.png',
