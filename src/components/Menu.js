@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { useParams } from "react-router-dom";
+import { trackGAEvent } from "./google-analytics";
 import {
   Bars3Icon,
   CameraIcon,
@@ -30,6 +31,10 @@ const products = [
   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
   { name: 'Contact sales', href: '#', icon: PhoneIcon },
 ] */
+function handleSubmit(event) {
+  trackGAEvent("Menu", "Botão", "About me");
+  console.log('clicou mané');
+}
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -201,7 +206,7 @@ const Menu = ({ className }) => {
 
           <a
             href="/about"
-            className="text-lg font-semibold leading-6  text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200"
+            className="text-lg font-semibold leading-6  text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200" onClick={handleSubmit}
           >
            {projectName && (
                 <>

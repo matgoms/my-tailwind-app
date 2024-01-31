@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Menu from "../components/Menu";
 import { HeroBig } from "../components/Hero";
 import Image2x from "../components/Image2x";
@@ -6,6 +7,10 @@ import Portfolio from "../components/Portfolio";
 import Footer from "../components/Footer";
 
 export default function Home(){
+
+    useEffect(() => {
+        document.title =  'Matheus Gomes - Home';
+      }, []);
 
     const photos = [
         '../img/projects-preview/4.jpg',

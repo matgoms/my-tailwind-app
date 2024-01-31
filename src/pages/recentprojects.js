@@ -37,7 +37,6 @@ const sortedProjects = recentProjects.sort((a, b) => {
 
 
 const limitedProjects = sortedProjects.slice(0, 6);
-console.log(limitedProjects);
 
   return (
     <section class="bg-slate-50 dark:bg-slate-900/40 transition-colors duration-1000 ease-in-out">

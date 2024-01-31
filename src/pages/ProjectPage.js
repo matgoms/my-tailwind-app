@@ -34,6 +34,9 @@ const ProjectPage = () => {
 
  useEffect(() => {
 
+        document.title =  'Matheus Gomes - ' + projectName.charAt(0).toUpperCase() + projectName.slice(1).replace(/-/g, ' ');;
+     
+
   const checkFilePath = (filePath, folder) => {
     const lowerCaseFilePath = filePath.toLowerCase();
     return lowerCaseFilePath.includes(folder.toLowerCase());

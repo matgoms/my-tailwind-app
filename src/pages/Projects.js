@@ -8,6 +8,11 @@ import { ScrollRestoration } from "react-router-dom";
 
 
 const Projects = () => {
+
+    useEffect(() => {
+        document.title =  'Matheus Gomes - Projects';
+      }, []);
+
     const HeroSmallTitle = [
       { title: 'Crafting Creative Design Journeys', description: 'My design projects showcase companies and startups committed to simplifying bureaucracy, crafting user-friendly training apps, revealing ancestral stories through personalized platforms, and more.' },
       /* { title: 'Title 2', description: 'Description 2' }, */

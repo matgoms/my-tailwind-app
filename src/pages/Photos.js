@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Menu from "../components/Menu";
 import { HeroSmall } from "../components/Hero";
 import Footer from "../components/Footer";
@@ -10,6 +11,7 @@ interface AppState {
 }
 
 class Photos extends Component<AppProps, AppState> {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -19,6 +21,8 @@ class Photos extends Component<AppProps, AppState> {
   }
 
   componentDidMount() {
+    document.title =  'Matheus Gomes - Photos';
+  
     // Use require.context to dinamically import all files from the 'public/img/photos' folder
     const context = require.context(
       "!!file-loader!../../public/img/photos",
@@ -34,7 +38,6 @@ class Photos extends Component<AppProps, AppState> {
       const fileName = filePath.replace(/^.*[\\\/]/, "").split(".")[0];
       // Parse the file name to extract width and height (assuming they are part of the file name)
       const [width, height] = fileName.split("_")[1].split("x").map(Number);
-      console.log(fileName, width, height);
       // Return the image object with largeURL, width, and height
       return {
         largeURL: context(filePath).default,
@@ -47,6 +50,7 @@ class Photos extends Component<AppProps, AppState> {
   }
 
   render() {
+    
     const HeroSmallTitle = [
       {
         title: "Telling Stories Through Lens",
