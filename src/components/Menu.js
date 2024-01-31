@@ -88,7 +88,7 @@ const Menu = ({ className }) => {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.5" onClick={() => handleSubmit("Menu", "menu-home", "button-home")}>
             <span className="sr-only">Matheus Gomes</span>
             {projectName && (
                 <>
@@ -227,13 +227,13 @@ const Menu = ({ className }) => {
             className="h-6 w-6 cursor-pointer hidden dark:block dark:text-white"
             aria-hidden="true"
             id="light"
-            onClick={handleThemeClick}
+            onClick={() => {handleThemeClick(); handleSubmit("Menu", "light-mode", "color-scheme")}}
           />
           <MoonIcon
             className="h-6 w-6 cursor-pointer dark:hidden block"
             aria-hidden="true"
             id="dark"
-            onClick={handleThemeClick}
+            onClick={() => {handleThemeClick(); handleSubmit("Menu", "dark-mode", "color-scheme")}}
           />
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">

@@ -1,3 +1,4 @@
+import { trackGAEvent } from "./google-analytics";
 import {
   EnvelopeIcon,
   CameraIcon,
@@ -8,6 +9,9 @@ import {
 } from "@heroicons/react/24/outline";
 
 export default function Footer() {
+  function handleSubmit(category, action, label) {
+    trackGAEvent(category, action, label);
+  }
   return (
     <footer class="bg-white dark:bg-slate-900 transition-colors duration-1000 ease-in-out">
       <div class="mx-auto max-w-7xl px-6 2xl:px-0 py-16 lg:pt-24">
@@ -149,6 +153,7 @@ export default function Footer() {
             <a
               href="http://linkedin.com/in/matgoms"
               class="text-gray-600 dark:text-gray-400  hover:text-gray-900 hover:dark:text-white ms-2"
+              onClick={() => handleSubmit("Footer", `social-linkedin`, "social-icon")}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -174,6 +179,7 @@ export default function Footer() {
             <a
               href="http://instagram.com/matgoms"
               class="text-gray-600 dark:text-gray-400  hover:text-gray-900 hover:dark:text-white ms-2"
+              onClick={() => handleSubmit("Footer", `social-insta`, "social-icon")}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -197,6 +203,7 @@ export default function Footer() {
             <a
               href="http://dribbble.com/matgoms"
               class="text-gray-600 dark:text-gray-400  hover:text-gray-900 hover:dark:text-white ms-2"
+              onClick={() => handleSubmit("Footer", `social-dribbble`, "social-icon")}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -221,6 +228,7 @@ export default function Footer() {
             <a
               href="http://be.net/matgoms"
               class="text-gray-600 dark:text-gray-400  hover:text-gray-900 hover:dark:text-white ms-2"
+              onClick={() => handleSubmit("Footer", `social-behance`, "social-icon")}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
