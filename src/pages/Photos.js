@@ -40,9 +40,11 @@ class Photos extends Component<AppProps, AppState> {
       const [width, height] = fileName.split("_")[1].split("x").map(Number);
       // Return the image object with largeURL, width, and height
       return {
+        fileName: fileName,
         largeURL: context(filePath).default,
         width: isNaN(width) ? 2500 : width, // Set your default width if not found in the file name
         height: isNaN(height) ? 1667 : height, // Set your default height if not found in the file name
+        
       };
     });
     // Update the component state with the imported images
