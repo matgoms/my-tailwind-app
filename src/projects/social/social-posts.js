@@ -1,89 +1,92 @@
 
 const Social = { 
     title: 'Social Media',  
-    image: 'https://i.imgur.com/0krS9Dv.png',  
+    image: `${process.env.PUBLIC_URL}/img/social/9.png`,  
     description: "A selection of social media designs. Done during my tenure at advertising agencies in São Paulo, Brazil, these designs embody creativity, innovation, and a strategic approach to social media aesthetics.",
     contents: [
         //paypal
         {
-            Img: 'https://i.imgur.com/0krS9Dv.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/1.png`
         },
         {
-            Img: 'https://i.imgur.com/OYgIPCr.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/2.png`
         },
         {
-            Img: 'https://i.imgur.com/nieTHBv.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/3.png`
         },
         {
-            Img: 'https://i.imgur.com/6KH04Bk.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/4.png`
         },
         {
-            Img: 'https://i.imgur.com/8Cz3VLb.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/5.png`
         },
 
         //lello
         {
-            Img: 'https://i.imgur.com/2XGF5il.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/6.png`
         },
         {
-            Img: 'https://i.imgur.com/ywPaszG.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/7.png`
         },
         {
-            Img: 'https://i.imgur.com/kOdOmBC.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/8.png`
         },
         //veni
         {
-            Img: 'https://i.imgur.com/XilLSpG.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/9.png`
         },
         //comprint
         {
-            Img: 'https://i.imgur.com/Vy1BFox.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/10.png`
         },
         {
-            Img: 'https://i.imgur.com/CjOYVmM.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/11.png`
         },
         //guarde
         {
-            Img: 'https://i.imgur.com/AqPxrZL.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/12.png`
         },
         //fera
         {
-            Img: 'https://i.imgur.com/BmpIK6c.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/13.png`
         },
         //dede
         {
-            Img: 'https://i.imgur.com/JOcEcEc.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/14.png`
         },
         //goodi
         {
-            Img: 'https://i.imgur.com/J1uETag.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/15.png`
         },
         {
-            Img: 'https://i.imgur.com/pySLu2z.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/16.png`
         },
         //dne
         {
-            Img: 'https://i.imgur.com/uDofcfh.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/17.png`
         },
         {
-            Img: 'https://i.imgur.com/PjnidYH.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/18.png`
         },
         
         //skp
         {
-            Img: 'https://i.imgur.com/MbwxRdW.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/19.png`
         },
         {
-            Img: 'https://i.imgur.com/QQ7xVw9.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/20.png`
         },
         {
-            Img: 'https://i.imgur.com/feNULLZ.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/21.png`
         },
         {
-            Img: 'https://i.imgur.com/kkzPBtr.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/22.png`
         },
         {
-            Img: 'https://i.imgur.com/U1gRcTX.png'
+            Img: `${process.env.PUBLIC_URL}/img/social/23.png`
+        },
+        {
+            Img: `${process.env.PUBLIC_URL}/img/social/24.png`
         },
     ]
 

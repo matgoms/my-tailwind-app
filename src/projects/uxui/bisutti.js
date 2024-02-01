@@ -3,8 +3,8 @@ const Bisutti = {
     year: '2018',
     link: "grupobisutti.com.br",
     color: "bg-white/80 dark:bg-slate-900",
-    image: process.env.PUBLIC_URL + '/img/' + 'Bisutti/Bisutti.jpg',
-    thumb: process.env.PUBLIC_URL + '/img/' + 'Bisutti/Bisutti-thumb.png',
+    image: `${process.env.PUBLIC_URL}/img/Bisutti/Bisutti.jpg`,
+    thumb: `${process.env.PUBLIC_URL}/img/Bisutti/Bisutti-thumb.png`,
     description: "The Bisutti Group is a benchmark brand in catering for social and corporate events.",
     scope: "User Interface",
     duration: '2 Month',
@@ -13,7 +13,7 @@ const Bisutti = {
         
        
         {
-          img: process.env.PUBLIC_URL + '/img/' + 'Bisutti/style.png',
+          img: `${process.env.PUBLIC_URL}/img/Bisutti/style.png`,
         },
         {
             title: "The new visual identity",
@@ -23,10 +23,10 @@ const Bisutti = {
         description: "Even though the website design didn't get approval, the concept highlights the commitment to excellence. The use of gold and white tones, along with stylish and soft fonts, aimed to elevate the digital presence to match the grandeur of the events they hosted.",
         },
         {
-            imgBig: process.env.PUBLIC_URL + '/img/' + 'Bisutti/home.png',
+            imgBig: `${process.env.PUBLIC_URL}/img/Bisutti/home.png`,
           },
           {
-            img: process.env.PUBLIC_URL + '/img/' + 'Bisutti/interna.png',
+            img: `${process.env.PUBLIC_URL}/img/Bisutti/interna.png`,
           },
         // Adicione mais itens de conteúdo conforme necessário
       ],

@@ -3,8 +3,8 @@ const Ecorodovias = {
     year: '2019',
     link: "ecorodovias.com.br/papainoelexiste",
     color: "bg-white/80 dark:bg-slate-900",
-    image: process.env.PUBLIC_URL + '/img/' + 'eco-rodovias/eco-rodovias.jpg',
-    thumb: process.env.PUBLIC_URL + '/img/' + 'eco-rodovias/eco-rodovias-thumb.png',
+    image: `${process.env.PUBLIC_URL}/img/eco-rodovias/eco-rodovias.jpg`,
+    thumb: `${process.env.PUBLIC_URL}/img/eco-rodovias/eco-rodovias-thumb.png`,
     description: 'Santa Claus Exists is the Ecorodovias Group project that transforms partners, suppliers, and stakeholders into Santa Clauses. The project has already gifted more than 70,000 Brazilian children served by charitable institutions.',
     scope: "User Interface",
     duration: '3 weeks',
@@ -13,15 +13,15 @@ const Ecorodovias = {
         {
             Duo: [
               {
-                imgDuo: process.env.PUBLIC_URL + "/img/" + "eco-rodovias/duo1.jpg",
+                imgDuo: `${process.env.PUBLIC_URL}/img/eco-rodovias/duo1.jpg`,
               },
               {
-                imgDuo: process.env.PUBLIC_URL + "/img/" + "eco-rodovias/duo2.jpg",
+                imgDuo: `${process.env.PUBLIC_URL}/img/eco-rodovias/duo2.jpg`,
               },
             ],
           },
         { 
-            img: process.env.PUBLIC_URL + '/img/' + 'eco-rodovias/style.png',
+            img: `${process.env.PUBLIC_URL}/img/eco-rodovias/style.png`,
           
         },
         { 
@@ -32,7 +32,7 @@ const Ecorodovias = {
     
 
         { 
-            img: process.env.PUBLIC_URL + '/img/' + 'eco-rodovias/web.png',
+            img: `${process.env.PUBLIC_URL}/img/eco-rodovias/web.png`,
           
         },
 

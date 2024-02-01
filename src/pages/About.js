@@ -35,7 +35,7 @@ const About = () => {
             <div class="grid grid-cols-1 md:grid-cols-3 lg:gap-24">
               <div class="col-span-2">
                 
-                <p class="lg:mt-3 mb-8 sm:text-xl leading-relaxed text-base  dark:text-gray-400 text-balance">
+                <p class="mb-8 sm:text-xl leading-relaxed text-base  dark:text-gray-400 text-balance">
                   As a creative enthusiast, I have always been dedicated to
                   studying various artistic fields and visual communications. I
                   have a strong ability to adapt, allowing me to tackle various
@@ -47,7 +47,7 @@ const About = () => {
               <div class="">
                 {/* linguas */}
 
-                <div class="flex gap-4 mt-6">
+                <div class="flex gap-4 mt-2">
                   <div class="group relative h-full cursor-pointer align-middle ">
                     <div class="absolute invisible bottom-7 group-hover:visible w-max bg-slate-700  text-black px-4 mb-6 -ms-2 py-1.5 text-sm rounded-md">
                       <p class=" leading-2 text-gray-200 pt-2 pb-2">

@@ -2,8 +2,8 @@ const Gardenfy = {
     title: "Gardenfy",
     year: "2022",
     color: "bg-white/80 dark:bg-slate-900",
-    image: process.env.PUBLIC_URL + "/img/" + "gardenfy/gardenfy.jpg",
-    thumb: process.env.PUBLIC_URL + "/img/" + "gardenfy/gardenfy-thumb.png",
+    image: `${process.env.PUBLIC_URL}/img/gardenfy/gardenfy.jpg`,
+    thumb: `${process.env.PUBLIC_URL}/img/gardenfy/gardenfy-thumb.png`,
     description:
       "The gardening app that gently lead users through the enchanting journey of plant care.",
     scope: "User Interface, User Experience",
@@ -13,10 +13,10 @@ const Gardenfy = {
       {
           Duo: [
             {
-              imgDuo: process.env.PUBLIC_URL + "/img/" + "gardenfy/duo1.jpg",
+              imgDuo: `${process.env.PUBLIC_URL}/img/gardenfy/duo1.jpg`,
             },
             {
-              imgDuo: process.env.PUBLIC_URL + "/img/" + "gardenfy/duo2.png",
+              imgDuo: `${process.env.PUBLIC_URL}/img/gardenfy/duo2.png`,
             },
           ],
         },
@@ -35,10 +35,10 @@ const Gardenfy = {
             "Through this app, we aspire to encourage collaboration, fostering engagement as we transform plant care into a visually digital experience. With features like displaying all plants, offering detailed plant information, providing timely watering notifications, and scheduling tools, this app is a comprehensive guide for plant enthusiasts.",
         },
         {
-          imgBig: process.env.PUBLIC_URL + "/img/" + "gardenfy/screens.png",
+          imgBig: `${process.env.PUBLIC_URL}/img/gardenfy/screens.png`,
         },
         {
-          img: process.env.PUBLIC_URL + '/img/' + 'gardenfy/style.png',
+          img: `${process.env.PUBLIC_URL}/img/gardenfy/style.png`,
         },
       {
           title: "Prototype",

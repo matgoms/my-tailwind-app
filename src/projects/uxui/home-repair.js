@@ -3,8 +3,8 @@ const HomeRepair = {
     year: '2023',
     status: 'Work in progress',
     color: "bg-white/80 dark:bg-slate-900",
-    image: process.env.PUBLIC_URL + '/img/' + 'home-repair/home-repair.jpg',
-    thumb: process.env.PUBLIC_URL + '/img/' + 'home-repair/home-repair-thumb.png',
+    image: `${process.env.PUBLIC_URL}/img/home-repair/home-repair.jpg`,
+    thumb: `${process.env.PUBLIC_URL}/img/home-repair/home-repair-thumb.png`,
     description: "Since 2023, I have been working on this project while immersed in the french market.",
     scope: 'User Interface, User Experience',
     duration: 'In progress',
@@ -17,15 +17,15 @@ const HomeRepair = {
         {
           Duo: [
             {
-              imgDuo: process.env.PUBLIC_URL + '/img/' + 'home-repair/components1.jpg',
+              imgDuo: `${process.env.PUBLIC_URL}/img/home-repair/components1.jpg`,
             },
             {
-              imgDuo: process.env.PUBLIC_URL + '/img/' + 'home-repair/components2.jpg',
+              imgDuo: `${process.env.PUBLIC_URL}/img/home-repair/components2.jpg`,
             },
           ],
         },
         {
-          img: process.env.PUBLIC_URL + '/img/' + 'home-repair/style.png',
+          img: `${process.env.PUBLIC_URL}/img/home-repair/style.png`,
         },
         {
           title: "Prototype",

@@ -149,10 +149,10 @@ export default function Footer() {
             Tailwind
           </span>
 
-          <div class="flex mt-4 sm:justify-center sm:mt-0">
+          <div class="flex mt-6 sm:justify-center sm:mt-0 gap-2">
             <a
               href="http://linkedin.com/in/matgoms"
-              class="text-gray-600 dark:text-gray-400  hover:text-gray-900 hover:dark:text-white ms-2"
+              class="text-gray-600 dark:text-gray-400  hover:text-gray-900 hover:dark:text-white"
               onClick={() => handleSubmit("Footer", `social-linkedin`, "social-icon")}
             >
               <svg
@@ -178,7 +178,7 @@ export default function Footer() {
             </a>
             <a
               href="http://instagram.com/matgoms"
-              class="text-gray-600 dark:text-gray-400  hover:text-gray-900 hover:dark:text-white ms-2"
+              class="text-gray-600 dark:text-gray-400  hover:text-gray-900 hover:dark:text-white"
               onClick={() => handleSubmit("Footer", `social-insta`, "social-icon")}
             >
               <svg
@@ -202,7 +202,7 @@ export default function Footer() {
             </a>
             <a
               href="http://dribbble.com/matgoms"
-              class="text-gray-600 dark:text-gray-400  hover:text-gray-900 hover:dark:text-white ms-2"
+              class="text-gray-600 dark:text-gray-400  hover:text-gray-900 hover:dark:text-white"
               onClick={() => handleSubmit("Footer", `social-dribbble`, "social-icon")}
             >
               <svg
@@ -227,7 +227,7 @@ export default function Footer() {
             </a>
             <a
               href="http://be.net/matgoms"
-              class="text-gray-600 dark:text-gray-400  hover:text-gray-900 hover:dark:text-white ms-2"
+              class="text-gray-600 dark:text-gray-400  hover:text-gray-900 hover:dark:text-white"
               onClick={() => handleSubmit("Footer", `social-behance`, "social-icon")}
             >
               <svg

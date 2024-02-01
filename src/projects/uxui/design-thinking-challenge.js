@@ -2,8 +2,8 @@ const Challenge = {
   title: "Design Thinking Challenge",
   year: "2022",
   color: "bg-white/80 dark:bg-slate-900",
-  image: process.env.PUBLIC_URL + "/img/" + "dt-challenge/dt-challenge.jpg",
-  thumb: process.env.PUBLIC_URL + "/img/" + "dt-challenge/dt-challenge-thumb.png",
+  image: `${process.env.PUBLIC_URL}/img/dt-challenge/dt-challenge.jpg`,
+  thumb: `${process.env.PUBLIC_URL}/img/dt-challenge/dt-challenge-thumb.png`,
   description:
     "The challenge we faced revolved around digitizing the training chart/plan. In response, our team studied and discussed potential solutions.",
   scope: "Design Thinking, User Experience",
@@ -13,10 +13,10 @@ const Challenge = {
     {
         Duo: [
           {
-            imgDuo: process.env.PUBLIC_URL + "/img/" + "dt-challenge/duo1.jpg",
+            imgDuo: `${process.env.PUBLIC_URL}/img/dt-challenge/duo1.jpg`,
           },
           {
-            imgDuo: process.env.PUBLIC_URL + "/img/" + "dt-challenge/duo2.png",
+            imgDuo: `${process.env.PUBLIC_URL}/img/dt-challenge/duo2.png`,
           },
         ],
       },
@@ -35,7 +35,7 @@ const Challenge = {
           "By creating a concept map, we could envision a more intuitive understanding of the training process, encourage collaboration and engagement among team members and transform training strategies into a visually compelling app.",
       },
       {
-        imgBig: process.env.PUBLIC_URL + "/img/" + "dt-challenge/concept-map.png",
+        imgBig: `${process.env.PUBLIC_URL}/img/dt-challenge/concept-map.png`,
       },
     {
         title: "Prototype",

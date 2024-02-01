@@ -3,8 +3,8 @@ const Genera = {
   year: "2022",
   link: "genera.com.br",
   color: "bg-white dark:bg-slate-900",
-  image: process.env.PUBLIC_URL + '/img/' + 'genera/genera.jpg',
-  thumb: process.env.PUBLIC_URL + '/img/' + 'genera/genera-thumb.png',
+  image: `${process.env.PUBLIC_URL}/img/genera/genera.jpg`,
+  thumb: `${process.env.PUBLIC_URL}/img/genera/genera-thumb.png`,
   description:
     "Genera is a pioneering Brazilian genetics laboratory in the genomic medicine segment, offering a personalized platform for ancestry, health and well-being testing.",
   scope: "User Interface, User Experience",
@@ -42,7 +42,7 @@ const Genera = {
     },
 
     {
-      img: process.env.PUBLIC_URL + '/img/' + 'genera/amostra.png',
+      img: `${process.env.PUBLIC_URL}/img/genera/amostra.png`,
       },
 
     // Adicione mais itens de conteúdo conforme necessário

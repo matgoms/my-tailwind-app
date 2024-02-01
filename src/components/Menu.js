@@ -119,7 +119,20 @@ const Menu = ({ className }) => {
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6 dark:text-gray-400" aria-hidden="true" />
+
+            {projectName && (
+                <>
+                  <Bars3Icon className="h-6 w-6 text-white" aria-hidden="true" />
+                  
+                </>
+              )}
+
+              {!projectName && (
+                <>
+                  <Bars3Icon className="h-6 w-6 dark:text-gray-400" aria-hidden="true" />
+                </>
+              )} 
+            
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12 ">
