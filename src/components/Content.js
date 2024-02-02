@@ -41,6 +41,22 @@ export default function Content() {
     return projectData.default;
   });
 
+  // Sort projects based on the 'year' property
+const sortedUxui = uxuiProjects.sort((a, b) => {
+  const yearA = parseInt(a.year, 10);
+  const yearB = parseInt(b.year, 10);
+
+  return yearB - yearA; // Sorting in descending order (newest first)
+});
+
+ // Sort projects based on the 'year' property
+ const sortedMotion = motionProjects.sort((a, b) => {
+  const yearA = parseInt(a.year, 10);
+  const yearB = parseInt(b.year, 10);
+
+  return yearB - yearA; // Sorting in descending order (newest first)
+});
+
   // Example functional component to render projects
   const Projects = ({ projects }) => {
     
@@ -61,9 +77,9 @@ export default function Content() {
     const UXUIProjects = () => <Projects projects={uxuiProjects} />;
     const MotionProjects = () => <Projects projects={motionProjects} />; */
 
-  const UXUI = ({ title, description, thumb, color, status }) => {
+  const UXUI = ({ title, description, thumb, color, status, number }) => {
     return (
-      <div className="mb-24 break-inside-avoid-column">
+      <div className="break-inside-avoid-column">
         <div class="transition ease-in duration-300 hover:-translate-y-4 w-full mb-6  relative">
         <img
           src={thumb}
@@ -80,11 +96,12 @@ export default function Content() {
                           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
                             {status}
+                           
                           </span>
                       </div>
                   )}
 
-</div>
+</div> 
         <h3 className="mb-2 text-xl font-bold dark:text-white">{title}</h3>
         <p className="text-gray-500 dark:text-gray-400">{description}</p>
       </div>
@@ -212,11 +229,11 @@ export default function Content() {
                         UX/UI Projects
                       </h1>
                       <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 dark:text-gray-400">
-                      Explore a selection of design projects that showcase my skills and passion for design.
+                      Here are a few design projects that showcase my skills and passion for design.
                       </p>
                     </div>
                   </div>
-                  <div class="columns-1 lg:columns-2 lg:gap-24">
+                  <div class="grid lg:grid-cols-2 gap-24 ">
                     {uxuiProjects.map((project, index) => (
                       <Link
                         key={index}
@@ -238,7 +255,7 @@ export default function Content() {
                         Social media
                       </h1>
                       <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 dark:text-gray-400">
-                      Discover the vibrant visuals and innovative concepts that define my approach to crafting engaging and impactful social media content.
+                      A compilation of social media posts I created for both large and small companies.
                       </p>
                     </div>
                   </div>
@@ -257,11 +274,11 @@ export default function Content() {
                         Motion and VFX
                       </h1>
                       <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 dark:text-gray-400">
-                      A collection of motion design projects I created as a hobby.
+                      A collection of motion and/or VFX projects I created as a hobbie or freelancer job.
                       </p>
                     </div>
                   </div>
-                  <div class="columns-1 lg:columns-2 lg:gap-24">
+                  <div class="grid lg:grid-cols-2 gap-24 ">
                     {motionProjects.map((project, index) => (
                       <Link
                         key={index}

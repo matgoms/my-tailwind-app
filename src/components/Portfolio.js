@@ -10,9 +10,11 @@ const importFirstProject = (context) => {
 const socialContext = require.context("../projects/social", false, /\.js$/);
 const socialProject = importFirstProject(socialContext);
 
-// Use require.context para importar dinamicamente o primeiro arquivo da pasta 'uxui'
+// Use require.context para importar dinamicamente os arquivos da pasta 'uxui'
 const uxuiContext = require.context("../projects/uxui", false, /\.js$/);
-const uxuiProject = importFirstProject(uxuiContext);
+const selectedUXUI = uxuiContext.keys()[7];
+const uxuiProject = uxuiContext(selectedUXUI).default;
+  
 
 // Use require.context para importar dinamicamente o primeiro arquivo da pasta 'motion'
 const motionContext = require.context("../projects/motion-vfx", false, /\.js$/);
