@@ -37,7 +37,7 @@ const Image2x = ({ photos }) => {
         <img
           key={index}
           src={photo}
-          alt={`Photo ${index + 1}`}
+          alt={``}
           className={`z-10 text-xl absolute top-0 left-0 px-0 lg:px-6 2xl:px-0 transition-opacity duration-1000 ${
             index === currentIndex ? 'opacity-100' : 'opacity-0'
           }`}

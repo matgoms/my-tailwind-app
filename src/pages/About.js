@@ -156,9 +156,9 @@ const About = () => {
                   <br />
                   São Paulo, Brazil
                 </p>
-
+<div class=" text-center">
                 <a
-                  class="inline-flex items-center py-2.5 px-5 me-2 text-sm font-medium text-gray-900 focus:outline-none bg-transparent rounded-full border border-slate-200 hover:bg-white focus:z-10 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-700 dark:bg-slate-800 dark:text-gray-400 dark:border-slate-600 dark:hover:text-white dark:hover:bg-slate-700"
+                  class="inline-flex items-center py-2.5 px-5 me-2 text-sm font-medium text-gray-900 focus:outline-none bg-transparent rounded-full border border-slate-200 hover:bg-white focus:z-10 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-700 dark:bg-slate-800 dark:text-gray-400 dark:border-slate-600 dark:hover:text-white dark:hover:bg-slate-700 mx-auto"
                   href="../pdf/CV - Matheus Gomes.pdf"
                   target="_blank"
                   onClick={() => handleSubmit("About", "cv-download", "button-cv")}
@@ -170,6 +170,7 @@ const About = () => {
                     aria-hidden="true"
                   />
                 </a>
+                </div>
               </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3  mt-8 lg:gap-24 dark:text-gray-400">

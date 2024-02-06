@@ -11,9 +11,9 @@ const CatCare = {
   
     contents: [
         {
-            title: "The problem",
+            title: "The current issue",
             description:
-              "There are already pet care services, but the vast majority specialize in dogs. Cat owners lack a service entirely dedicated to feline needs. So our team reunited to study and create a user journey, propose features and ideas.",
+              "There are already pet care services out there, but the vast majority specialize in dogs. Cat owners lack a service entirely dedicated to feline needs. So our team reunited to study and create a user journey, propose features and ideas.",
           },
 
          

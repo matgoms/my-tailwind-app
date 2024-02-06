@@ -1,23 +1,4 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import TiltComponent from './Tilt';
-/*  const features = [
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: CloudArrowUpIcon,
-  },
-  {
-    name: 'SSL certificates.',
-    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Database backups.',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: ServerIcon,
-  },
-]  */
 
 export function HeroBig() {
   return (
@@ -54,7 +35,7 @@ const Title = ({ title, description, image }) => (
         <div className="col-span-2 mr-auto place-self-center">
     {title && (
       <div key={title} className="">
-        <dt className="max-w-2xl my-6 text-5xl font-extrabold tracking-tight leading-none md:text-xl xl:text-7xl dark:text-gray-100 text-balance">
+        <dt className="max-w-2xl my-6 text-5xl font-extrabold tracking-tight leading-none md:text-6xl xl:text-7xl dark:text-gray-100 text-balance">
           {title}
         </dt>
         <dd className="max-w-2xl mb-6 mt-6 font-body text-gray-500 lg:mb-8 text-xl lg:text-2xl dark:text-gray-400 text-balance">
@@ -65,7 +46,7 @@ const Title = ({ title, description, image }) => (
     </div>
     {image && (
       <div key={image} className="">
-         <img class="hidden lg:block lg:mt-4 aspect-square w-3/4 rounded-full object-cover saturate-50 hover:saturate-100 duration-300  transition-all" src={image}/>
+         <img class="hidden lg:block lg:mt-4 aspect-square w-3/4 rounded-full object-cover saturate-50 hover:saturate-100 duration-300  transition-all" src={image} alt=""/>
       </div>
     )}
     </div>

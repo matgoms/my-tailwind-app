@@ -6,12 +6,7 @@ import Photos from "./pages/Photos";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ProjectPage from "./pages/ProjectPage";
-import RecentProjects from "./pages/recentprojects";
-import {
-  initializeGA,
-  trackGAEvent,
-  GoogleAnalytics,
-} from "./components/google-analytics";
+import { GoogleAnalytics } from "./components/google-analytics";
 
 function App() {
   return (

@@ -3,8 +3,7 @@ import {
     CameraIcon,
     PaintBrushIcon,
   } from '@heroicons/react/24/outline'
-
-export default function Feature() {
+function Feature() {
     return (
      <>
 
@@ -46,3 +45,5 @@ export default function Feature() {
 </>
   )
 }
+
+export default Feature;

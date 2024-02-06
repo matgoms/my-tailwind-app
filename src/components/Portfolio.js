@@ -41,7 +41,6 @@ export default function Portfolio() {
                 src={uxuiProject.thumb}
                 alt={uxuiProject.title}
                 class={`transition ease-in duration-300 hover:opacity-80  w-full mb-2 object-cover  aspect-[12/11] object-left ${uxuiProject.color}`}
-                alt=""
               />
               <div class="mb-24 lg:mb-0 break-inside-avoid-column">
                 <h3 class="my-6 text-xl font-bold dark:text-white">
@@ -59,7 +58,6 @@ export default function Portfolio() {
                 src={socialProject.image}
                 alt={socialProject.title}
                 class={`transition ease-in duration-300 hover:opacity-80 rounded-2xl w-full mb-2  aspect-[12/11]  object-cover object-center ${socialProject.color} outline-slate-300 dark:outline-slate-700 outline outline-1`}
-                alt=""
               />
               <div class="mb-24 lg:mb-0 break-inside-avoid-column">
                 <h3 class="my-6 text-xl font-bold dark:text-white">
@@ -78,7 +76,6 @@ export default function Portfolio() {
                 src={motionProject.thumb}
                 alt={motionProject.title}
                 class={`transition ease-in duration-300 hover:opacity-80  w-full mb-2 aspect-[12/11]  object-cover object-center ${motionProject.color}`}
-                alt=""
               />
               <div class="lg:mb-0 break-inside-avoid-column">
                 <h3 class="my-6 text-xl font-bold dark:text-white">

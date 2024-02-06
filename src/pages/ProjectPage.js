@@ -83,7 +83,7 @@ const ProjectPage = () => {
         color={project.color}
       />
       <Menu className="absolute top-0 w-full *:text-white bg-gradient-to-b from-black/30 " />
-      <div class="bg-white dark:bg-slate-800 transition-colors duration-1000 ease-in-out">
+      <div class="bg-white dark:bg-slate-800 transition-colors duration-1000 ease-in-out" id="content">
         <div class=" mx-auto max-w-screen-xl py-16 px-6 2xl:px-0 lg:gap-8 xl:gap-8 lg:pt-32">
           <div class="d-block lg:grid grid-cols-1 lg:grid-cols-5">
             <div class="max-w-screen-md mb-8 lg:mb-16 col-span-4">

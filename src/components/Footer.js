@@ -1,12 +1,5 @@
 import { trackGAEvent } from "./google-analytics";
-import {
-  EnvelopeIcon,
-  CameraIcon,
-  PaintBrushIcon,
-  XMarkIcon,
-  SunIcon,
-  MoonIcon,
-} from "@heroicons/react/24/outline";
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
 
 export default function Footer() {
   function handleSubmit(category, action, label) {
@@ -131,7 +124,7 @@ export default function Footer() {
               viewBox="-10.5 -9.45 21 18.9"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              class="text-sm ms-3 me-1 w-5 text-cyan-700  flex origin-center transition-all ease-in-out"
+              class="text-sm ms-3 me-1 w-5 text-cyan-600  flex origin-center transition-all ease-in-out"
             >
               <circle cx="0" cy="0" r="2" fill="currentColor"></circle>
               <g stroke="currentColor" stroke-width="1" fill="none">
@@ -143,7 +136,7 @@ export default function Footer() {
             React +
             <img
               className="h-5 w-auto ms-1 me-1"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              src="https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=500"
               alt=""
             />{" "}
             Tailwind
@@ -152,6 +145,8 @@ export default function Footer() {
           <div class="flex mt-6 sm:justify-center sm:mt-0 gap-2">
             <a
               href="http://linkedin.com/in/matgoms"
+              target="_blank"
+              rel="noreferrer"
               class="text-gray-600 dark:text-gray-400  hover:text-gray-900 hover:dark:text-white"
               onClick={() => handleSubmit("Footer", `social-linkedin`, "social-icon")}
             >
@@ -178,6 +173,8 @@ export default function Footer() {
             </a>
             <a
               href="http://instagram.com/matgoms"
+              target="_blank"
+              rel="noreferrer"
               class="text-gray-600 dark:text-gray-400  hover:text-gray-900 hover:dark:text-white"
               onClick={() => handleSubmit("Footer", `social-insta`, "social-icon")}
             >
@@ -202,6 +199,8 @@ export default function Footer() {
             </a>
             <a
               href="http://dribbble.com/matgoms"
+              target="_blank"
+              rel="noreferrer"
               class="text-gray-600 dark:text-gray-400  hover:text-gray-900 hover:dark:text-white"
               onClick={() => handleSubmit("Footer", `social-dribbble`, "social-icon")}
             >
@@ -227,6 +226,8 @@ export default function Footer() {
             </a>
             <a
               href="http://be.net/matgoms"
+              target="_blank"
+              rel="noreferrer"
               class="text-gray-600 dark:text-gray-400  hover:text-gray-900 hover:dark:text-white"
               onClick={() => handleSubmit("Footer", `social-behance`, "social-icon")}
             >

@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { Tab, TabList, TabPanel, Tabs } from '@headlessui/react';
-import { Link } from "react-router-dom";
-import { useLocation } from 'react-router-dom';
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import { Tab } from '@headlessui/react';
+import { Link,  useLocation } from "react-router-dom";
 
 export default function Content() {
   const socialContext = require.context("../projects/social", false, /\.js$/);
@@ -57,25 +54,8 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
   return yearB - yearA; // Sorting in descending order (newest first)
 });
 
-  // Example functional component to render projects
-  const Projects = ({ projects }) => {
-    
-    return (
-      <div>
-        {projects.map((project) => (
-          <div key={project.title}>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            {/* Add other project details as needed */}
-          </div>
-        ))}
-      </div>
-    );
-  };
 
-  /*    const SocialProjects = () => <Projects projects={socialProjects} />;
-    const UXUIProjects = () => <Projects projects={uxuiProjects} />;
-    const MotionProjects = () => <Projects projects={motionProjects} />; */
+
 
   const UXUI = ({ title, description, thumb, color, status, number }) => {
     return (
@@ -103,7 +83,7 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
 
 </div> 
         <h3 className="mb-2 text-xl font-bold dark:text-white">{title}</h3>
-        <p className="text-gray-500 dark:text-gray-400">{description}</p>
+        <p className="text-gray-500 dark:text-gray-400 text-balance">{description}</p>
       </div>
     );
   };
@@ -155,7 +135,7 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
                   )}
                   </div>
         <h3 className="mb-2 text-xl font-bold dark:text-white">{title}</h3>
-        <p className="text-gray-500 dark:text-gray-400 text-pretty">{description}</p>
+        <p className="text-gray-500 dark:text-gray-400 text-balance">{description}</p>
       </div>
     );
   };
@@ -194,8 +174,7 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
         
       // Adicione mais casos conforme necessário
 
-      // O caso padrão será 'social' se nenhum estado de categoria for fornecido
-      default:
+        default:
         setActiveTabIndex(0);
         break;
       
