@@ -13,7 +13,7 @@ export default function Contact() {
       }, []);
 
   function handleSubmit(event) {
-    trackGAEvent("Contato", "Botão", "Download CV");
+    trackGAEvent("Contato", "Botão-CV", "Download CV");
   }
 
   return (
