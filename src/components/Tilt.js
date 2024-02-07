@@ -3,7 +3,9 @@ import Tilt from "react-parallax-tilt";
 
 const TiltComponent = () => {
   return (
-    <Tilt
+    <dotlottie-player class="h-full scale-125" src="https://assets-v2.lottiefiles.com/a/358be988-116c-11ee-a1ad-cb3e019a0508/pHLfn5gB9V.lottie" background="transparent" speed="0.3" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+
+    /* <Tilt
       perspective={700}
       scale={1.02}
       transitionSpeed={10000}
@@ -23,7 +25,7 @@ const TiltComponent = () => {
         transformStyle: "preserve-3d",
       }}
     >
-      {/* glareEnable={true} glareMaxOpacity={0.8} glareColor="#ffffff" glarePosition="bottom"  */}
+
 
       <div
         class="w-full h-full flex justify-center items-center duration-1000 ease-in-out *:absolute "
@@ -39,13 +41,8 @@ const TiltComponent = () => {
           class="w-24"
           style={{ transform: "translate3d(180px,-120px,40px)" }}
         />
-       {/*  <img
-          src="../img/home/cafe.png"
-          class="w-16"
-          style={{ transform: "translate3d(160px,80px,160px)" }}
-        /> */}
+     
 <dotlottie-player class="size-32" src="https://lottie.host/a478bc3b-87c6-4a54-a4ce-8ec2aeab6cda/vaMYRcJrKJ.json" background="transparent" speed="1" style={{transform: "translate3d(129px, 70px,200px)"}} direction="1" playMode="normal" loop autoplay></dotlottie-player>
-       {/*  https://lottie.host/1d5326ef-370a-4ea3-817d-8fffe526bb3a/KjPy2n6Ths.json */}
         <img
           src="../img/home/tela.png"
           class="w-72 block dark:hidden"
@@ -72,7 +69,7 @@ const TiltComponent = () => {
           style={{ transform: "translate3d(-150px, 110px,200px)" }}
         />
       </div>
-    </Tilt>
+    </Tilt> */
   );
 };
 

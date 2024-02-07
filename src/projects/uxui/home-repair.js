@@ -10,6 +10,7 @@ const HomeRepair = {
     duration: 'In progress',
 
     contents: [
+     
       {
        description:  "It's still a work in progress (WIP) as I strive to make the Design System as good and comprehensive as possible using the latest updates from Figma, including variables, components, boolean properties, instance swapping, and more.",
       },

@@ -10,6 +10,30 @@ const Ecorodovias = {
     duration: '3 weeks',
 
     contents: [
+
+      {
+        columns: [
+            {
+              title: "Aqui vai o titulo da coluna 1",
+              text: "Aqui vai o texto da coluna 1",
+              aditional: "Outro texto se quiser",
+            },
+            {
+              title: "Aqui vai o titulo da coluna 2",
+              text: "Aqui vai o texto da coluna 2",
+            },
+            {
+              icon: "ArrowDownIcon",
+              title: "Aqui vai o titulo da coluna 3",
+              text: "Aqui vai o texto da coluna 3",
+            },
+       
+      
+        ],
+        
+
+    },
+   
         {
             Duo: [
               {

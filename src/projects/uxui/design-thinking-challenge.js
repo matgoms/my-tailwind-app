@@ -38,12 +38,12 @@ const Challenge = {
         imgBig: `${process.env.PUBLIC_URL}/img/dt-challenge/concept-map.png`,
       },
     {
-        title: "Prototype",
-      figma:
-        "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FXBEO8OWCgJkZUCwFempJHF%2FAcademia%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D6-0%26viewport%3D1162%252C546%252C0.33%26t%3DbrhdVhSIWTQwPXHj-1%26scaling%3Dscale-down%26mode%3Ddesign",
-      caption: "(Scroll down to see the entire project)",
+        title: "Final screens",
+    
     },
-   
+    {
+      imgBig: `${process.env.PUBLIC_URL}/img/dt-challenge/screens.png`,
+    },
 
     
 
