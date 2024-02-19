@@ -4,7 +4,7 @@ const Logos = {
   status: 'Work in progress',
   color: "bg-fuchsia-700 dark:bg-fuchsia-900",
   image: `${process.env.PUBLIC_URL}/img/logos/logos.png`,
-  thumb: `${process.env.PUBLIC_URL}/img/logos/gif2.gif`,
+  thumb: `${process.env.PUBLIC_URL}/img/logos/logos.png`,
   description:
     "A collection of animated logo designs, along with their diverse variations, designed during my time at advertising agencies in São Paulo, Brazil. ",
   scope: "Motion Design, Branding",

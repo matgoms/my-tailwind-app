@@ -156,9 +156,9 @@ const About = () => {
                   <br />
                   São Paulo, Brazil
                 </p>
-<div class=" text-center">
+
                 <a
-                  class="inline-flex items-center py-2.5 px-5 me-2 text-sm font-medium text-gray-900 focus:outline-none bg-transparent rounded-full border border-slate-200 hover:bg-white focus:z-10 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-700 dark:bg-slate-800 dark:text-gray-400 dark:border-slate-600 dark:hover:text-white dark:hover:bg-slate-700 mx-auto"
+                  class="inline-flex items-center py-2.5 px-5 me-2 text-sm font-medium text-gray-900 focus:outline-none bg-transparent rounded-full border border-slate-200 hover:bg-white focus:z-10 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-700 dark:bg-slate-800 dark:text-gray-400 dark:border-slate-600 dark:hover:text-white dark:hover:bg-slate-700"
                   href="../pdf/CV - Matheus Gomes.pdf"
                   target="_blank"
                   onClick={() => handleSubmit("About", "cv-download", "button-cv")}
@@ -170,7 +170,7 @@ const About = () => {
                     aria-hidden="true"
                   />
                 </a>
-                </div>
+                
               </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3  mt-8 lg:gap-24 dark:text-gray-400">
@@ -179,29 +179,34 @@ const About = () => {
                   Work Experience
                 </h3>
 
-                <h5 class="font-bold mt-4">Designer</h5>
-                <p>Brand Connect</p>
-
-                <h5 class="font-bold mt-4">UX/UI Designer</h5>
-                <p>Tesla</p>
-
-                <h5 class="font-bold mt-4">Web Designer</h5>
-                <p>Link 9</p>
-
-                <h5 class="font-bold mt-4">Designer</h5>
-                <p>Brand Connect</p>
-
-                <h5 class="font-bold mt-4">Art Director</h5>
-                <p>Degrau Publicidade</p>
-
                 <h5 class="font-bold mt-4">UX/UI Designer</h5>
                 <p>Genera</p>
+                <h5 class="font-bold mt-4">Art Director</h5>
+                <p>Degrau Publicidade</p>
+                <h5 class="font-bold mt-4">Designer</h5>
+                <p>Brand Connect</p>
+                <h5 class="font-bold mt-4">Web Designer</h5>
+                <p>Link 9</p>
+                <h5 class="font-bold mt-4">UX/UI Designer</h5>
+                <p>Tesla</p>
+                <h5 class="font-bold mt-4">Graphic Designer</h5>
+                <p>Brand Connect</p>
+
+                
+                
+
+               
+
+                
+
+                
 
                 <h3 class="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-                  Freelancer
+                  Freelance
                 </h3>
 
                 <h5 class="font-bold mt-4">Photography and Audiovisual</h5>
+                <h5 class="font-bold mt-4">Front-end development</h5>
               </div>
               <div class="">
                 <h3 class="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
@@ -221,18 +226,22 @@ const About = () => {
                 <h3 class="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
                   Professional courses
                 </h3>
-
+                <h5 class="font-bold mt-4">User Centered Design</h5>
+                <p>PUCRS</p>
+                <h5 class="font-bold mt-4">Computer Graphics</h5>
+                <p>Universidade Cidade de São Paulo</p>
+                <h5 class="font-bold mt-4">English</h5>
+                <p>Academia Washington</p>
+                <h5 class="font-bold mt-4">Programming and Webdesign</h5>
+                <p>CENLEP</p>
                 <h5 class="font-bold mt-4">Administration</h5>
                 <p>Salesianas</p>
 
-                <h5 class="font-bold mt-4">Programming and Webdesign</h5>
-                <p>CENLEP</p>
+                
 
-                <h5 class="font-bold mt-4">English</h5>
-                <p>Academia Washington</p>
+                
 
-                <h5 class="font-bold mt-4">Computer Graphics</h5>
-                <p>Universidade Cidade de São Paulo</p>
+                
               </div>
               <div class="">
                 <h3 class="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
