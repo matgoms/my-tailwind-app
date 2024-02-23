@@ -204,9 +204,9 @@ const About = () => {
                 <h3 className="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
                   Freelance
                 </h3>
-
+                <h5 className="font-bold mt-4">UX/UI</h5>
                 <h5 className="font-bold mt-4">Photography and Audiovisual</h5>
-                <h5 className="font-bold mt-4">Front-end development</h5>
+                <h5 className="font-bold mt-4">Motion Design</h5>
               </div>
               <div className="">
                 <h3 className="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
@@ -226,6 +226,8 @@ const About = () => {
                 <h3 className="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
                   Professional courses
                 </h3>
+                <h5 className="font-bold mt-4">Interaction Design and Accessibility</h5>
+                <p>LinkedIn</p>
                 <h5 className="font-bold mt-4">User Centered Design</h5>
                 <p>PUCRS</p>
                 <h5 className="font-bold mt-4">Computer Graphics</h5>
@@ -302,6 +304,8 @@ const About = () => {
                     <li>Design Thinking</li>
                     <li>Front End</li>
                     <li>React</li>
+                    <li>Motion Design</li>
+                    <li>Visual Effects</li>
                   </ul>
                 </div>
                 <div>
@@ -315,7 +319,7 @@ const About = () => {
                     <li>Maze</li>
                     <li>Photoshop</li>
                     <li>Illustrator</li>
-                    <li>Sketch</li>
+                    <li>After Effects</li>
                     <li>Hotjar</li>
                     <li>Notion</li>
                   </ul>
