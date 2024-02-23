@@ -140,7 +140,7 @@ const Menu = ({ className }) => {
             <Popover.Button className="flex items-center gap-x-1 text-lg focus:outline-none font-semibold leading-6 ">
               {projectName && (
                 <>
-                  <p class="text-white">Works</p>
+                  <p className="text-white">Works</p>
                   <ChevronDownIcon
                 className="h-5 w-5 flex-none "
                 aria-hidden="true"
@@ -150,7 +150,7 @@ const Menu = ({ className }) => {
 
               {!projectName && (
                 <>
-                  <p class="text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200">
+                  <p className="text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200">
                     Works</p>
                   
                   <ChevronDownIcon
@@ -222,13 +222,13 @@ const Menu = ({ className }) => {
           >
            {projectName && (
                 <>
-                  <p class="text-white">About me</p>
+                  <p className="text-white">About me</p>
                                  </>
               )}
 
               {!projectName && (
                 <>
-                  <p class="text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200">
+                  <p className="text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200">
                     About me</p>
                   
                  
@@ -257,14 +257,14 @@ const Menu = ({ className }) => {
           >
             {projectName && (
                 <>
-                  <p class="text-white">Contact <span aria-hidden="true">&rarr;</span></p>
+                  <p className="text-white">Contact <span aria-hidden="true">&rarr;</span></p>
                   
                 </>
               )}
 
               {!projectName && (
                 <>
-                  <p class="text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200">
+                  <p className="text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200">
                     Contact <span aria-hidden="true">&rarr;</span></p>
                 </>
               )} 

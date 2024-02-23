@@ -60,20 +60,20 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
   const UXUI = ({ title, description, thumb, color, status, number }) => {
     return (
       <div className="break-inside-avoid-column">
-        <div class="transition ease-in duration-300 hover:-translate-y-4 w-full mb-6  relative">
+        <div className="transition ease-in duration-300 hover:-translate-y-4 w-full mb-6  relative">
         <img
           src={thumb}
           alt={title}
           className={` aspect-[4/3] object-cover object-center ${color} hover:opacity-90 transition ease-in duration-300`}
         />
         {status  && (
-                        <div class="absolute top-4 right-4 ">
+                        <div className="absolute top-4 right-4 ">
                           
                        <span
                             className="bg-amber-400 inline-flex items-center rounded-full  text-slate-800 px-4 py-2">
-                            <svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-slate-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-slate-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
                             {status}
                            
@@ -114,20 +114,20 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
   const Motion = ({ title, description, thumb, color, status  }) => {
     return (
       <div className="mb-24">
-        <div class="transition ease-in duration-300 hover:-translate-y-4 w-full mb-6  relative">
+        <div className="transition ease-in duration-300 hover:-translate-y-4 w-full mb-6  relative">
         <img
           src={thumb}
           alt={title}
           className="hover:opacity-90 w-full mb-6 aspect-[4/3] object-cover object-center ${color} transition "
         />
          {status  && (
-                        <div class="absolute top-4 right-4 ">
+                        <div className="absolute top-4 right-4 ">
                           
                        <span
                             className="bg-amber-400 inline-flex items-center rounded-full  text-slate-800 px-4 py-2">
-                            <svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-slate-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-slate-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
                             {status}
                           </span>
@@ -184,11 +184,11 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
   }, [location.state]);
 
   return (
-    <section class="text-gray-600 body-font bg-slate-50 dark:bg-slate-900/50 transition-colors duration-1000 ease-in-out py-24 lg:py-24">
-      <div class="max-w-screen-xl px-6 mx-auto">
-        <div class=" ">
+    <section className="text-gray-600 body-font bg-slate-50 dark:bg-slate-900/50 transition-colors duration-1000 ease-in-out py-24 lg:py-24">
+      <div className="max-w-screen-xl px-6 mx-auto">
+        <div className=" ">
           <Tab.Group selectedIndex={activeTabIndex} onChange={handleTabChange}>
-            <Tab.List class="text-sm lg:text-md font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 flex flex-wrap -mb-px ">
+            <Tab.List className="text-sm lg:text-md font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 flex flex-wrap -mb-px ">
               {tabs.map((tab, index) => (
                 <>
                   <Tab className={tab.classDefault}>UX/UI Design</Tab>
@@ -202,17 +202,17 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
             <Tab.Panels>
               <Tab.Panel>
                 <>
-                  <div class="flex flex-col">
-                    <div class="flex flex-wrap sm:flex-row flex-col py-24">
-                      <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0 dark:text-gray-100">
+                  <div className="flex flex-col">
+                    <div className="flex flex-wrap sm:flex-row flex-col py-24">
+                      <h1 className="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0 dark:text-gray-100">
                         UX/UI Projects
                       </h1>
-                      <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 dark:text-gray-400">
+                      <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 dark:text-gray-400">
                       Here are a few design projects that showcase my skills and passion for design.
                       </p>
                     </div>
                   </div>
-                  <div class="grid lg:grid-cols-2 gap-24 ">
+                  <div className="grid lg:grid-cols-2 gap-24 ">
                     {uxuiProjects.map((project, index) => (
                       <Link
                         key={index}
@@ -228,17 +228,17 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
               </Tab.Panel>
               <Tab.Panel>
                 <>
-                  <div class="flex flex-col">
-                    <div class="flex flex-wrap sm:flex-row flex-col py-24">
-                      <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0 dark:text-gray-100">
+                  <div className="flex flex-col">
+                    <div className="flex flex-wrap sm:flex-row flex-col py-24">
+                      <h1 className="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0 dark:text-gray-100">
                         Social media
                       </h1>
-                      <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 dark:text-gray-400">
+                      <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 dark:text-gray-400">
                       A compilation of social media posts I created for both large and small companies.
                       </p>
                     </div>
                   </div>
-                  <div class="columns-1 md:columns-2 lg:columns-3 md:gap-24">
+                  <div className="columns-1 md:columns-2 lg:columns-3 md:gap-24">
                     {socialProjects.map((project, index) => (
                       <Social key={index} {...project} />
                     ))}
@@ -247,17 +247,17 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
               </Tab.Panel>
               <Tab.Panel>
                 <>
-                  <div class="flex flex-col">
-                    <div class="flex flex-wrap sm:flex-row flex-col py-24">
-                      <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0 dark:text-gray-100">
+                  <div className="flex flex-col">
+                    <div className="flex flex-wrap sm:flex-row flex-col py-24">
+                      <h1 className="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0 dark:text-gray-100">
                         Motion and VFX
                       </h1>
-                      <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 dark:text-gray-400">
+                      <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 dark:text-gray-400">
                       A collection of motion and/or VFX projects I created as a hobbie or freelancer job.
                       </p>
                     </div>
                   </div>
-                  <div class="grid lg:grid-cols-2 gap-24 ">
+                  <div className="grid lg:grid-cols-2 gap-24 ">
                     {motionProjects.map((project, index) => (
                       <Link
                         key={index}

@@ -15,7 +15,7 @@ const Picle = {
     
     {
         html:
-          '<video class="w-full" autoplay loop muted playsinline><source src="../img/picles/picle.mp4" type="video/mp4" /></video>',
+          '<video className="w-full" autoplay loop muted playsinline><source src="../img/picles/picle.mp4" type="video/mp4" /></video>',
         /* canva:
           "", */
 

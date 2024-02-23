@@ -23,8 +23,8 @@ export default function SimpleGallery(props) {
   }, []);
 
   return (
-    <section class="text-gray-600 body-font bg-slate-50 dark:bg-slate-900/50 py-8 lg:py-16 transition-colors duration-1000 ease-in-out">
-    <div class="max-w-screen-2xl px- py-6 mx-auto columns-1 lg:columns-3 lg:gap-16 my-8 lg:my-16">
+    <section className="text-gray-600 body-font bg-slate-50 dark:bg-slate-900/50 py-8 lg:py-16 transition-colors duration-1000 ease-in-out">
+    <div className="max-w-screen-2xl px- py-6 mx-auto columns-1 lg:columns-3 lg:gap-16 my-8 lg:my-16">
 
     <div className="pswp-gallery " id={props.galleryID}>
       {props.images.map((image, index) => (
@@ -37,7 +37,7 @@ export default function SimpleGallery(props) {
           rel="noreferrer"
           onClick={() => handleSubmit("Photos", `image-${image.fileName.split('_')[0]}`, "photo-click")}
         >
-          <img src={image.largeURL} alt="" class="w-full mb-6 lg:mb-16" />
+          <img src={image.largeURL} alt="" className="w-full mb-6 lg:mb-16" />
         </a>
       ))}
     </div>

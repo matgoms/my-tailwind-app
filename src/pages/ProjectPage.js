@@ -85,23 +85,23 @@ const ProjectPage = () => {
       />
       <Menu className="absolute top-0 w-full *:text-white bg-gradient-to-b from-black/30 " />
       <div
-        class="bg-white dark:bg-slate-800 transition-colors duration-1000 ease-in-out"
+        className="bg-white dark:bg-slate-800 transition-colors duration-1000 ease-in-out"
         id="content"
       >
-        <div class=" mx-auto max-w-screen-xl py-16 px-6 2xl:px-0 lg:gap-8 xl:gap-8 lg:pt-32">
-          <div class="d-block lg:grid grid-cols-1 lg:grid-cols-5">
-            <div class="max-w-screen-md mb-8 lg:mb-16 col-span-4">
-              <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+        <div className=" mx-auto max-w-screen-xl py-16 px-6 2xl:px-0 lg:gap-8 xl:gap-8 lg:pt-32">
+          <div className="d-block lg:grid grid-cols-1 lg:grid-cols-5">
+            <div className="max-w-screen-md mb-8 lg:mb-16 col-span-4">
+              <h2 className="mb-4 text-5xl tracking-tight font-extrabold text-gray-900 dark:text-white">
                 {project.title}
               </h2>
-              <p class="mt-8 text-gray-500 sm:text-xl dark:text-gray-400 text-balance">
+              <p className="mt-8 text-gray-500 sm:text-xl dark:text-gray-400 text-balance">
                 {project.description}
               </p>
               {project.link && (
                 <>
                   <a
                     href={"http://" + project.link}
-                    class="mt-8 text-gray-900 dark:text-gray-400 text-center flex gap-3"
+                    className="mt-8 text-gray-900 dark:text-gray-400 text-center flex gap-3"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -114,16 +114,16 @@ const ProjectPage = () => {
                 </>
               )}
             </div>
-            <div class="max-w-screen-md mb-8 lg:mb-16">
-              <div class="mb-4 text-gray-500 dark:text-gray-400">
-                <label class="font-bold text-gray-900 dark:text-gray-200">
+            <div className="max-w-screen-md mb-8 lg:mb-16">
+              <div className="mb-4 text-gray-500 dark:text-gray-400">
+                <label className="font-bold text-gray-900 dark:text-gray-200">
                   Year:
                 </label>
                 <br />
                 {project.year}
               </div>
-              <div class="mb-4 text-gray-500 dark:text-gray-400">
-                <label class="font-bold text-gray-900 dark:text-gray-200">
+              <div className="mb-4 text-gray-500 dark:text-gray-400">
+                <label className="font-bold text-gray-900 dark:text-gray-200">
                   Scope:
                 </label>
                 <br />
@@ -140,8 +140,8 @@ const ProjectPage = () => {
               </div>
               {project.duration && (
                 <>
-                  <div class="mb-4 text-gray-500 dark:text-gray-400">
-                    <label class="font-bold text-gray-900 dark:text-gray-200">
+                  <div className="mb-4 text-gray-500 dark:text-gray-400">
+                    <label className="font-bold text-gray-900 dark:text-gray-200">
                       Duration:
                     </label>
                     <br />
@@ -152,11 +152,11 @@ const ProjectPage = () => {
             </div>
           </div>
         </div>
-        <hr class="border-gray-200 mx-auto dark:border-gray-700" />
+        <hr className="border-gray-200 mx-auto dark:border-gray-700" />
 
-        <div class="bg-white dark:bg-slate-800 mx-auto w-full mt-8 lg:mt-24 mb-32 lg:mb-32 xl:px-0 ">
-          <div class="flex justify-between mx-auto ">
-            <article class="mx-auto w-full">
+        <div className="bg-white dark:bg-slate-800 mx-auto w-full mt-8 lg:mt-24 mb-32 lg:mb-32 xl:px-0 ">
+          <div className="flex justify-between mx-auto ">
+            <article className="mx-auto w-full">
               {project.contents &&
                 project.contents.map((content, index) => (
                   <div key={index}>
@@ -189,7 +189,7 @@ const ProjectPage = () => {
                           {content.columns.map((column, columnIndex) => (
                             <span
                               key={columnIndex}
-                              class="d-block w-full bg-slate-100 py-4 px-6"
+                              className="d-block w-full bg-slate-100 py-4 px-6"
                             >
                               {column.icon &&
                                 (() => {
@@ -202,14 +202,14 @@ const ProjectPage = () => {
                                   );
                                 })()}
 
-                              <p class="font-bold text-gray-600 my-2">
+                              <p className="font-bold text-gray-600 my-2">
                                 {column.title}
                               </p>
-                              <p class="text-gray-400 text-sm my-2">
+                              <p className="text-gray-400 text-sm my-2">
                                 {column.text}
                               </p>
                               {column.aditional && (
-                                <p class="text-gray-400 text-sm my-2">
+                                <p className="text-gray-400 text-sm my-2">
                                   {column.aditional}
                                 </p>
                               )}
@@ -300,9 +300,9 @@ const ProjectPage = () => {
                                 "%26scaling%3Dscale-down-width%26page-id%3D0%253A1%26mode%3Ddesign&hide-ui=1"
                               }
                               allowfullscreen
-                              class="w-full h-lvh lg:border-2 border-slate-50 dark:border-slate-800"
+                              className="w-full h-lvh lg:border-2 border-slate-50 dark:border-slate-800"
                             ></iframe>
-                            <h6 class="mt-4 text-gray-700  dark:text-gray-400 text-center ">
+                            <h6 className="mt-4 text-gray-700  dark:text-gray-400 text-center ">
                               {content.caption}
                             </h6>
                           </div>
@@ -317,9 +317,9 @@ const ProjectPage = () => {
                             <iframe
                               src={content.canva}
                               allowfullscreen
-                              class="w-full aspect-video border-2 border-slate-50 dark:border-slate-800"
+                              className="w-full aspect-video border-2 border-slate-50 dark:border-slate-800"
                             ></iframe>
-                            <h6 class="mt-4  text-gray-700  dark:text-gray-400 text-center">
+                            <h6 className="mt-4  text-gray-700  dark:text-gray-400 text-center">
                               {content.caption}
                             </h6>
                           </div>
@@ -336,12 +336,12 @@ const ProjectPage = () => {
                                 content.vimeo +
                                 "&title=0&byline=0&portrait=0&sidedock=0"
                               }
-                              class="w-full aspect-video border-2 border-slate-50 dark:border-slate-800"
+                              className="w-full aspect-video border-2 border-slate-50 dark:border-slate-800"
                               frameborder="0"
                               allow="autoplay; fullscreen; picture-in-picture"
                               allowfullscreen
                             ></iframe>
-                            <h6 class="mt-4  text-gray-700  dark:text-gray-400 text-center">
+                            <h6 className="mt-4  text-gray-700  dark:text-gray-400 text-center">
                               {content.caption}
                             </h6>
                           </div>

@@ -23,7 +23,7 @@ const Projects = () => {
 
     return (
         <>
-         <div class="bg-white dark:bg-slate-800 transition-colors duration-1000 ease-in-out">
+         <div className="bg-white dark:bg-slate-800 transition-colors duration-1000 ease-in-out">
             <Menu />
             <HeroSmall titles={HeroSmallTitle} />
             <Content />

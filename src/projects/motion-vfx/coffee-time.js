@@ -12,7 +12,7 @@ const Coffee = {
     
     {
         html:
-          '<video class="w-full" autoplay loop muted playsinline controls><source src="../img/coffee/coffee.mp4" type="video/mp4" /></video>',
+          '<video className="w-full" autoplay loop muted playsinline controls><source src="../img/coffee/coffee.mp4" type="video/mp4" /></video>',
         /* canva:
           "", */
 
