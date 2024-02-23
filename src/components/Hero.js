@@ -18,8 +18,8 @@ export function HeroBig() {
        {/*  <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
             <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup"/>
         </div>   */}              
-         <div className="lg:grid m-auto h-full hidden ">
-      <TiltComponent/>
+         <div className="lg:grid m-auto h-full hidden dark:mix-blend-screen dark:invert transition-all duration-200">
+      <TiltComponent className=""/>
             
         </div>
     </div>

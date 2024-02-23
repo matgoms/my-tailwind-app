@@ -3,7 +3,7 @@ import Tilt from "react-parallax-tilt";
 
 const TiltComponent = () => {
   return (
-    <dotlottie-player className="h-full scale-125" src="https://assets-v2.lottiefiles.com/a/358be988-116c-11ee-a1ad-cb3e019a0508/pHLfn5gB9V.lottie" background="transparent" speed="0.3" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+    <dotlottie-player className="h-full scale-100" src="https://lottie.host/f358b627-6f34-4558-bc7b-3f2727a78da0/TWH45i1DOq.json" background="transparent" speed="0.5" direction="1" playMode="normal" loop autoplay></dotlottie-player>
 
     /* <Tilt
       perspective={700}
