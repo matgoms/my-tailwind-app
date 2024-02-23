@@ -64,7 +64,7 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
         <img
           src={thumb}
           alt={title}
-          className={` aspect-[4/3] object-cover object-center ${color} hover:opacity-80 hover:saturate-[.5] transition ease-in duration-300`}
+          className={` aspect-[4/3] object-cover object-center ${color} hover:opacity-90 transition ease-in duration-300`}
         />
         {status  && (
                         <div class="absolute top-4 right-4 ">
@@ -118,7 +118,7 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
         <img
           src={thumb}
           alt={title}
-          className="hover:opacity-80 w-full mb-6 hover:saturate-[.3] aspect-[4/3] object-cover object-center ${color}"
+          className="hover:opacity-90 w-full mb-6 aspect-[4/3] object-cover object-center ${color} transition "
         />
          {status  && (
                         <div class="absolute top-4 right-4 ">

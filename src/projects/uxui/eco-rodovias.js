@@ -11,7 +11,7 @@ const Ecorodovias = {
   duration: "3 weeks",
 
   contents: [
-    {
+   /*  {
       columns: [
         {
           title: "Aqui vai o titulo da coluna 1",
@@ -29,7 +29,7 @@ const Ecorodovias = {
         },
       ],
     },
-
+ */
     {
       Duo: [
         {

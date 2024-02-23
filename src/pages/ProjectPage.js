@@ -348,6 +348,21 @@ const ProjectPage = () => {
                         </section>
                       </>
                     )}
+
+                    
+{content.html && (
+                      <section>
+                      <div className="mr-auto w-full lg:max-w-screen-xl py-3 lg:py-16 mx-auto">
+                                  <span
+                                    dangerouslySetInnerHTML={{
+                                      __html: content.html,
+                                    }}
+                                  />
+                        </div>
+                      </section>
+                    )}
+
+
                   </div>
                 ))}
             </article>
