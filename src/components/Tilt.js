@@ -2,9 +2,9 @@ import React from "react";
 import Tilt from "react-parallax-tilt";
 
 const TiltComponent = () => {
-  return (
-    <dotlottie-player className="h-full scale-100" src="https://lottie.host/f358b627-6f34-4558-bc7b-3f2727a78da0/TWH45i1DOq.json" background="transparent" speed="0.5" direction="1" playMode="normal" loop autoplay></dotlottie-player>
-
+  return (<>
+   {/*  <dotlottie-player className=" scale-100" src="https://lottie.host/104f3d33-0fa6-4a73-8fe1-2163f8a94ad0/Gs1h1b4yYd.json" background="transparent" speed="0.5" direction="1" playMode="normal" loop autoplay></dotlottie-player> */}
+<iframe className="border-0 w-full h-full" width="null" height="null" src="https://rive.app/community/8364-16046-cube/embed" allowfullscreen></iframe></>
     /* <Tilt
       perspective={700}
       scale={1.02}
