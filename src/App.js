@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ProjectPage from "./pages/ProjectPage";
 import { GoogleAnalytics } from "./components/google-analytics";
+import Addproject from "./pages/addproject";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/photos" element={<Photos />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/addproject" element={<Addproject />} />
           <Route path="/projects/:projectName" element={<ProjectPage />} />
         </Routes>
       </BrowserRouter>

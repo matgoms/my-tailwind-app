@@ -3,7 +3,7 @@ import Menu from "../components/Menu";
 import Form from "../components/Form";
 import Footer from "../components/Footer";
 import { trackGAEvent } from "../components/google-analytics";
-import { EnvelopeIcon } from "@heroicons/react/24/outline";
+import { DevicePhoneMobileIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
 
 
 export default function Contact() {
@@ -36,6 +36,14 @@ export default function Contact() {
                 Starting a new project? Interested in a quote? Need more
                 information about something? Let me know.
               </p>
+        <div className="flex gap-4">
+              <a
+                className="inline-flex items-center py-2.5 px-5 text-sm mb-12  text-slate-900 focus:outline-none bg-transparent rounded-full border border-slate-200 hover:bg-white focus:z-10 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-700 dark:bg-slate-800 dark:text-gray-400 dark:border-slate-600 dark:hover:text-white dark:hover:bg-slate-700 transition-colors duration-1000 ease-in-out"  onClick={handleSubmit}
+                download
+              >
+                <DevicePhoneMobileIcon className="h-6 w-6 me-2 " aria-hidden="true" />
+                +55 11 976233032
+              </a>
 
               <a
                 className="inline-flex items-center py-2.5 px-5 text-sm mb-12  text-slate-900 focus:outline-none bg-transparent rounded-full border border-slate-200 hover:bg-white focus:z-10 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-700 dark:bg-slate-800 dark:text-gray-400 dark:border-slate-600 dark:hover:text-white dark:hover:bg-slate-700 transition-colors duration-1000 ease-in-out"
@@ -46,6 +54,7 @@ export default function Contact() {
                 <EnvelopeIcon className="h-6 w-6 me-2 " aria-hidden="true" />
                 matgoms@gmail.com
               </a>
+              </div>
 
               <Form />
             </div>
