@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Tab } from '@headlessui/react';
+import { Tab, Transition } from '@headlessui/react';
 import Menu from "../components/Menu";
 import { HeroSmall } from "../components/Hero";
 import Footer from "../components/Footer";
@@ -22,9 +22,10 @@ class Photos extends Component<AppProps, AppState> {
     this.state = {
       name: "React",
       images: [],
-      activeTabIndex: 0
+      activeTabIndex: 0,
     };
   }
+
 
   // Method to handle tab change
   handleTabChange = (index: number) => {
@@ -82,7 +83,10 @@ class Photos extends Component<AppProps, AppState> {
     // Merge the people and landscapes images into a single array
     
     this.setState({ people: peopleImages, landscapes: landscapesImages, special: specialImages });
+    
+ 
   };
+  
   render() {
 
     const HeroSmallTitle = [
@@ -109,45 +113,43 @@ class Photos extends Component<AppProps, AppState> {
 
           <section className="text-gray-600 body-font bg-slate-50 dark:bg-slate-900/50  py-24 lg:py-24  transition-colors duration-1000 ease-in-out">
             <div className="max-w-screen-2xl px-6 mx-auto">
-              <Tab.Group onChange={() => this.handleTabChange(1)}>
+            <Tab.Group onChange={this.handleTabChange} >
                 <div className="max-w-screen-xl px-6 mx-auto">
                   <Tab.List className="max-w-screen-xl text-sm lg:text-md font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 flex flex-wrap -mb-px ">
                     {tabs.map((tab, index) => (
                       <>
-                        <Tab className={tab.classDefault}>Portraits</Tab>
-                        <Tab className={tab.classDefault}>Landscapes</Tab>
-                        <Tab className={tab.classDefault}>Special occasions</Tab>
+                        <Tab className={tab.classDefault} onClick={this.toggleVisibility}>Landscapes</Tab>
+                        <Tab className={tab.classDefault} onClick={this.toggleVisibility}>Portraits</Tab>
+                        <Tab className={tab.classDefault} onClick={this.toggleVisibility}>Special occasions</Tab>
                       </>
                     ))}
                   </Tab.List>
                 </div>
                 <Tab.Panels>
+                
+                  <Tab.Panel >
 
-                  <Tab.Panel>
-                    <>
-
-                      <div className="columns-1 md:columns-2 lg:columns-3 md:gap-24 py-24">
-                      {this.state.people && <SimpleGallery galleryID="my-gallery" images={this.state.people} />} 
-                      </div>
-                    </>
+                      <div className={`columns-1 md:columns-2 lg:columns-3 md:gap-24 py-24 `} >
+                      {this.state.people && <SimpleGallery galleryID="my-gallery" images={this.state.landscapes} />} 
+                      </div> 
                   </Tab.Panel>
-
-                  <Tab.Panel>
-                    <>
-
-                      <div className="columns-1 md:columns-2 lg:columns-3 md:gap-24 py-24">
-                      {this.state.people && <SimpleGallery galleryID="my-gallery" images={this.state.landscapes} />}
+                 
+                 
+                  <Tab.Panel >
+                 
+                      <div className="columns-1 md:columns-2 lg:columns-3 md:gap-24 py-24 ">
+                      <SimpleGallery galleryID="my-gallery" images={this.state.people}/>
                       </div>
-                    </>
                   </Tab.Panel>
-                  <Tab.Panel>
-                    <>
-
-                      <div className="columns-1 md:columns-2 lg:columns-3 md:gap-24 py-24">
-                      {this.state.people && <SimpleGallery galleryID="my-gallery" images={this.state.special} />}
-                      </div>
-                    </>
+                 
+                  <Tab.Panel> 
+                    
+                      <div className={`columns-1 md:columns-2 lg:columns-3 md:gap-24 py-24`}>
+                      <SimpleGallery galleryID="my-gallery" images={this.state.special} />
+                      </div> 
+                      
                   </Tab.Panel>
+                 
                 </Tab.Panels>
               </Tab.Group>
 

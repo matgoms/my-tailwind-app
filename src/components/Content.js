@@ -64,7 +64,8 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
         <img
           src={thumb}
           alt={title}
-          className={` aspect-[4/3] object-cover object-center ${color} hover:opacity-90 transition ease-in duration-300`}
+          className={` aspect-[4/3] object-cover object-center ${color} hover:opacity-90 transition ease-in duration-700 opacity-0`}
+          onLoad={(e) => e.target.classList.add('opacity-100')}
         />
         {status  && (
                         <div className="absolute top-4 right-4 ">
@@ -102,7 +103,8 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
                   <img
                     src={content.Img}
                     alt={title}
-                    className="rounded-2xl outline-slate-300 hover:outline-offset-[8px] transition-all ease-in duration-75  dark:hover:outline-slate-600 dark:outline-slate-700  outline-1 outline w-full mb-24 object-fit object-center"
+                    className="rounded-2xl outline-slate-300 hover:outline-offset-[8px] transition-all ease-in duration-200  dark:hover:outline-slate-600 dark:outline-slate-700  outline-1 outline w-full mb-24 object-fit object-center opacity-0 "
+                    onLoad={(e) => e.target.classList.add('opacity-100')}
                   />
                 </>
               )}
@@ -113,12 +115,13 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
   };
   const Motion = ({ title, description, thumb, color, status  }) => {
     return (
-      <div className="mb-24">
-        <div className="transition ease-in duration-300 hover:-translate-y-4 w-full mb-6  relative">
+      <div >
+        <div className="transition ease-in duration-300 hover:-translate-y-4 w-full mb-6 relative">
         <img
           src={thumb}
           alt={title}
-          className="hover:opacity-90 w-full mb-6 aspect-[4/3] object-cover object-center ${color} transition "
+          className="hover:opacity-90 w-full mb-6 aspect-[4/3] object-cover object-center ${color} transition opacity-0 duration-700"
+          onLoad={(e) => e.target.classList.add('opacity-100')}
         />
          {status  && (
                         <div className="absolute top-4 right-4 ">
@@ -220,7 +223,7 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
                           .toLowerCase()
                           .replace(/\s+/g, "-")}`}
                       >
-                        <UXUI key={index} {...project} />
+                        <UXUI key={index} {...project}  />
                       </Link>
                     ))}
                   </div>

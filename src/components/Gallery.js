@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Tab } from '@headlessui/react';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
 import { trackGAEvent } from './google-analytics';
@@ -39,7 +38,7 @@ export default function SimpleGallery(props) {
           rel="noreferrer"
           onClick={() => handleSubmit("Photos", `image-${image.fileName.split('_')[0]}`, "photo-click")}
         >
-          <img src={image.largeURL} alt="" className="w-full mb-6 lg:mb-16" />
+          <img src={image.largeURL} alt="" className="w-full mb-6 lg:mb-16 opacity-0 duration-500" onLoad={(e) => e.target.classList.add('opacity-100')}/>
         </a>
       ))}
     </div>
