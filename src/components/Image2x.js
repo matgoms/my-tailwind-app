@@ -28,7 +28,7 @@ const Image2x = ({ photos }) => {
 
   return (
     <div
-      className='group relative xl:w-full aspect-video overflow-hidden grid max-w-screen-2xl my-16 lg:my-8  mx-auto transition-all duration-1000 ease-in-out items-center' 
+      className='group relative xl:w-full aspect-video overflow-hidden grid max-w-screen-2xl my-16 lg:my-24  mx-auto transition-all duration-1000 ease-in-out items-center' 
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

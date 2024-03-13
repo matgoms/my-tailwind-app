@@ -7,7 +7,7 @@ export default function Footer() {
   }
   return (
     <footer className="bg-white dark:bg-slate-900 transition-colors duration-1000 ease-in-out">
-      <div className="mx-auto max-w-7xl px-6 2xl:px-0 py-16 lg:pt-24">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:pt-24">
         <div className="lg:flex md:justify-between">
           <div className="mb-16 lg:mb-6">
             <a href="/" className="flex items-center">

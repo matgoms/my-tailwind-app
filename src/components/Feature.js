@@ -19,21 +19,21 @@ function Feature() {
               <PaintBrushIcon className="h-8 w-8" aria-hidden="true" />
               </div>
               <h3 className="mb-2 text-xl font-bold dark:text-white">Art Direction</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-balance"> With a meticulous eye for detail and a profound aesthetic sensibility, I stand out in projects that leave a resounding impact, creating a sustained and meaningful impression.</p>
+              <p className="text-gray-500 dark:text-gray-400 text-balance">From concept to execution, I bring creativity and vision to projects and I ensure every detail reflects the brand's personality and objectives.</p>
           </div>
           <div>
               <div className="flex justify-center items-center mb-4 w-20 h-20 rounded-full bg-primary-100 lg:h-20 lg:w-20 bg-teal-200">
               <CodeBracketIcon className="h-8 w-8" aria-hidden="true" />
               </div>
               <h3 className="mb-2 text-xl font-bold dark:text-white">UX/UI Design</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-balance"> Through iterative design processes, my goal is to elevate digital experiences to new heights.</p>
+              <p className="text-gray-500 dark:text-gray-400 text-balance">I craft engaging digital experiences to users' needs. My focus is on intuitive and accessible design that captivates users.</p>
           </div>
           <div>
               <div className="flex justify-center items-center mb-4 w-20 h-20 rounded-full bg-primary-100 lg:h-20 lg:w-20 dark:bg-primary-900 bg-cyan-200">
                  <CameraIcon className="h-8 w-8" aria-hidden="true" />                    
               </div>
               <h3 className="mb-2 text-xl font-bold dark:text-white">Photography</h3>
-              <p className="text-gray-500 dark:text-gray-400  text-balance">With technical proficiency and an artistic eye, I navigate the complexities of light, composition, and subject matter.</p>
+              <p className="text-gray-500 dark:text-gray-400  text-balance">With technical proficiency and an artistic eye, I navigate the complexities of light, composition, and subject.</p>
           </div>
          
          

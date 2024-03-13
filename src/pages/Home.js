@@ -5,6 +5,7 @@ import Image2x from "../components/Image2x";
 import Feature from "../components/Feature";
 import Portfolio from "../components/Portfolio";
 import Footer from "../components/Footer";
+import Brands from "../components/brands";
 
 const Home = () => {
   useEffect(() => {
@@ -27,6 +28,7 @@ const Home = () => {
       <Menu />
       <HeroBig />
       <Image2x photos={photos} />
+      <Brands />
       <Feature />
       <Portfolio />
       <Footer />
