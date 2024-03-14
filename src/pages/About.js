@@ -5,6 +5,7 @@ import { HeroSmall } from "../components/Hero";
 import Footer from "../components/Footer";
 import { ArrowDownTrayIcon } from "@heroicons/react/20/solid";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
+import Brands from "../components/brands";
 
 const About = () => {
 
@@ -30,10 +31,19 @@ const About = () => {
       <div className="bg-white dark:bg-slate-800 transition-colors duration-1000 ease-in-out">
         <Menu />
         <HeroSmall titles={HeroSmallTitle} images={HeroSmallTitle} />
-        <section className="text-gray-600 text-md bg-slate-50 dark:bg-slate-900/50 py-16 lg:py-24 transition-colors duration-1000 ease-in-out">
+        
+      <Brands />
+      <div className="relative mx-auto flex justify-center py-16 ">
+ <a className="absolute bottom-12 mx-auto lg:animate-bounce cursor-pointer bg-slate-50 dark:bg-slate-900/60 p-2 w-14 h-14 rounded-full flex items-center justify-center backdrop-blur-sm transition-colors duration-1000 ease-in-out" href="#about-me">
+    <svg className="w-6 h-6 text-gray-600 dark:text-gray-200" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+      <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+  </a>
+  </div>
+        <section className="text-gray-600 text-md bg-slate-50 dark:bg-slate-900/50 py-16 lg:py-24 transition-colors duration-1000 ease-in-out" id="about-me">
           <div className="max-w-screen-xl px-6 mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-24">
-              <div className="col-span-2">
+              <div className="col-span-2" >
                 
                 <p className="mb-8 sm:text-xl leading-relaxed text-base  dark:text-gray-400 text-balance">
                   As a creative enthusiast, I have always been dedicated to
