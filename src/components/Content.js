@@ -198,7 +198,7 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
 
                   <Tab className={tab.classDefault}>Social media</Tab>
 
-                  <Tab className={tab.classDefault}>Motion/VFX</Tab>
+                  <Tab className={tab.classDefault}>3D/Motion/VFX</Tab>
                 </>
               ))}
             </Tab.List>
@@ -253,10 +253,10 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
                   <div className="flex flex-col">
                     <div className="flex flex-wrap sm:flex-row flex-col py-24">
                       <h1 className="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0 dark:text-gray-100">
-                        Motion and VFX
+                        3D, Motion and VFX
                       </h1>
                       <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0 dark:text-gray-400">
-                      A collection of motion and/or VFX projects I created as a hobbie or freelancer job.
+                      A collection of projects I created as a hobbie or freelancer job.
                       </p>
                     </div>
                   </div>
