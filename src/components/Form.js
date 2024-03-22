@@ -1,4 +1,14 @@
 export default function Form() {
+  function checkEmail() {
+    var emailInput = document.getElementById('email');
+    var emailValue = emailInput.value.trim();
+
+    if (!emailValue) {
+      emailInput.setAttribute('required', 'required');
+    } else {
+      emailInput.removeAttribute('required');
+    }
+  }
   return (
     <form name="contact" method="post" className="space-y-6" data-netlify="true" >
       <div>
@@ -57,6 +67,7 @@ export default function Form() {
       <button
         type="submit"
         className="py-3 px-5 text-sm font-medium text-center text-white rounded-full bg-slate-700 sm:w-fit hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800 transition-colors duration-1000 ease-in-out"
+        onClick={() => checkEmail()}
       >
         Send message
       </button>
