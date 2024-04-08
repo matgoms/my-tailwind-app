@@ -189,11 +189,11 @@ const About = () => {
                   Work Experience
                 </h3>
 
-                <h5 className="font-bold mt-4">UX/UI Designer</h5>
+                <h5 className="font-bold mt-4">Product Designer</h5>
                 <p>Genera</p>
                 <h5 className="font-bold mt-4">Art Director</h5>
                 <p>Degrau Publicidade</p>
-                <h5 className="font-bold mt-4">Designer</h5>
+                <h5 className="font-bold mt-4">UX/UI Designer</h5>
                 <p>Brand Connect</p>
                 <h5 className="font-bold mt-4">Web Designer</h5>
                 <p>Link 9</p>
