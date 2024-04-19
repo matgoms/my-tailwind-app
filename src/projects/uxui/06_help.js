@@ -3,7 +3,7 @@ const Help = {
   year: "2020",
   color: "bg-white/80 dark:bg-slate-900",
   image: `${process.env.PUBLIC_URL}/img/help/help.jpg`,
-  thumb: `${process.env.PUBLIC_URL}/img/help/help-thumb.png`,
+  thumb: `${process.env.PUBLIC_URL}/img/help/help-thumb.jpg`,
   description:
     "With a focus on retirees, INSS pensioners, and public servants, help! offers personalized assistance at over 800 stores spread across Brazil.",
   scope: "User Interface, User Experience",

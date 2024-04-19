@@ -189,30 +189,27 @@ const ProjectPage = () => {
                           {content.columns.map((column, columnIndex) => (
                             <span
                               key={columnIndex}
-                              className="d-block w-full ring-gray-200 dark:ring-gray-700 ring-1 py-6 px-6"
+                              className="d-block w-full bg-slate-100 py-4 px-6"
                             >
-
-                              <div className="flex gap-4">
                               {column.icon &&
                                 (() => {
                                   const IconComponent =
                                     Icons[column.icon];
                                   return (
-                                    <p className="text-gray-700 dark:text-white text-sm my-2">
+                                    <p className="text-gray-400 text-sm my-2">
                                       <IconComponent className="size-6" />
                                     </p>
                                   );
                                 })()}
 
-                              <p className="font-bold text-gray-900 dark:text-white text-base lg:text-lg my-2">
+                              <p className="font-bold text-gray-600 my-2">
                                 {column.title}
                               </p>
-                              </div>
-                              <p className="text-gray-500 text-sm dark:text-gray-400 lg:text-base my-2 text-pretty leading-relaxed">
+                              <p className="text-gray-400 text-sm my-2">
                                 {column.text}
                               </p>
                               {column.aditional && (
-                                <p className="text-gray-500 text-sm dark:text-gray-400 lg:text-base my-2  text-pretty leading-relaxed">
+                                <p className="text-gray-400 text-sm my-2">
                                   {column.aditional}
                                 </p>
                               )}
@@ -250,7 +247,7 @@ const ProjectPage = () => {
                             <img
                               src={content.img}
                               alt=""
-                              className="w-full border-[1px] border-gray-200 dark:border-gray-900/40 bg-slate-50 dark:bg-slate-900/60"
+                              className="w-full border-[1px] border-slate-50 dark:border-slate-900/40 bg-slate-50 dark:bg-slate-900/60"
                             />
                           </div>
                         </section>
@@ -263,7 +260,7 @@ const ProjectPage = () => {
                             <img
                               src={content.imgBig}
                               alt=""
-                              className="w-full border-[1px] border-gray-200 dark:border-gray-900/40 bg-slate-50 dark:bg-slate-900/60"
+                              className="w-full border-[1px] border-slate-50 dark:border-slate-900/40 bg-slate-50 dark:bg-slate-900/60"
                             />
                           </div>
                         </section>
@@ -283,7 +280,7 @@ const ProjectPage = () => {
                                   <img
                                     src={duo.imgDuo}
                                     alt=""
-                                    className="w-full border-[1px] border-gray-200 dark:border-gray-900/40 bg-slate-50 dark:bg-slate-900/60"
+                                    className="w-full border-[1px] border-slate-50 dark:border-slate-900/40 bg-slate-50 dark:bg-slate-900/60"
                                   />
                                 </div>
                               </div>
@@ -303,7 +300,7 @@ const ProjectPage = () => {
                                 "%26scaling%3Dscale-down-width%26page-id%3D0%253A1%26mode%3Ddesign&hide-ui=1"
                               }
                               allowfullscreen
-                              className="w-full h-lvh lg:border-2 border-gray-200 dark:border-gray-800"
+                              className="w-full h-lvh lg:border-2 border-slate-50 dark:border-slate-800"
                             ></iframe>
                             <h6 className="mt-4 text-gray-700  dark:text-gray-400 text-center ">
                               {content.caption}
@@ -320,7 +317,7 @@ const ProjectPage = () => {
                             <iframe
                               src={content.canva}
                               allowfullscreen
-                              className="w-full aspect-video border-2 border-gray-200 dark:border-gray-800"
+                              className="w-full aspect-video border-2 border-slate-50 dark:border-slate-800"
                             ></iframe>
                             <h6 className="mt-4  text-gray-700  dark:text-gray-400 text-center">
                               {content.caption}
@@ -339,7 +336,7 @@ const ProjectPage = () => {
                                 content.vimeo +
                                 "&title=0&byline=0&portrait=0&sidedock=0"
                               }
-                              className="w-full aspect-video border-2 border-gray-200 dark:border-gray-800"
+                              className="w-full aspect-video border-2 border-slate-50 dark:border-slate-800"
                               frameborder="0"
                               allow="autoplay; fullscreen; picture-in-picture"
                               allowfullscreen

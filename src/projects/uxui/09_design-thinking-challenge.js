@@ -3,7 +3,7 @@ const Challenge = {
   year: "2022",
   color: "bg-white/80 dark:bg-slate-900",
   image: `${process.env.PUBLIC_URL}/img/dt-challenge/dt-challenge.jpg`,
-  thumb: `${process.env.PUBLIC_URL}/img/dt-challenge/dt-challenge-thumb.png`,
+  thumb: `${process.env.PUBLIC_URL}/img/dt-challenge/dt-challenge-thumb.jpg`,
   description:
     "The challenge we faced revolved around digitizing the training chart/plan. In response, our team studied and discussed potential solutions.",
   scope: "Design Thinking, User Experience",

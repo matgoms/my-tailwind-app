@@ -4,7 +4,7 @@ const Ecorodovias = {
   link: "ecorodovias.com.br/papainoelexiste",
   color: "bg-white/80 dark:bg-slate-900",
   image: `${process.env.PUBLIC_URL}/img/eco-rodovias/eco-rodovias.jpg`,
-  thumb: `${process.env.PUBLIC_URL}/img/eco-rodovias/eco-rodovias-thumb.png`,
+  thumb: `${process.env.PUBLIC_URL}/img/eco-rodovias/eco-rodovias-thumb.jpg`,
   description:
     "Santa Claus Exists is the Ecorodovias Group project that transforms partners, suppliers, and stakeholders into Santa Clauses. The project has already gifted more than 70,000 Brazilian children served by charitable institutions.",
   scope: "User Interface",

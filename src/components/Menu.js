@@ -39,6 +39,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+
 const Menu = ({ className }) => {
   const [theme, setTheme] = useState(
     localStorage.getItem("color-theme") || "light"
@@ -81,6 +82,7 @@ const Menu = ({ className }) => {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { projectName } = useParams();
+ 
   return (
     <header className={`${className}`}>
       <nav

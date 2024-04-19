@@ -38,22 +38,6 @@ export default function Content() {
     return projectData.default;
   });
 
-  // Sort projects based on the 'year' property
-const sortedUxui = uxuiProjects.sort((a, b) => {
-  const yearA = parseInt(a.year, 10);
-  const yearB = parseInt(b.year, 10);
-
-  return yearB - yearA; // Sorting in descending order (newest first)
-});
-
- // Sort projects based on the 'year' property
- const sortedMotion = motionProjects.sort((a, b) => {
-  const yearA = parseInt(a.year, 10);
-  const yearB = parseInt(b.year, 10);
-
-  return yearB - yearA; // Sorting in descending order (newest first)
-});
-
 
 
 
@@ -64,7 +48,7 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
         <img
           src={thumb}
           alt={title}
-          className={` aspect-[4/3] object-cover object-center ${color} hover:opacity-90 transition ease-in duration-700 opacity-0`}
+          className={` object-cover object-center ${color} hover:saturate-0 transition ease-in duration-500 opacity-0`}
           onLoad={(e) => e.target.classList.add('opacity-100')}
         />
         {status  && (
@@ -215,16 +199,26 @@ const sortedUxui = uxuiProjects.sort((a, b) => {
                       </p>
                     </div>
                   </div>
-                  <div className="grid lg:grid-cols-2 gap-24 ">
+                  <div className="grid lg:grid-cols-2 gap-24 "> 
+            
                     {uxuiProjects.map((project, index) => (
+                      <>
+                      {project.status != 'hidden' && (
+
                       <Link
                         key={index}
                         to={`/projects/${project.title
                           .toLowerCase()
                           .replace(/\s+/g, "-")}`}
                       >
+                       
                         <UXUI key={index} {...project}  />
+                       
+                   
                       </Link>
+                    
+                    )}
+                    </>
                     ))}
                   </div>
                 </>

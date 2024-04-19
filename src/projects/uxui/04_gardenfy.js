@@ -3,7 +3,7 @@ const Gardenfy = {
     year: "2022",
     color: "bg-white/80 dark:bg-slate-900",
     image: `${process.env.PUBLIC_URL}/img/gardenfy/gardenfy.jpg`,
-    thumb: `${process.env.PUBLIC_URL}/img/gardenfy/gardenfy-thumb.png`,
+    thumb: `${process.env.PUBLIC_URL}/img/gardenfy/gardenfy-thumb.jpg`,
     description:
       "The gardening app that gently lead users through the enchanting journey of plant care.",
     scope: "User Interface, User Experience",

@@ -1,9 +1,10 @@
 const Cremosy = { 
     title: 'Cremosy',
     year: '2020',
+    status: 'hidden',
     color: "bg-white/80 dark:bg-slate-900",
     image: `${process.env.PUBLIC_URL}/img/cremosy/cremosy.jpg`,
-    thumb: `${process.env.PUBLIC_URL}/img/cremosy/cremosy-thumb.png`,
+    thumb: `${process.env.PUBLIC_URL}/img/cremosy/cremosy-thumb.jpg`,
     description: "Cremosy, a butter company, is an excellent choice for those seeking quality and convenience in their culinary endeavors at an affordable price range. ",
     scope: "User Interface, User Experience",
     duration: '1 Month',

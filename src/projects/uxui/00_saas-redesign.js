@@ -4,7 +4,7 @@ const Saas = {
   color: "bg-white/80 dark:bg-slate-900",
   image: `${process.env.PUBLIC_URL}/img/saas-redesign/saas-redesign.jpg`,
   thumb:
-    `${process.env.PUBLIC_URL}/img/saas-redesign/saas-redesign-thumb.png`,
+    `${process.env.PUBLIC_URL}/img/saas-redesign/saas-redesign-thumb.jpg`,
   description:
     "Xero is a SaaS cloud-based accounting software with tools for managing invoicing, bank reconciliation, inventory, purchasing, expenses, bookkeeping and much more. ",
   scope: "User Interface, User Experience",

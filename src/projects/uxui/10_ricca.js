@@ -4,7 +4,7 @@ const Ricca = {
     year: '2020',
     color: "bg-white/80 dark:bg-slate-900",
     image: `${process.env.PUBLIC_URL}/img/ricca/ricca.jpg`,
-    thumb: `${process.env.PUBLIC_URL}/img/ricca/ricca-thumb.png`,
+    thumb: `${process.env.PUBLIC_URL}/img/ricca/ricca-thumb.jpg`,
     description: "Launched in 1987, Ricca has a history marked by innovations in the food industry and gained recognition among baking and confectionery professionals for the quality of its products.",
     scope: "User Interface, User Experience",
     duration: '1 Month',

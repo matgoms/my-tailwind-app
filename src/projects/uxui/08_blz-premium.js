@@ -3,7 +3,7 @@ const Blzpremium = {
     year: "2022",
     color: "bg-white/80 dark:bg-slate-900",
     image: `${process.env.PUBLIC_URL}/img/blzpremium/blzpremium.jpg`,
-    thumb: `${process.env.PUBLIC_URL}/img/blzpremium/blzpremium-thumb.png`,
+    thumb: `${process.env.PUBLIC_URL}/img/blzpremium/blzpremium-thumb.jpg`,
     description:
       "This activity presented the challenge of crafting a deluxe/premium iteration of the existing app. Beleza na Web is renowned for providing a vast array of products from leading beauty and wellness brands.",
     scope: "User Interface, User Experience",

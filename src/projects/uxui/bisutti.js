@@ -1,10 +1,11 @@
 const Bisutti = { 
     title: 'Bisutti', 
     year: '2018',
+    status: 'hidden',
     link: "grupobisutti.com.br",
     color: "bg-white/80 dark:bg-slate-900",
     image: `${process.env.PUBLIC_URL}/img/Bisutti/Bisutti.jpg`,
-    thumb: `${process.env.PUBLIC_URL}/img/Bisutti/Bisutti-thumb.png`,
+    thumb: `${process.env.PUBLIC_URL}/img/Bisutti/Bisutti-thumb.jpg`,
     description: "The Bisutti Group is a benchmark brand in catering for social and corporate events.",
     scope: "User Interface",
     duration: '2 Month',

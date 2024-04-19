@@ -34,14 +34,16 @@ const Image2x = ({ photos }) => {
     >
        
       {photos.map((photo, index) => (
+        <a href={photo.url} className={`transition-opacity duration-1000 ${
+          index === currentIndex ? 'opacity-100' : 'opacity-0'
+        }`}>
         <img
           key={index}
-          src={photo}
+          src={photo.img}
           alt={``}
-          className={`z-10 text-xl absolute top-0 left-0 px-0 lg:px-6 2xl:px-0 transition-opacity duration-1000 ${
-            index === currentIndex ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`z-10 text-xl absolute top-0 left-0 px-0 lg:px-6 2xl:px-0`}
         />
+        </a>
       ))}
     </div>
   );

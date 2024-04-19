@@ -12,14 +12,22 @@ const Home = () => {
   }, []);
 
   const photos = [
-    '../img/projects-preview/4.jpg',
-    '../img/projects-preview/2.jpg',
-    '../img/projects-preview/1.jpg',
-    '../img/projects-preview/coffee.gif',
-    '../img/projects-preview/5.jpg',
-    '../img/projects-preview/6.jpg',
-    '../img/projects-preview/picle.gif',
-    '../img/projects-preview/3.jpg',
+    {
+      url: "projects/saas-redesign",
+      img: "../img/projects-preview/4.jpg",
+    },
+    {
+      url: "projects/genera-design-system",
+      img: "../img/projects-preview/2.jpg",
+    },
+    {
+      url: "projects/gardenfy",
+      img: "../img/projects-preview/1.jpg",
+    },
+    {
+      url: "projects/blz-premium",
+      img: "../img/projects-preview/3.jpg",
+    },
   ];
 
   return (
@@ -32,5 +40,5 @@ const Home = () => {
       <Footer />
     </div>
   );
-}
+};
 export default Home;

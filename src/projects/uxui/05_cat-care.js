@@ -3,7 +3,7 @@ const CatCare = {
     year: "2022",
     color: "bg-white/80 dark:bg-slate-900",
     image: `${process.env.PUBLIC_URL}/img/catcare/catcare.jpg`,
-    thumb: `${process.env.PUBLIC_URL}/img/catcare/catcare-thumb.png`,
+    thumb: `${process.env.PUBLIC_URL}/img/catcare/catcare-thumb.jpg`,
     description:
       "The Cat Care is an application that allows cat owners to find trusted caregivers who operate in their region.",
     scope: "User Interface, User Experience",

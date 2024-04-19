@@ -4,7 +4,7 @@ import { HeroSmall } from "../components/Hero";
 import Content from "../components/Content";
 import Footer from "../components/Footer";
 import { ScrollRestoration } from "react-router-dom";
-
+import ProjectsPage from './teste';
 
 
 const Projects = () => {
