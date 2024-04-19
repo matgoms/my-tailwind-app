@@ -25,6 +25,10 @@ const Home = () => {
       img: "../img/projects-preview/1.jpg",
     },
     {
+      url: "projects/help!",
+      img: "../img/projects-preview/7.jpg",
+    },
+    {
       url: "projects/blz-premium",
       img: "../img/projects-preview/3.jpg",
     },

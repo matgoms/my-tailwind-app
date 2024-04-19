@@ -12,7 +12,7 @@ const socialProject = importFirstProject(socialContext);
 
 // Use require.context para importar dinamicamente os arquivos da pasta 'uxui'
 const uxuiContext = require.context("../projects/uxui", false, /\.js$/);
-const selectedUXUI = uxuiContext.keys()[10];
+const selectedUXUI = uxuiContext.keys()[0];
 const uxuiProject = uxuiContext(selectedUXUI).default;
   
 

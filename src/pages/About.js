@@ -46,17 +46,113 @@ const About = () => {
               <div className="col-span-2" >
                 
                 <p className="mb-8 sm:text-xl leading-relaxed text-base  dark:text-gray-400 text-balance">
-                  As a creative enthusiast, I have always been dedicated to
-                  studying various artistic fields and visual communications. I
-                  have a strong ability to adapt, allowing me to tackle various
-                  situations effectively and find prompt, suitable solutions.
-                  Furthermore, through my professional experiences and studies I have learned to manage multiple tasks simultaneously and consistently excel by delivering
-                  high-quality work.
+                  As a creative enthusiast, I have always been dedicated to studying various artistic fields and visual communications. I have a strong ability to adapt, allowing me to tackle various situations effectively and find prompt, suitable solutions.
                 </p>
               </div>
               <div className="">
-                {/* linguas */}
 
+
+                <p className="lg:text-lg leading-relaxed font-medium mb-6 dark:text-gray-400">
+                  Matheus Gomes, 27yd
+                  <br />
+                  <a
+                    href="mailto:matgoms@gmail.com"
+                    className="text-gray-600 underline dark:text-gray-400 hover:no-underline"
+                  >
+                    matgoms@gmail.com
+                  </a>
+                  <br />
+                  São Paulo, Brazil
+                </p>
+
+                <a
+                  className="inline-flex items-center py-2.5 px-5 me-2 text-sm font-medium text-gray-900 focus:outline-none bg-transparent rounded-full border border-slate-200 hover:bg-white focus:z-10 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-700 dark:bg-slate-800 dark:text-gray-400 dark:border-slate-600 dark:hover:text-white dark:hover:bg-slate-700"
+                  href="../pdf/CV - Matheus Gomes.pdf"
+                  target="_blank"
+                  onClick={() => handleSubmit("About", "cv-download", "button-cv")}
+                  download
+                >
+                  Download my CV
+                  <ArrowDownTrayIcon
+                    className="h-6 w-6 ms-2 "
+                    aria-hidden="true"
+                  />
+                </a>
+                
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3  mt-8 lg:gap-24 dark:text-gray-400">
+              <div className="">
+                <h3 className="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                  Work Experience
+                </h3>
+
+                <h5 className="font-bold mt-4">Product Designer</h5>
+                <p>Genera</p>
+                <h5 className="font-bold mt-4">Art Director</h5>
+                <p>Degrau Publicidade</p>
+                <h5 className="font-bold mt-4">UX/UI Designer</h5>
+                <p>Brand Connect</p>
+                <h5 className="font-bold mt-4">Web Designer</h5>
+                <p>Link 9</p>
+                <h5 className="font-bold mt-4">UX/UI Designer</h5>
+                <p>Tesla</p>
+                <h5 className="font-bold mt-4">Graphic Designer</h5>
+                <p>Brand Connect</p>
+
+                
+                
+
+               
+
+                
+
+                
+
+                <h3 className="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                  Freelance
+                </h3>
+                <h5 className="font-bold mt-4">UX/UI</h5>
+                <h5 className="font-bold mt-4">Photography and Audiovisual</h5>
+                <h5 className="font-bold mt-4">Motion Design</h5>
+              </div>
+              <div className="">
+                <h3 className="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                  Barchelor Degree
+                </h3>
+
+                <h5 className="font-bold mt-4">Advertising and Marketing</h5>
+                <p>Anhembi Morumbi</p>
+
+                <h3 className="mb-4 mt-8  text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                  Postgraduate
+                </h3>
+
+                <h5 className="font-bold mt-4">User Interface Design</h5>
+                <p>Centro Acadêmico Belas Artes</p>
+
+                <h3 className="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                  Professional courses
+                </h3>
+                <h5 className="font-bold mt-4">Interaction Design and Accessibility</h5>
+                <p>LinkedIn</p>
+                <h5 className="font-bold mt-4">User Centered Design</h5>
+                <p>PUCRS</p>
+                <h5 className="font-bold mt-4">Computer Graphics</h5>
+                <p>Universidade Cidade de São Paulo</p>
+                <h5 className="font-bold mt-4">English</h5>
+                <p>Academia Washington</p>
+                <h5 className="font-bold mt-4">Programming and Webdesign</h5>
+                <p>CENLEP</p>
+                <h5 className="font-bold mt-4">Administration</h5>
+                <p>Salesianas</p>               
+              </div>
+
+              
+              <div className="">
+              <div>
+                  <h3 className="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                    Languages</h3>
                 <div className="flex gap-4 mt-2">
                   <div className="group relative h-full cursor-pointer align-middle ">
                     <div className="absolute invisible bottom-7 group-hover:visible w-max bg-slate-700  text-black px-4 mb-6 -ms-2 py-1.5 text-sm rounded-md">
@@ -153,109 +249,8 @@ const About = () => {
                     ></span>
                   </div>
                 </div>
+</div>
 
-                <p className="lg:text-lg leading-relaxed font-medium my-6 dark:text-gray-400">
-                  Matheus Gomes, 27yd
-                  <br />
-                  <a
-                    href="mailto:matgoms@gmail.com"
-                    className="text-gray-600 underline dark:text-gray-400 hover:no-underline"
-                  >
-                    matgoms@gmail.com
-                  </a>
-                  <br />
-                  São Paulo, Brazil
-                </p>
-
-                <a
-                  className="inline-flex items-center py-2.5 px-5 me-2 text-sm font-medium text-gray-900 focus:outline-none bg-transparent rounded-full border border-slate-200 hover:bg-white focus:z-10 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-700 dark:bg-slate-800 dark:text-gray-400 dark:border-slate-600 dark:hover:text-white dark:hover:bg-slate-700"
-                  href="../pdf/CV - Matheus Gomes.pdf"
-                  target="_blank"
-                  onClick={() => handleSubmit("About", "cv-download", "button-cv")}
-                  download
-                >
-                  Download my CV
-                  <ArrowDownTrayIcon
-                    className="h-6 w-6 ms-2 "
-                    aria-hidden="true"
-                  />
-                </a>
-                
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3  mt-8 lg:gap-24 dark:text-gray-400">
-              <div className="">
-                <h3 className="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-                  Work Experience
-                </h3>
-
-                <h5 className="font-bold mt-4">Product Designer</h5>
-                <p>Genera</p>
-                <h5 className="font-bold mt-4">Art Director</h5>
-                <p>Degrau Publicidade</p>
-                <h5 className="font-bold mt-4">UX/UI Designer</h5>
-                <p>Brand Connect</p>
-                <h5 className="font-bold mt-4">Web Designer</h5>
-                <p>Link 9</p>
-                <h5 className="font-bold mt-4">UX/UI Designer</h5>
-                <p>Tesla</p>
-                <h5 className="font-bold mt-4">Graphic Designer</h5>
-                <p>Brand Connect</p>
-
-                
-                
-
-               
-
-                
-
-                
-
-                <h3 className="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-                  Freelance
-                </h3>
-                <h5 className="font-bold mt-4">UX/UI</h5>
-                <h5 className="font-bold mt-4">Photography and Audiovisual</h5>
-                <h5 className="font-bold mt-4">Motion Design</h5>
-              </div>
-              <div className="">
-                <h3 className="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-                  Barchelor Degree
-                </h3>
-
-                <h5 className="font-bold mt-4">Advertising and Marketing</h5>
-                <p>Anhembi Morumbi</p>
-
-                <h3 className="mb-4 mt-8  text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-                  Postgraduate
-                </h3>
-
-                <h5 className="font-bold mt-4">User Interface Design</h5>
-                <p>Centro Acadêmico Belas Artes</p>
-
-                <h3 className="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-                  Professional courses
-                </h3>
-                <h5 className="font-bold mt-4">Interaction Design and Accessibility</h5>
-                <p>LinkedIn</p>
-                <h5 className="font-bold mt-4">User Centered Design</h5>
-                <p>PUCRS</p>
-                <h5 className="font-bold mt-4">Computer Graphics</h5>
-                <p>Universidade Cidade de São Paulo</p>
-                <h5 className="font-bold mt-4">English</h5>
-                <p>Academia Washington</p>
-                <h5 className="font-bold mt-4">Programming and Webdesign</h5>
-                <p>CENLEP</p>
-                <h5 className="font-bold mt-4">Administration</h5>
-                <p>Salesianas</p>
-
-                
-
-                
-
-                
-              </div>
-              <div className="">
                 <h3 className="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
                   Habilities
                 </h3>
@@ -271,7 +266,7 @@ const About = () => {
                 </div>
 
                 <div className="flex justify-between">
-                  <h5 className="font-bold mb-2">Photography</h5>
+                  <h5 className="font-bold mb-2">Graphic Design</h5>
                   <div>90%</div>
                 </div>
                 <div className="w-full bg-slate-200 rounded-full h-1.5 mb-6 dark:bg-slate-700">
@@ -282,7 +277,7 @@ const About = () => {
                 </div>
 
                 <div className="flex justify-between">
-                  <h5 className="font-bold mb-2">Social Media</h5>
+                  <h5 className="font-bold mb-2">Photography</h5>
                   <div>80%</div>
                 </div>
                 <div className="w-full bg-slate-200 rounded-full h-1.5 mb-6 dark:bg-slate-700">
@@ -293,7 +288,7 @@ const About = () => {
                 </div>
 
                 <div className="flex justify-between">
-                  <h5 className="font-bold mb-2">Video Editing / VFX / Motion</h5>
+                  <h5 className="font-bold mb-2">3D / VFX / Motion</h5>
                   <div>60%</div>
                 </div>
                 <div className="w-full bg-slate-200 rounded-full h-1.5 mb-6 dark:bg-slate-700">
@@ -302,6 +297,8 @@ const About = () => {
                     style={{ width: "60%" }}
                   ></div>
                 </div>
+
+                
 
                 <div>
                   <h3 className="mb-4 mt-8 text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
