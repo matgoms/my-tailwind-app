@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Tab } from '@headlessui/react';
 import { Link,  useLocation } from "react-router-dom";
+import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
 
 export default function Content() {
   const socialContext = require.context("../projects/social", false, /\.js$/);
@@ -41,7 +42,7 @@ export default function Content() {
 
 
 
-  const UXUI = ({ title, description, thumb, color, status, number }) => {
+  const UXUI = ({ title, description, thumb, color, status, number, scope }) => {
     return (
       <div className="break-inside-avoid-column">
         <div className="transition ease-in duration-300 hover:-translate-y-4 w-full mb-6  relative">
@@ -67,8 +68,30 @@ export default function Content() {
                   )}
 
 </div> 
-        <h3 className="mb-2 text-xl font-bold dark:text-white">{title}</h3>
-        <p className="text-gray-500 dark:text-gray-400 text-balance">{description}</p>
+<div className="flex justify-between align-middle mb-4">
+                      <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        <a href="#">{title}</a>
+                      </h2>
+                      <span
+                        href="#"
+                        className="inline-flex items-center font-medium text-primary-600 hover:underline dark:text-gray-100"
+                      >
+                       <ArrowRightCircleIcon className="size-6 text-gray-400 dark:text-gray-600"/>
+                      </span>
+                    </div>
+        <div className="justify-between items-center text-gray-500">
+                      {scope &&
+                        scope.split(",").map((scop, index) => (
+                          <span
+                            key={index}
+                            className="inline-flex items-center font-medium rounded-full text-sm bg-transparent border-[1px] border-slate-600/20 text-gray-600 my-2 mr-1.5 px-2.5 py-0.5 dark:text-gray-400 dark:border-slate-400/20"
+                          >
+                            {scop.trim()}{" "}
+                            {/* Use trim to remove any leading or trailing whitespace */}
+                          </span>
+                        ))}
+                    </div>
+        <p className="mt-4 text-gray-500 dark:text-gray-500 text-pretty">{description}</p>
       </div>
     );
   };

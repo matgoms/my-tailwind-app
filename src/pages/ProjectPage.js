@@ -373,7 +373,8 @@ const ProjectPage = () => {
         </div>
 
         <RecentProjects
-          currentProject={`./${projectFolder}/${projectName}.js`}
+          currentProject={`${project.title}`}
+          currentCategory={`${project.scope}`}
         />
 
         <Footer />

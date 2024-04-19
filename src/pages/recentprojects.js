@@ -2,49 +2,55 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
 
-const RecentProjects = ({ currentProject }) => {
+const RecentProjects = ({ currentProject, currentCategory }) => {
  
   // Use require.context to dynamically import all files within './projects'
   const projectsContext = require.context("../projects", true, /\.js$/);
 
  // Get an array of all project file paths
  const projectFilePaths = projectsContext.keys();
- const excludedProjects = ['./social/social-posts.js', currentProject];
+ const excludedProjects = ['./social/social-posts.js'];
  
 
  // Exclude a specific project file (adjust the filename as needed)
   const filteredFilePaths = projectFilePaths.filter(
-    (project) => !excludedProjects.includes(project) && project !== currentProject
+    (project) => !excludedProjects.includes(project)
   );
-   
+  
 
 
  // Import each project dynamically
  const recentProjects = filteredFilePaths.map((project) => {
    const projectData = projectsContext(project);
+
+
    // Assuming each project file exports a default object
    return projectData.default;
+      
 
 });
 
+
+const relatedProjects = recentProjects.filter(project => project.scope === currentCategory && project.title !== currentProject);
+
+
+/* 
 // Sort projects based on the 'year' property
 const sortedProjects = recentProjects.sort((a, b) => {
   const yearA = parseInt(a.year, 10);
   const yearB = parseInt(b.year, 10);
-
   return yearB - yearA; // Sorting in descending order (newest first)
-});
+}); */
 
 
-const limitedProjects = sortedProjects.slice(0, 6);
-
+const limitedProjects = relatedProjects.slice(0, 6);
   return (
     <section className="bg-slate-50 dark:bg-slate-900/40 transition-colors duration-1000 ease-in-out">
       <div className="py-16 mx-auto max-w-screen-xl lg:py-40 px-6">
       <div className="lg:flex mb-16 justify-between items-center">
         <div className="">
           <h2 className="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            Other projects
+           Related projects
           </h2>
           <p className="font-regular text-gray-500 sm:text-xl dark:text-gray-400">
           Here are a few projects I've worked on recently.
@@ -73,7 +79,7 @@ const limitedProjects = sortedProjects.slice(0, 6);
                   <img
                     src={project.thumb}
                     alt={project.title}
-                    className={`transition hover:saturate-[.5] aspect-[4/3] ease-in duration-300 hover:opacity-80  w-full mb-2  object-cover object-center ${project.color}`}
+                    className={`transition hover:saturate-[.5] aspect-square ease-in duration-300 hover:opacity-80  w-full mb-2  object-cover object-center ${project.color}`}
                   />
                   {project.status  && (
                         <div className="absolute top-4 right-4 ">
@@ -124,6 +130,7 @@ const limitedProjects = sortedProjects.slice(0, 6);
               </Link>
               {/* Add more project details as needed */}
             </div>
+            
           ))}
         </div>
       </div>
