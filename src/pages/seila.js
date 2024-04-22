@@ -6,7 +6,7 @@ import ImageFull from "../components/ImageFull";
 import Footer from "../components/Footer";
 import { LinkIcon } from "@heroicons/react/24/outline";
 import * as Icons from "@heroicons/react/24/outline";
-import RecentProjects from "./recentprojects";
+import RecentProjects from "./relatedprojects";
 
 // Use require.context to dynamically import all files within './projects'
 const uxuiContext = require.context("../projects/uxui", false, /\.js$/);

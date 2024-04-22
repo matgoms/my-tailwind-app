@@ -6,7 +6,7 @@ import ImageFull from "../components/ImageFull";
 import Footer from "../components/Footer";
 import { LinkIcon } from "@heroicons/react/24/outline";
 import * as Icons from "@heroicons/react/24/outline";
-import RecentProjects from "./recentprojects";
+import RelatedProjects from "./relatedprojects";
 
 // Use require.context to dynamically import all files within './projects'
 const uxuiContext = require.context("../projects/uxui", false, /\.js$/);
@@ -372,7 +372,7 @@ const ProjectPage = () => {
           </div>
         </div>
 
-        <RecentProjects
+        <RelatedProjects
           currentProject={`${project.title}`}
           currentCategory={`${project.scope}`}
         />

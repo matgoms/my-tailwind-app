@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
 
-const RecentProjects = ({ currentProject, currentCategory }) => {
+const RelatedProjects = ({ currentProject, currentCategory }) => {
  
   // Use require.context to dynamically import all files within './projects'
   const projectsContext = require.context("../projects", true, /\.js$/);
@@ -20,7 +20,7 @@ const RecentProjects = ({ currentProject, currentCategory }) => {
 
 
  // Import each project dynamically
- const recentProjects = filteredFilePaths.map((project) => {
+ const importProjects = filteredFilePaths.map((project) => {
    const projectData = projectsContext(project);
 
 
@@ -31,7 +31,13 @@ const RecentProjects = ({ currentProject, currentCategory }) => {
 });
 
 
-const relatedProjects = recentProjects.filter(project => project.scope === currentCategory && project.title !== currentProject);
+const relatedProjects = importProjects.filter(project => {
+  const scopes = project.scope.split(",");
+  const categories = currentCategory.split(",");
+  
+  // Check if any category in `categories` is included in `scopes`
+  return categories.some(category => scopes.includes(category)) && project.title !== currentProject;
+});
 
 
 /* 
@@ -138,4 +144,4 @@ const limitedProjects = relatedProjects.slice(0, 6);
   );
 };
 
-export default RecentProjects;
+export default RelatedProjects;
