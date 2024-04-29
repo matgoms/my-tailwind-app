@@ -1,8 +1,8 @@
 import { createBucketClient } from '@cosmicjs/sdk';
 
 const cosmic = createBucketClient({
-    bucketSlug: 'test-production-03c12cb0-e885-11ee-b929-6b4141e26b66',
-readKey: 's0Htr6cfnBxrlUQtQgHO4Xwhkd33yl1iME9S75ehdVHX1CkLn7',
+    bucketSlug: 'my-portfolio-production-d85e2f60-0174-11ef-90d8-41ef09030fc9',
+readKey: 'HBYqgIlKT0BrbeF3INWO49yUTdpsbYjhPuhQZQnWjuZWY6KJ6E',
   }) 
 
 export default cosmic;

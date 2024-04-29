@@ -1,12 +1,14 @@
-import React, { useEffect } from "react";
+import  { React, useEffect } from "react";
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { trackGAEvent } from "./google-analytics";
 import {
   Bars3Icon,
   CameraIcon,
   PaintBrushIcon,
+  HeartIcon,
+  CubeIcon,
   XMarkIcon,
   SunIcon,
   MoonIcon,
@@ -15,22 +17,34 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 const products = [
   {
     name: "Design",
-    description: "Here are some design projects I've worked on recently.",
+    type: "uxuis",
+    description: "Here are design projects I've worked on recently.",
     href: "/projects",
     icon: PaintBrushIcon,
   },
   {
+    name: "3D, Motion and VFX",
+    type: "3d-motion-and-vfx",
+    description: "I do these for hobbie or freelance job.",
+    href: "/vfx",
+    icon: CubeIcon,
+  },
+  {
+    name: "Social Media",
+    type: "social",
+    description: "Some social media posts I've done.",
+    href: "/social",
+    icon: HeartIcon,
+  },
+  {
     name: "Photography",
+    type: "photography",
     description:
       "Take a look at the amazing landscapes, pre-wedding photos, portraits and much more.",
     href: "/photos",
     icon: CameraIcon,
   },
 ];
-/* const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
-] */
 function handleSubmit(category, action, label) {
   trackGAEvent(category, action, label);
 }
@@ -58,6 +72,8 @@ const Menu = ({ className }) => {
       document.documentElement.classList.remove("dark");
       document.documentElement.style.setProperty('--color-scheme-background', 'light');
     }
+    
+
   }, []);
 
   const handleThemeClick = () => {
@@ -81,7 +97,7 @@ const Menu = ({ className }) => {
   };
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { projectName } = useParams();
+  const { slug } = useParams();
  
   return (
     <header className={`${className}`}>
@@ -92,7 +108,7 @@ const Menu = ({ className }) => {
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5" onClick={() => handleSubmit("Menu", "menu-home", "button-home")}>
             <span className="sr-only">Matheus Gomes</span>
-            {projectName && (
+            {slug && (
                 <>
                   <img
               className="w-24 md:w-32 brightness-0  transition-all duration-1000 ease-in-out invert"
@@ -102,7 +118,7 @@ const Menu = ({ className }) => {
                 </>
               )}
             
-              {!projectName && (
+              {!slug && (
                 <>
                   <img
               className="w-24 md:w-32 transition-all duration-1000 ease-in-out dark:invert"
@@ -122,14 +138,14 @@ const Menu = ({ className }) => {
           >
             <span className="sr-only">Open main menu</span>
 
-            {projectName && (
+            {slug && (
                 <>
                   <Bars3Icon className="h-6 w-6 text-white" aria-hidden="true" />
                   
                 </>
               )}
 
-              {!projectName && (
+              {!slug && (
                 <>
                   <Bars3Icon className="h-6 w-6 dark:text-gray-400" aria-hidden="true" />
                 </>
@@ -140,7 +156,7 @@ const Menu = ({ className }) => {
         <Popover.Group className="hidden lg:flex lg:gap-x-12 ">
           <Popover className="relative ">
             <Popover.Button className="flex items-center gap-x-1 text-lg focus:outline-none font-semibold leading-6 ">
-              {projectName && (
+              {slug && (
                 <>
                   <p className="text-white">Works</p>
                   <ChevronDownIcon
@@ -150,7 +166,7 @@ const Menu = ({ className }) => {
                 </>
               )}
 
-              {!projectName && (
+              {!slug && (
                 <>
                   <p className="text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200">
                     Works</p>
@@ -177,6 +193,9 @@ const Menu = ({ className }) => {
               <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl shadow-2xl ring-1 ring-gray-900/10 bg-white dark:bg-slate-900">
                 <div className="p-4">
                   {products.map((item) => (
+                  
+                  
+
                     <div
                       key={item.name}
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-md leading-6 hover:bg-slate-50 dark:hover:bg-slate-800/40 "
@@ -188,6 +207,7 @@ const Menu = ({ className }) => {
                         />
                       </div>
                       <div className="flex-auto">
+                 
                         <a
                           href={item.href}
                           className="block text-lg font-semibold text-gray-900 dark:text-white" onClick={() => handleSubmit("Menu", `menu-${item.name}`, "button-works")}
@@ -195,7 +215,7 @@ const Menu = ({ className }) => {
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
-                        <p className="text-md mt-1 text-gray-600 dark:text-gray-400">
+                        <p className="text-md mt-1 text-gray-600 dark:text-gray-400 text-balance">
                           {item.description}
                         </p>
                       </div>
@@ -222,13 +242,13 @@ const Menu = ({ className }) => {
             href="/about"
             className="text-lg font-semibold leading-6  text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200" onClick={() => handleSubmit("Menu", "menu-about", "button-about")}
           >
-           {projectName && (
+           {slug && (
                 <>
                   <p className="text-white">About me</p>
                                  </>
               )}
 
-              {!projectName && (
+              {!slug && (
                 <>
                   <p className="text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200">
                     About me</p>
@@ -257,14 +277,14 @@ const Menu = ({ className }) => {
             className="text-lg font-semibold leading-6  text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200  transition-colors duration-1000 ease-in-out"
             onClick={() => handleSubmit("Menu", "menu-contact", "button-contact")}
           >
-            {projectName && (
+            {slug &&(
                 <>
                   <p className="text-white">Contact <span aria-hidden="true">&rarr;</span></p>
                   
                 </>
               )}
 
-              {!projectName && (
+              {!slug && (
                 <>
                   <p className="text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-200">
                     Contact <span aria-hidden="true">&rarr;</span></p>

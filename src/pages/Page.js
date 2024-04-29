@@ -1,20 +1,22 @@
+import Menu from "../components/Menu";
 import React, { useEffect, useState, useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import cosmic from "../bucketclient";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import Menu from "../components/Menu";
 import ImageFull from "../components/ImageFull";
 import Footer from "../components/Footer";
 import { LinkIcon } from "@heroicons/react/24/outline";
+
+import * as Icons from "@heroicons/react/24/outline";
 
 const Img = React.memo(({ src, alt, className }) => (
   <img
     className={
       (className,
-      "w-full border-[1px] border-slate-50 dark:border-slate-900/40 bg-slate-50 lg:my-16 dark:bg-slate-900/60")
+      "w-full border-[1px] border-gray-200 dark:border-gray-900/40 bg-gray-50 dark:bg-slate-900/6 lg:my-16 my-3 group-has-[a]:w- ")
     }
-    src={src}
+    src={src + '?auto=format'}
     alt={alt}
   />
 ));
@@ -37,7 +39,7 @@ const H2 = React.memo(({ children }) => (
 
 const P = React.memo(({ children }) => (
   <div className="has-[img]:lg:max-w-screen-2xl has-[iframe]:lg:max-w-screen-2xl lg:max-w-3xl mx-auto w-full px-6 lg:px-0">
-    <p className="my-3 text-gray-600 sm:text-xl dark:text-gray-400 text-pretty">
+    <p className="my-3 text-gray-600 sm:text-xl dark:text-gray-200 text-pretty">
       {children}
     </p>
   </div>
@@ -58,9 +60,6 @@ const H6 = React.memo(({ children }) => (
   <h6 className="text-sm text-center">{children}</h6>
 ));
 
-const Table = React.memo(({ children }) => (
-  <div className="max-w-screen-xl mx-auto columns-1">{children}</div>
-));
 
 const Code = React.memo(({ children }) => (
   <iframe
@@ -69,17 +68,65 @@ const Code = React.memo(({ children }) => (
   ></iframe>
 ));
 
-const Tr = React.memo(({ children }) => (
-  <div className="max-w-screen-xl mx-auto columns-1 lg:columns-2 lg:gap-32 lg:flex">
+const Table = React.memo(({ node, children, ...props }) => (
+  <div className={`max-w-screen-xl mx-auto table-fixed my-16`} {...props}>
     {children}
   </div>
 ));
 
-const Th = React.memo(({ children }) => (
-  <div className="m-6 lg:m-0">{children}</div>
+const Tr = React.memo(({ node, children, ...props }) => (
+  <div className="flex group w-full has-[img]:border-0   has-[img]:gap-32 gap-12 break-words"  {...props}>
+  {children}
+  </div>
 ));
 
-const Blog = () => {
+const Thead = React.memo(({ node, children, ...props }) => (
+  <div className="flex w-full" {...props}>
+  {children}
+  </div>
+));
+
+const Tbody = React.memo(({ node, children, ...props }) => (
+  <div className="flex w-full" {...props}>
+  {children}
+  </div>
+));
+
+const Th = React.memo(({ node, children, ...props }) => (
+  <div className="flex w-full font-semibold p-4 px-6 items-center gap-4 text-slate-900 dark:text-slate-200 text-left has-[img]:border-0 border-b-[1px] border-slate-500/20 has-[img]:p-0 bg-gray-50 has-[img]:bg-white has-[img]:dark:bg-slate-800 dark:bg-slate-900/60" {...props}>{children}</div>
+));
+
+const Td = React.memo(({ node, children, ...props }) => (
+  <div className="flex w-full font-normal p-6 text-slate-900 dark:text-slate-200 text-left  align-top bg-gray-50 has-[img]:bg-white has-[img]:dark:bg-slate-800 dark:bg-slate-900/60" {...props}>{children}</div>
+));
+
+const Del = React.memo(({ children, ...props }) => {
+  // Check if children is defined and not null
+  if (!children) {
+    return null; // Render nothing if children is not defined
+  }
+
+  // Check if the children contain a component placeholder
+  const IconComponent = Icons[children];
+
+  // Render the icon component if it exists
+  if (IconComponent) {
+    return (
+      <p className="text-gray-700 dark:text-white text-sm my-2">
+        <IconComponent className="size-6" />
+      </p>
+    );
+  } else {
+    // Render the children as is if it's not an icon component placeholder
+    return children;
+  }
+});
+
+
+
+
+const Page = () => {
+  
   const components = useMemo(
     () => ({
       img: Img,
@@ -88,39 +135,53 @@ const Blog = () => {
       h3: H3,
       h6: H6,
       li: Li,
+      p: P,
       table: Table,
+      thead: Thead,
+      tbody: Tbody,
       tr: Tr,
       th: Th,
-      p: P,
+      td: Td,
+      del: Del,
       code: Code,
+      
       // Adicione outros componentes conforme necessário
-    }),
-    []
+    }),[]
+    
   );
+
+
+
   const [posts, setPosts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const { slug } = useParams();
 
   useEffect(() => {
     cosmic.objects
       .find({
         slug,
-        type: "uxuis",
       })
       .then((response) => {
-        document.title = "Matheus Gomes - " + posts[0]?.title;
+       
         setPosts(response.objects);
+        setIsLoading(false);
+        
       })
       .catch((error) => {
         console.error("Erro ao recuperar os dados:", error);
       });
-
-  }, [slug, posts]);
-
+      
+      window.scrollTo(0, 0);
+        
+      
+  }, []);
+  document.title = "Matheus Gomes - " + posts[0]?.title;
+ 
   return (
     <div>
       {posts.map((post) => (
         <div key={post.id}>
-          <ImageFull image={post.metadata.cover_image.url} />
+          <ImageFull image={post.metadata.cover_image.imgix_url + '?auto=format,compress'} />
         </div>
       ))}
       <Menu className="absolute top-0 w-full *:text-white bg-gradient-to-b from-black/30" />
@@ -131,6 +192,8 @@ const Blog = () => {
         <div className="mx-auto max-w-screen-xl py-16 px-6 2xl:px-0 lg:gap-8 xl:gap-8 lg:pt-32">
           <div className="d-block lg:grid grid-cols-1 lg:grid-cols-5">
             <div className="max-w-screen-md mb-8 lg:mb-16 col-span-4">
+ 
+
               {posts.map((post) => (
                 <div key={post.id}>
                   <>
@@ -203,26 +266,68 @@ const Blog = () => {
           </div>
         </div>
         <hr className="border-gray-200 mx-auto dark:border-gray-700" />
-        <div className="bg-white dark:bg-slate-800 mx-auto w-full mt-8 lg:mt-24 mb-32 lg:mb-32 xl:px-0 ">
+        <div className="bg-white dark:bg-slate-800 mx-auto w-full py-16 lg:py-32 xl:px-0 ">
           <div className="flex justify-between mx-auto ">
-            {posts.map((post) => (
-              <div key={post.id} className="mx-auto w-full">
-                <ReactMarkdown
-                  remarkPlugins={[remarkGfm]}
-                  className="prose-xl"
-                  components={components}
-                >
-                  {post.metadata.content}
-                </ReactMarkdown>
-              </div>
-            ))}
+          {isLoading && (
+     
+     <div className="mx-auto flex">
+                    <span className="inline-flex items-center rounded-full  text-slate-800 dark:text-white px-4 py-2 text-sm">
+                      <svg
+                        className="animate-spin -ml-1 mr-2 h-5 w-5 text-slate-800 dark:text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        ></path>
+                      </svg>
+                      Loading
+                    </span>
+                  </div>
+
+)}
+
+          {posts && posts.map((post) => (
+  <div key={post.id} className="mx-auto w-full">
+                                     
+                    <Del/>
+    <ReactMarkdown
+      remarkPlugins={[remarkGfm]}
+      className="prose-xl"
+      components={components}
+    >
+      
+      {post.metadata.content}
+      </ReactMarkdown>
+      {post.metadata.video && (
+        <video controls className="mr-auto w-full lg:max-w-screen-xl py-3 lg:py-16 mx-auto" autoplay loop muted playsinline controls>
+          <source src={post.metadata.video.imgix_url} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      )}
+    
+  </div>
+))}
+
           </div>
         </div>
       </div>
       <hr className="border-gray-200 mx-auto dark:border-gray-700" />
       <Footer />
     </div>
+    
   );
 };
 
-export default Blog;
+export default Page;

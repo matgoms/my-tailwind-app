@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Menu from "../components/Menu";
 import { HeroBig } from "../components/Hero";
 import Image2x from "../components/Image2x";
-import Feature from "../components/Feature";
+import Skills from "../components/Skills";
 import Portfolio from "../components/Portfolio";
 import Footer from "../components/Footer";
 
@@ -39,7 +39,7 @@ const Home = () => {
       <Menu />
       <HeroBig />
       <Image2x photos={photos} />
-      <Feature />
+      <Skills />
       <Portfolio />
       <Footer />
     </div>

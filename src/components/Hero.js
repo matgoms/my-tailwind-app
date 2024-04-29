@@ -4,7 +4,7 @@ export function HeroBig() {
   return (
    <>
     <section>
-    <div className="grid gap-16 max-w-screen-xl px-6 py-16 mx-auto lg:grid lg:grid-cols-3 lg:py-24 ">
+    <div className="grid gap-16 max-w-screen-xl px-6 py-16 mx-auto lg:grid lg:grid-cols-3 lg:pb-40 lg:pt-24">
         <div className="mr-auto place-self-center lg:col-span-2 lg:grid-cols-2">
             <h1 className="max-w-2xl my-6 text-6xl font-extrabold tracking-tight leading-none xl:text-6xl dark:text-gray-100">I'm a Product Designer with +7 years of experience.</h1>
           

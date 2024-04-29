@@ -64,7 +64,7 @@ const limitedProjects = relatedProjects.slice(0, 6);
  </div>
           <h3 className="mt-4 md:mt-0 text-lg font-medium racking-tight text-gray-900 dark:text-white">
                         <a href="/projects" className="flex items-center gap-4 hover:underline"> 
-                        See more
+                        See all projects
                         <ArrowRightCircleIcon className="size-6 text-gray-400 dark:text-gray-600"/>
                       </a>
                       </h3>
