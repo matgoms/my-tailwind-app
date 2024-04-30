@@ -13,7 +13,7 @@ const Home = () => {
 
   const photos = [
     {
-      url: "projects/saas-redesign",
+      url: "projects/xero-saas-redesign",
       img: "../img/projects-preview/4.jpg",
     },
     {
@@ -25,7 +25,7 @@ const Home = () => {
       img: "../img/projects-preview/1.jpg",
     },
     {
-      url: "projects/help!",
+      url: "projects/help",
       img: "../img/projects-preview/7.jpg",
     },
     {

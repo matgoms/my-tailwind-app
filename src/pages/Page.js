@@ -69,13 +69,13 @@ const Code = React.memo(({ children }) => (
 ));
 
 const Table = React.memo(({ node, children, ...props }) => (
-  <div className={`max-w-screen-xl mx-auto table-fixed my-16`} {...props}>
+  <div className={`max-w-screen-xl mx-auto table-fixed my-16 !has-[img]:overflow-x-auto`} {...props}>
     {children}
   </div>
 ));
 
 const Tr = React.memo(({ node, children, ...props }) => (
-  <div className="flex group w-full has-[img]:border-0   has-[img]:gap-32 gap-12 break-words"  {...props}>
+  <div className="flex group w-full has-[img]:border-0   has-[img]:gap-32 gap-8 md:gap-12 break-words"  {...props}>
   {children}
   </div>
 ));
@@ -87,17 +87,17 @@ const Thead = React.memo(({ node, children, ...props }) => (
 ));
 
 const Tbody = React.memo(({ node, children, ...props }) => (
-  <div className="flex w-full" {...props}>
+  <div className="flex w-full " {...props}>
   {children}
   </div>
 ));
 
 const Th = React.memo(({ node, children, ...props }) => (
-  <div className="flex w-full font-semibold p-4 px-6 items-center gap-4 text-slate-900 dark:text-slate-200 text-left has-[img]:border-0 border-b-[1px] border-slate-500/20 has-[img]:p-0 bg-gray-50 has-[img]:bg-white has-[img]:dark:bg-slate-800 dark:bg-slate-900/60" {...props}>{children}</div>
+  <div className="flex w-full min-w-56 font-semibold p-4 py-2 md:py-4 md:p-6 items-center gap-4 text-slate-900 dark:text-slate-200 text-left has-[img]:border-0 border-b-[1px] border-slate-500/20 has-[img]:p-0 bg-gray-50 has-[img]:bg-white has-[img]:dark:bg-slate-800 dark:bg-slate-900/60" {...props}>{children}</div>
 ));
 
 const Td = React.memo(({ node, children, ...props }) => (
-  <div className="flex w-full font-normal p-6 text-slate-900 dark:text-slate-200 text-left  align-top bg-gray-50 has-[img]:bg-white has-[img]:dark:bg-slate-800 dark:bg-slate-900/60" {...props}>{children}</div>
+  <div className="flex w-full min-w-56 text-sm md:text-md leading-relaxed font-normal p-4 md:p-6 text-slate-900 dark:text-slate-200 text-left  align-top bg-gray-50 has-[img]:bg-white has-[img]:dark:bg-slate-800 dark:bg-slate-900/60" {...props}>{children}</div>
 ));
 
 const Del = React.memo(({ children, ...props }) => {
