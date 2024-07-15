@@ -14,7 +14,7 @@ const Img = React.memo(({ src, alt, className }) => (
   <img
     className={
       (className,
-      "w-full border-[1px] border-gray-200 dark:border-gray-900/40 bg-gray-50 dark:bg-slate-900/6 lg:my-16 my-3 group-has-[a]:w- ")
+      "w-full border-[1px] border-gray-200 dark:border-gray-900/40 bg-gray-50 dark:bg-slate-900/60 lg:my-16 my-3 group-has-[a]:w- ")
     }
     src={src + '?auto=format'}
     alt={alt}
